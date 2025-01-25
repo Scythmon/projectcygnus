@@ -47,6 +47,14 @@ public class ProjectCygnus
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.STAR);
             event.accept(ModItems.CONCENTRATED_CRYSTAL_CLUSTER);
+            event.accept(ModItems.SINGULARITY_STONE);
+            event.accept(ModItems.WITHER_CONCENTRATE);
+            event.accept(ModItems.LIFE_CONCENTRATE);
+            event.accept(ModItems.UNDEAD_CONCENTRATE);
+            event.accept(ModItems.SPEED_CONCENTRATE);
+            event.accept(ModItems.STRENGTH_CONCENTRATE);
+            event.accept(ModItems.STAR_CONCENTRATE);
+            event.accept(ModItems.TRUE_CRYSTAL);
         }
     }
 

@@ -1,4 +1,12 @@
 {
   "item.projectcygnus.star": "Star",
-  "item.projectcygnus.concentrated_crystal_cluster": "Concentrated Crystal Cluster"
+  "item.projectcygnus.concentrated_crystal_cluster": "Concentrated Crystal Cluster",
+  "item.projectcygnus.singularity_stone": "Singularity Stone",
+  "item.projectcygnus.true_crystal": "True Crystal",
+  "item.projectcygnus.wither_concentrate": "Wither Concentrate",
+  "item.projectcygnus.undead_concentrate": "Undead Concentrate",
+  "item.projectcygnus.life_concentrate": "Life Concentrate",
+  "item.projectcygnus.speed_concentrate": "Speed Concentrate",
+  "item.projectcygnus.strength_concentrate": "Strength Concentrate",
+  "item.projectcygnus.star_concentrate": "Star Concentrate"
 }

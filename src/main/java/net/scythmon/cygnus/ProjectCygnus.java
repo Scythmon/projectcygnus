@@ -13,6 +13,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.scythmon.cygnus.items.ModCreativeModeTabs;
 import net.scythmon.cygnus.items.ModItems;
 import org.slf4j.Logger;
 
@@ -28,6 +29,8 @@ public class ProjectCygnus
     public ProjectCygnus(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
@@ -45,31 +48,6 @@ public class ProjectCygnus
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.STAR);
-            event.accept(ModItems.CONCENTRATED_CRYSTAL_CLUSTER);
-            event.accept(ModItems.SINGULARITY_STONE);
-            event.accept(ModItems.WITHER_CONCENTRATE);
-            event.accept(ModItems.LIFE_CONCENTRATE);
-            event.accept(ModItems.UNDEAD_CONCENTRATE);
-            event.accept(ModItems.SPEED_CONCENTRATE);
-            event.accept(ModItems.STRENGTH_CONCENTRATE);
-            event.accept(ModItems.STAR_CONCENTRATE);
-            event.accept(ModItems.TRUE_CRYSTAL);
-            event.accept(ModItems.STARFLAME);
-            event.accept(ModItems.BLOOD_STEEL);
-            event.accept(ModItems.ANGEL_GOLD);
-            event.accept(ModItems.ALTAR_CORE);
-            event.accept(ModItems.CHERUB_TEAR);
-            event.accept(ModItems.DOMINION_TEAR);
-            event.accept(ModItems.THRONE_TEAR);
-            event.accept(ModItems.EMPTY_CELESTIAL_TALISMAN);
-            event.accept(ModItems.EMPTY_ANGELIC_TALISMAN);
-            event.accept(ModItems.FELL_STAR_PLATE);
-            event.accept(ModItems.AFTERLIFE_PLATE);
-            event.accept(ModItems.ANGEL_PLATE);
-            event.accept(ModItems.CARNAGE_PLATE);
-            event.accept(ModItems.UNSTABLE_SINGULARITY);
-            event.accept(ModItems.SINGULARITY_SHARD);
         }
     }
 

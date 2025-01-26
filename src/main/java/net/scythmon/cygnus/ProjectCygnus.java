@@ -55,6 +55,21 @@ public class ProjectCygnus
             event.accept(ModItems.STRENGTH_CONCENTRATE);
             event.accept(ModItems.STAR_CONCENTRATE);
             event.accept(ModItems.TRUE_CRYSTAL);
+            event.accept(ModItems.STARFLAME);
+            event.accept(ModItems.BLOOD_STEEL);
+            event.accept(ModItems.ANGEL_GOLD);
+            event.accept(ModItems.ALTAR_CORE);
+            event.accept(ModItems.CHERUB_TEAR);
+            event.accept(ModItems.DOMINION_TEAR);
+            event.accept(ModItems.THRONE_TEAR);
+            event.accept(ModItems.EMPTY_CELESTIAL_TALISMAN);
+            event.accept(ModItems.EMPTY_ANGELIC_TALISMAN);
+            event.accept(ModItems.FELL_STAR_PLATE);
+            event.accept(ModItems.AFTERLIFE_PLATE);
+            event.accept(ModItems.ANGEL_PLATE);
+            event.accept(ModItems.CARNAGE_PLATE);
+            event.accept(ModItems.UNSTABLE_SINGULARITY);
+            event.accept(ModItems.SINGULARITY_SHARD);
         }
     }
 

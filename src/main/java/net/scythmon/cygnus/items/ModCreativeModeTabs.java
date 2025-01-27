@@ -10,6 +10,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.block.ModBlocks;
 
 import javax.security.auth.login.Configuration;
 import javax.swing.*;
@@ -79,6 +80,8 @@ public class ModCreativeModeTabs {
                         //Filled Celestial Talismans
                         //Filled Carnage Talismans
                         //Boss Drops
+                        //Blocks
+                        output.accept((ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get()));
                     }))
                     .build());
     public static void register(IEventBus eventBus) {

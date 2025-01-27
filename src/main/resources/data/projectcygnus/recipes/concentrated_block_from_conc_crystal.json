@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "projectcygnus:concentrated_crystal_cluster"
+    }
+  },
+  "result": {
+    "item": "projectcygnus:concentrated_crystal_block"
+  }
+}

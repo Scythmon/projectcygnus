@@ -57,19 +57,18 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-
-   // maven { url 'https://maven.blamejared.com' }
-    // flatDir {
-    //     dir 'libs'
-    // }
+    maven {
+        url "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
+        content {
+            includeGroup "com.klikli_dev"
+        }
+    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-  // compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84-FORGE:api")
-
-   // runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84-FORGE")
+        implementation fg.deobf("com.klikli_dev:modonomicon-${minecraft_version}-forge:${modonomicon_version}"){transitive=false}
 
     implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
 
@@ -93,12 +92,12 @@ tasks.named('processResources', ProcessResources).configure {
 tasks.named('jar', Jar).configure {
     manifest {
         attributes([
-            'Specification-Title'     : mod_id,
-            'Specification-Vendor'    : mod_authors,
-            'Specification-Version'   : '1', // We are version 1 of ourselves
-            'Implementation-Title'    : project.name,
-            'Implementation-Version'  : project.jar.archiveVersion,
-            'Implementation-Vendor'   : mod_authors
+                'Specification-Title'     : mod_id,
+                'Specification-Vendor'    : mod_authors,
+                'Specification-Version'   : '1', // We are version 1 of ourselves
+                'Implementation-Title'    : project.name,
+                'Implementation-Version'  : project.jar.archiveVersion,
+                'Implementation-Vendor'   : mod_authors
         ])
     }
 }
@@ -129,18 +128,3 @@ sourceSets.each {
     it.output.resourcesDir = dir
     it.java.destinationDirectory = dir
 }
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file
-//adding a bunch of words here to make it autoconvert to a txt fileadding a bunch of words here to make it autoconvert to a txt file

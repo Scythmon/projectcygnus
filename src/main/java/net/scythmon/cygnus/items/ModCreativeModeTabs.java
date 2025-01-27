@@ -19,11 +19,13 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ProjectCygnus.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> CYGNUS = CREATIVE_MODE_TABS.register("cygnus",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STARFLAME.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STAR.get()))
                     .title(Component.translatable("creativetab.cygnus_tab"))
                     .displayItems(((itemDisplayParameters, output) -> {
                         //Naturals
-
+                        output.accept(ModItems.CRYSTAL_FLOWER.get());
+                        output.accept(ModItems.CRYSTAL_BERRIES.get());
+                        output.accept(ModItems.BROWNIE.get());
 
 
                         //Pre-Crafting Items

@@ -12,6 +12,17 @@ import net.scythmon.cygnus.ProjectCygnus;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ProjectCygnus.MOD_ID);
+    //Naturals
+
+
+    public static final RegistryObject<Item> CRYSTAL_FLOWER = ITEMS.register("crystal_flower",
+            () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_FLOWER).rarity(Rarity.UNCOMMON))));
+
+    public static final RegistryObject<Item> CRYSTAL_BERRIES = ITEMS.register("crystal_berries",
+            () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_BERRIES).rarity(Rarity.COMMON))));
+    public static final RegistryObject<Item> BROWNIE = ITEMS.register("brownie",
+            () -> new Item((new Item.Properties().food(ModFoods.BROWNIE).rarity(Rarity.COMMON))));
+
     // Tier one crafting items
 
 

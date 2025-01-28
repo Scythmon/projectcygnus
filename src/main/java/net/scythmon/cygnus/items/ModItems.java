@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.items.custom.FuelItem;
 import net.scythmon.cygnus.items.custom.MetalDetectorItem;
 
 public class ModItems {
@@ -31,7 +32,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> STARFLAME = ITEMS.register("starflame",
-        () -> new Item(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.COMMON)));
+        () -> new FuelItem(new Item.Properties(), 12800));
 
     public static final RegistryObject<Item> BLOOD_STEEL = ITEMS.register("blood_steel",
         () -> new Item(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.COMMON)));

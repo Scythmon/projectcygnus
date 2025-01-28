@@ -20,16 +20,13 @@ import org.slf4j.Logger;
 
 
 @Mod(ProjectCygnus.MOD_ID)
-public class ProjectCygnus
-{
-
+public class ProjectCygnus  {
     public static final String MOD_ID = "projectcygnus";
-
     private static final Logger LOGGER = LogUtils.getLogger();
-
-    public ProjectCygnus(FMLJavaModLoadingContext context)
+    @SuppressWarnings("removal")
+    public ProjectCygnus()
     {
-        IEventBus modEventBus = context.getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
 
@@ -66,4 +63,5 @@ public class ProjectCygnus
         public static void onClientSetup(FMLClientSetupEvent event) {
         }
     }
+
 }

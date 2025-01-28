@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.block.custom.SoundBlock;
 import net.scythmon.cygnus.items.ModItems;
 
 import java.util.function.Supplier;
@@ -21,6 +22,9 @@ public class ModBlocks {
 
     public static final  RegistryObject<Block> CONCENTRATED_CRYSTAL_BLOCK = registerBlock("concentrated_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+
+    public static final  RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

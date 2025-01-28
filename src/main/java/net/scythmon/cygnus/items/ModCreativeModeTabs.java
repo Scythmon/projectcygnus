@@ -75,7 +75,7 @@ public class ModCreativeModeTabs {
 
 
                         output.accept(ModItems.SINGULARITY_STONE.get());
-
+                        output.accept(ModItems.METAL_DETECTOR.get());
 
                         //Filled Celestial Talismans
                         //Filled Carnage Talismans

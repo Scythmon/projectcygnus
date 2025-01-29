@@ -27,8 +27,13 @@
   "item.projectcygnus.crystal_flower": "Crystal Flower",
   "item.projectcygnus.crystal_berries": "Crystal Berries",
   "item.projectcygnus.brownie": "Brownie",
+
   "item.projectcygnus.metal_detector": "Metal Detector",
+  "tooltip.projectcygnus.metal_detector.tooltip": "Finds Valuables Underground",
+
   "block.projectcygnus.concentrated_crystal_block": "Concentrated Crystal Block",
   "block.projectcygnus.sound_block": "Sound Block",
+
+
   "creativetab.cygnus_tab": "Cygnus"
 }

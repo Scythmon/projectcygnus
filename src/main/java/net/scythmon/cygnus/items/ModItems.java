@@ -22,6 +22,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> CRYSTAL_BERRIES = ITEMS.register("crystal_berries",
             () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_BERRIES).rarity(Rarity.COMMON))));
+
     public static final RegistryObject<Item> BROWNIE = ITEMS.register("brownie",
             () -> new Item((new Item.Properties().food(ModFoods.BROWNIE).rarity(Rarity.COMMON))));
 

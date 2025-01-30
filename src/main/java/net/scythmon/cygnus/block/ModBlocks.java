@@ -17,7 +17,7 @@ import net.scythmon.cygnus.items.ModItems;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    private static final DeferredRegister<Block> BLOCKS =
+    public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ProjectCygnus.MOD_ID);
 
     public static final  RegistryObject<Block> CONCENTRATED_CRYSTAL_BLOCK = registerBlock("concentrated_crystal_block",

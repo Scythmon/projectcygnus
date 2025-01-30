@@ -1,0 +1,4 @@
+// 1.20.1	2025-01-29T22:31:22.8847273	Tags for minecraft:block mod id projectcygnus
+0e9cfa5fe5e7f6d8526203c8c23eba31934af10c data/minecraft/tags/blocks/mineable/pickaxe.json
+0e9cfa5fe5e7f6d8526203c8c23eba31934af10c data/minecraft/tags/blocks/needs_iron_tool.json
+80918d335c7d95227536db1d61c80216daa6b0af data/projectcygnus/tags/blocks/metal_detector_valuables.json

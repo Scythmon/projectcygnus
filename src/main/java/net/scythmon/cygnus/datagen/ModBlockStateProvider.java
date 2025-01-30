@@ -6,6 +6,7 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.block.ModBlocks;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -15,7 +16,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-
+        blockWithItem(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK);
+        blockWithItem(ModBlocks.SOUND_BLOCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

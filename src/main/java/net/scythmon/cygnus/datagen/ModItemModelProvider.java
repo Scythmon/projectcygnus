@@ -23,7 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BROWNIE);
         simpleItem(ModItems.CRYSTAL_BERRIES);
         simpleItem(ModItems.CRYSTAL_FLOWER);
-
+        simpleItem(ModItems.COFFEE);
         // Tier one crafting items
 
         simpleItem(ModItems.TRUE_CRYSTAL);
@@ -57,6 +57,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SINGULARITY_SHARD);
         simpleItem(ModItems.SINGULARITY_STONE);
         simpleItem(ModItems.UNSTABLE_SINGULARITY);
+
+
+        //Tier 4 crafting
+
+        simpleItem(ModItems.WISHING_CORE);
+        simpleItem(ModItems.WISHING_TOKEN);
+        simpleItem(ModItems.EMPTY_HARBINGER_TALISMAN);
+        simpleItem(ModItems.EMPTY_WATCHING_TALISMAN);
+        simpleItem(ModItems.EMPTY_FETID_TALISMAN);
 
         //ignore this
 

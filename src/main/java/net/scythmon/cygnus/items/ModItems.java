@@ -18,13 +18,16 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> CRYSTAL_FLOWER = ITEMS.register("crystal_flower",
-            () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_FLOWER).rarity(Rarity.UNCOMMON))));
+            () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_FLOWER).rarity(Rarity.COMMON))));
 
     public static final RegistryObject<Item> CRYSTAL_BERRIES = ITEMS.register("crystal_berries",
             () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_BERRIES).rarity(Rarity.COMMON))));
 
     public static final RegistryObject<Item> BROWNIE = ITEMS.register("brownie",
             () -> new Item((new Item.Properties().food(ModFoods.BROWNIE).rarity(Rarity.COMMON))));
+
+    public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
+            () -> new Item((new Item.Properties().food(ModFoods.COFFEE).rarity(Rarity.COMMON))));
 
     // Tier one crafting items
 
@@ -113,7 +116,22 @@ public class ModItems {
     public static final RegistryObject<Item> SINGULARITY_STONE = ITEMS.register("singularity_stone",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
+    //Tier 4 Crafting items
 
+    public static final RegistryObject<Item> WISHING_CORE = ITEMS.register("wishing_core",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> WISHING_TOKEN = ITEMS.register("wishing_token",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> EMPTY_WATCHING_TALISMAN = ITEMS.register("empty_watching_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> EMPTY_HARBINGER_TALISMAN = ITEMS.register("empty_harbinger_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> EMPTY_FETID_TALISMAN = ITEMS.register("empty_fetid_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
     //ignore this
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",

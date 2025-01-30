@@ -11,4 +11,7 @@ public class ModFoods {
 
     public static final FoodProperties BROWNIE = new FoodProperties.Builder()
             .nutrition(4).saturationMod(0.3f).build();
+
+    public static final FoodProperties COFFEE = new FoodProperties.Builder()
+            .nutrition(2).saturationMod(0.3f).build();
 }

@@ -24,6 +24,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CRYSTAL_BERRIES);
         simpleItem(ModItems.CRYSTAL_FLOWER);
         simpleItem(ModItems.COFFEE);
+        simpleItem(ModItems.ONEH_MOTER);
+
+        //Precrafting
+        simpleItem(ModItems.CULTIST_KNIFE);
+        simpleItem(ModItems.BOTTLED_BLOOD);
+        simpleItem(ModItems.HOLY_WATER);
+        simpleItem(ModItems.CRYSTAL_BUDS);
+        simpleItem(ModItems.BOOK_OF_ENOCH);
+        simpleItem(ModItems.PRAYER_BOOK);
         // Tier one crafting items
 
         simpleItem(ModItems.TRUE_CRYSTAL);
@@ -100,7 +109,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SOUL_OF_GODLY_JUDGEMENT);
 
         //ignore this
-
+        withExistingParent(ModItems.TIGER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         simpleItem(ModItems.METAL_DETECTOR);
     }
 

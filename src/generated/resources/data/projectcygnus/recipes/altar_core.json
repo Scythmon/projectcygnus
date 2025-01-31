@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "projectcygnus:angel_gold"
+    },
+    "T": {
+      "item": "projectcygnus:true_crystal"
+    }
+  },
+  "pattern": [
+    " A ",
+    "ATA",
+    " A "
+  ],
+  "result": {
+    "item": "projectcygnus:altar_core"
+  },
+  "show_notification": true
+}

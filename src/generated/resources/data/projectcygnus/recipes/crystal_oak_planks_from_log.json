@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "projectcygnus:crystal_oak_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "projectcygnus:crystal_oak_planks"
+  }
+}

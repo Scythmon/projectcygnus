@@ -28,10 +28,15 @@ public class ModblockTagGenerator extends BlockTagsProvider {
 
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
+                .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get())
+                .add(ModBlocks.BLOOD_STEEL_BLOCK.get())
+                .add(ModBlocks.ANGEL_GOLD_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
+                .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get())
+                .add(ModBlocks.BLOOD_STEEL_BLOCK.get())
+                .add(ModBlocks.ANGEL_GOLD_BLOCK.get());
+
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CRYSTAL_OAK_LOG.get())

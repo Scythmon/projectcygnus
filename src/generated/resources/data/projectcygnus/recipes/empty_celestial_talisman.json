@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "projectcygnus:angel_gold"
+    },
+    "B": {
+      "item": "projectcygnus:crystal_buds"
+    },
+    "T": {
+      "item": "projectcygnus:true_crystal"
+    }
+  },
+  "pattern": [
+    "BAB",
+    "ATA",
+    "BAB"
+  ],
+  "result": {
+    "item": "projectcygnus:empty_celestial_talisman"
+  },
+  "show_notification": true
+}

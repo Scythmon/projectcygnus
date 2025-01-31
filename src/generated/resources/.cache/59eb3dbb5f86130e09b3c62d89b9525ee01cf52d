@@ -1,4 +1,6 @@
-// 1.20.1	2025-01-30T21:25:19.6077416	Loot Tables
+// 1.20.1	2025-01-31T05:52:12.5005581	Loot Tables
+3d91623397a7c89db7ee4bd9bdc662175c836b2b data/projectcygnus/loot_tables/blocks/angel_gold_block.json
+73d15fca8e330529ee72348d64d918887a9486dc data/projectcygnus/loot_tables/blocks/blood_steel_block.json
 b60140870d4569b4d04507b4e58dc11c13d784c1 data/projectcygnus/loot_tables/blocks/concentrated_crystal_block.json
 c15f993cd2903a7f4145adc0358c76252cb23038 data/projectcygnus/loot_tables/blocks/crystal_oak_leaves.json
 04b9b6dde13443dd5e979a30b19edb9189e6fbee data/projectcygnus/loot_tables/blocks/crystal_oak_log.json

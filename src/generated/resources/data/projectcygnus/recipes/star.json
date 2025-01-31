@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "projectcygnus:concentrated_crystal_cluster"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "U": {
+      "item": "projectcygnus:unstable_singularity"
+    }
+  },
+  "pattern": [
+    "CUC",
+    "NSN",
+    "CUC"
+  ],
+  "result": {
+    "item": "projectcygnus:star"
+  },
+  "show_notification": true
+}

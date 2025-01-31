@@ -14,4 +14,7 @@ public class ModFoods {
 
     public static final FoodProperties COFFEE = new FoodProperties.Builder()
             .nutrition(2).saturationMod(0.3f).build();
+
+    public static final FoodProperties ONEH_MOTER = new FoodProperties.Builder()
+            .nutrition(1).saturationMod(0.1f).alwaysEat().build();
 }

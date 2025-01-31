@@ -11,6 +11,16 @@
   "item.projectcygnus.star_concentrate": "Star Concentrate",
   "item.projectcygnus.starflame": "Starflame",
 
+  "item.projectcygnus.bottled_blood": "Bottle of Blood",
+  "item.projectcygnus.cultist_knife": "Cultist Knife",
+  "item.projectcygnus.holy_water": "Holy Water",
+  "item.projectcygnus.book_of_enoch": "The Book of Enoch",
+  "item.projectcygnus.prayer_book": "Prayer Book",
+  "item.projectcygnus.oneh_moter": "Oneh Moter",
+
+
+  "item.projectcygnus.crystal_buds": "Crystal Buds",
+
   "item.projectcygnus.blood_steel": "Blood Steel",
   "item.projectcygnus.angel_gold": "Angel Gold",
   "item.projectcygnus.altar_core": "Altar Core",
@@ -64,10 +74,20 @@
   "item.projectcygnus.soul_of_godly_judgement": "Soul of Godly Judgement",
   "item.projectcygnus.soul_of_crumbling_heavens": "Soul of Crumbling Heavens",
 
+  "item.projectcygnus.death_bird_helmet": "Mask of the Death Bird",
+  "item.projectcygnus.death_bird_chestplate": "Ribs of the Death Bird",
+  "item.projectcygnus.death_bird_leggings": "Leggings of the Death Bird",
+  "item.projectcygnus.death_bird_boots": "Claws of the Death Bird",
+
+
   "item.projectcygnus.metal_detector": "Metal Detector",
   "tooltip.projectcygnus.metal_detector.tooltip": "Finds Valuables Underground",
 
+  "tooltip.projectcygnus.oneh_moter.tooltip": "You feel compelled to drink this...though your arent sure if you should",
+
   "block.projectcygnus.concentrated_crystal_block": "Block of Concentrated Crystal",
+  "block.projectcygnus.blood_steel_block": "Block of Blood Steel",
+  "block.projectcygnus.angel_gold_block": "Block of Angel Gold",
 
 
   "block.projectcygnus.crystal_oak_log": "Crystal Oak Log",

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "projectcygnus:concentrated_crystal_cluster"
+    },
+    "S": {
+      "item": "projectcygnus:singularity_shard"
+    },
+    "T": {
+      "item": "projectcygnus:true_crystal"
+    }
+  },
+  "pattern": [
+    "TST",
+    "SCS",
+    "TST"
+  ],
+  "result": {
+    "item": "projectcygnus:singularity_stone"
+  },
+  "show_notification": true
+}

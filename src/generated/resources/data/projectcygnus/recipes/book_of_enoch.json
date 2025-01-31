@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "item": "projectcygnus:starflame"
+    }
+  ],
+  "result": {
+    "item": "projectcygnus:book_of_enoch"
+  }
+}

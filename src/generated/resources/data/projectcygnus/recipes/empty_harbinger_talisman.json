@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "projectcygnus:bottled_blood"
+    },
+    "C": {
+      "item": "projectcygnus:concentrated_crystal_cluster"
+    },
+    "F": {
+      "item": "projectcygnus:crystal_flower"
+    },
+    "S": {
+      "item": "projectcygnus:blood_steel"
+    },
+    "T": {
+      "item": "projectcygnus:empty_celestial_talisman"
+    }
+  },
+  "pattern": [
+    "BSC",
+    "FTF",
+    "CSB"
+  ],
+  "result": {
+    "item": "projectcygnus:empty_harbinger_talisman"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "projectcygnus:bottled_blood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "projectcygnus:blood_steel"
+  }
+}

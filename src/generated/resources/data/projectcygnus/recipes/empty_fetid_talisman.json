@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "projectcygnus:bottled_blood"
+    },
+    "C": {
+      "item": "projectcygnus:crystal_berries"
+    },
+    "F": {
+      "item": "projectcygnus:starflame"
+    },
+    "S": {
+      "item": "projectcygnus:blood_steel"
+    },
+    "T": {
+      "item": "projectcygnus:empty_celestial_talisman"
+    }
+  },
+  "pattern": [
+    "BSC",
+    "FTF",
+    "CSB"
+  ],
+  "result": {
+    "item": "projectcygnus:empty_fetid_talisman"
+  },
+  "show_notification": true
+}

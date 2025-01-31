@@ -1,6 +1,7 @@
 package net.scythmon.cygnus;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -14,6 +15,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.scythmon.cygnus.block.ModBlocks;
+import net.scythmon.cygnus.entity.ModEntities;
+import net.scythmon.cygnus.entity.client.TigerRenderer;
 import net.scythmon.cygnus.items.ModCreativeModeTabs;
 import net.scythmon.cygnus.items.ModItems;
 import org.slf4j.Logger;
@@ -32,6 +35,8 @@ public class ProjectCygnus  {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -61,6 +66,7 @@ public class ProjectCygnus  {
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.TIGER.get(), TigerRenderer::new);
         }
     }
 

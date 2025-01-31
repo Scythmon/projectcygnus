@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "projectcygnus:angel_gold"
+    },
+    "C": {
+      "item": "projectcygnus:empty_celestial_talisman"
+    },
+    "H": {
+      "item": "projectcygnus:holy_water"
+    },
+    "T": {
+      "item": "projectcygnus:cherub_tear"
+    }
+  },
+  "pattern": [
+    "HAH",
+    "TCT",
+    "HAH"
+  ],
+  "result": {
+    "item": "projectcygnus:empty_angelic_talisman"
+  },
+  "show_notification": true
+}

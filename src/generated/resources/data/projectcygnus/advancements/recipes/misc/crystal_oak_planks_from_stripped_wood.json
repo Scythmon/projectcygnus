@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_crystal_oak_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "projectcygnus:stripped_crystal_oak_wood"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "projectcygnus:crystal_oak_planks_from_stripped_wood"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_stripped_crystal_oak_wood",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "projectcygnus:crystal_oak_planks_from_stripped_wood"
+    ]
+  },
+  "sends_telemetry_event": false
+}

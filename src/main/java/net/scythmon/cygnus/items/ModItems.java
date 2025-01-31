@@ -1,15 +1,19 @@
 package net.scythmon.cygnus.items;
 
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.entity.ModEntities;
 import net.scythmon.cygnus.items.custom.FuelItem;
 import net.scythmon.cygnus.items.custom.MetalDetectorItem;
+import net.scythmon.cygnus.items.custom.OnehMoterItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -20,14 +24,36 @@ public class ModItems {
     public static final RegistryObject<Item> CRYSTAL_FLOWER = ITEMS.register("crystal_flower",
             () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_FLOWER).rarity(Rarity.COMMON))));
 
+    public static final RegistryObject<Item> ONEH_MOTER = ITEMS.register("oneh_moter",
+            () -> new OnehMoterItem((new Item.Properties().food(ModFoods.ONEH_MOTER).rarity(Rarity.EPIC))));
+
     public static final RegistryObject<Item> CRYSTAL_BERRIES = ITEMS.register("crystal_berries",
             () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_BERRIES).rarity(Rarity.COMMON))));
+
+    public static final RegistryObject<Item> CRYSTAL_BUDS = ITEMS.register("crystal_buds",
+            () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> BROWNIE = ITEMS.register("brownie",
             () -> new Item((new Item.Properties().food(ModFoods.BROWNIE).rarity(Rarity.COMMON))));
 
     public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
             () -> new Item((new Item.Properties().food(ModFoods.COFFEE).rarity(Rarity.COMMON))));
+    //PreCrafting
+    public static final RegistryObject<Item> BOOK_OF_ENOCH = ITEMS.register("book_of_enoch",
+            () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> PRAYER_BOOK = ITEMS.register("prayer_book",
+            () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> CULTIST_KNIFE = ITEMS.register("cultist_knife",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> HOLY_WATER = ITEMS.register("holy_water",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> BOTTLED_BLOOD = ITEMS.register("bottled_blood",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
 
     // Tier one crafting items
 
@@ -208,12 +234,32 @@ public class ModItems {
     public static final RegistryObject<Item> SOUL_OF_CRUMBLING_HEAVENS = ITEMS.register("soul_of_crumbling_heavens",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
+    //Armour Sets ----------------------------------------------------------------------------------
+
+    public static final RegistryObject<Item> DEATH_BIRD_HELMET = ITEMS.register("death_bird_helmet",
+            () -> new ArmorItem(ModArmorMaterials.DEATH_BIRD, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> DEATH_BIRD_CHESTPLATE = ITEMS.register("death_bird_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.DEATH_BIRD, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+
+    public static final RegistryObject<Item> DEATH_BIRD_LEGGINGS = ITEMS.register("death_bird_leggings",
+            () -> new ArmorItem(ModArmorMaterials.DEATH_BIRD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+
+    public static final RegistryObject<Item> DEATH_BIRD_BOOTS = ITEMS.register("death_bird_boots",
+            () -> new ArmorItem(ModArmorMaterials.DEATH_BIRD, ArmorItem.Type.BOOTS, new Item.Properties()));
+
     //ignore this
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(100).rarity(Rarity.COMMON)));
 
+    public static final RegistryObject<Item> TIGER_SPAWN_EGG = ITEMS.register("tiger_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.TIGER, 0xD57E36, 0xD1D00D0,
+                    new Item.Properties()));
+
     //Food items are below this comment
+
+
 
 
     public static void register(IEventBus eventBus) {

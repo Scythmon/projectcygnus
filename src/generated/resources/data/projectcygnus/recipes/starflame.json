@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "F": {
+      "item": "minecraft:fire_charge"
+    },
+    "T": {
+      "item": "projectcygnus:true_crystal"
+    }
+  },
+  "pattern": [
+    "FBF",
+    "BTB",
+    "FBF"
+  ],
+  "result": {
+    "item": "projectcygnus:starflame"
+  },
+  "show_notification": true
+}

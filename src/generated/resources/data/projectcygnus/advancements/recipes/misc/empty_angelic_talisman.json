@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_concentrated_crystal_block": {
+    "has_empty_celestial_talisman": {
       "conditions": {
         "items": [
           {
             "items": [
-              "projectcygnus:concentrated_crystal_block"
+              "projectcygnus:empty_celestial_talisman"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "projectcygnus:concentrated_crystal_cluster"
+        "recipe": "projectcygnus:empty_angelic_talisman"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_concentrated_crystal_block",
+      "has_empty_celestial_talisman",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "projectcygnus:concentrated_crystal_cluster"
+      "projectcygnus:empty_angelic_talisman"
     ]
   },
   "sends_telemetry_event": false

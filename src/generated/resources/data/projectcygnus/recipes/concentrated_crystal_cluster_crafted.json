@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "projectcygnus:star_concentrate"
+    },
+    "E": {
+      "item": "projectcygnus:strength_concentrate"
+    },
+    "F": {
+      "item": "projectcygnus:crystal_flower"
+    },
+    "L": {
+      "item": "projectcygnus:life_concentrate"
+    },
+    "S": {
+      "item": "projectcygnus:speed_concentrate"
+    },
+    "T": {
+      "item": "projectcygnus:true_crystal"
+    },
+    "U": {
+      "item": "projectcygnus:undead_concentrate"
+    },
+    "W": {
+      "item": "projectcygnus:wither_concentrate"
+    }
+  },
+  "pattern": [
+    "LFS",
+    "UTE",
+    "WFA"
+  ],
+  "result": {
+    "item": "projectcygnus:concentrated_crystal_cluster"
+  },
+  "show_notification": true
+}

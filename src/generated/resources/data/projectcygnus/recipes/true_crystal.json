@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "B": {
+      "item": "projectcygnus:crystal_berries"
+    },
+    "C": {
+      "item": "projectcygnus:crystal_buds"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "F": {
+      "item": "projectcygnus:crystal_flower"
+    },
+    "G": {
+      "item": "minecraft:flint"
+    },
+    "P": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "pattern": [
+    "PFQ",
+    "GBE",
+    "ACD"
+  ],
+  "result": {
+    "item": "projectcygnus:true_crystal"
+  },
+  "show_notification": true
+}

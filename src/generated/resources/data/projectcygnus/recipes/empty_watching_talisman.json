@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "projectcygnus:bottled_blood"
+    },
+    "C": {
+      "item": "projectcygnus:concentrated_crystal_cluster"
+    },
+    "F": {
+      "item": "projectcygnus:empty_fetid_talisman"
+    },
+    "H": {
+      "item": "projectcygnus:empty_harbinger_talisman"
+    },
+    "W": {
+      "item": "projectcygnus:wishing_core"
+    }
+  },
+  "pattern": [
+    "CBC",
+    "FWH",
+    "CBC"
+  ],
+  "result": {
+    "item": "projectcygnus:empty_watching_talisman"
+  },
+  "show_notification": true
+}

@@ -11,6 +11,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.block.ModBlocks;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.security.auth.login.Configuration;
 import javax.swing.*;
@@ -29,6 +31,14 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.STARFLAME.get());
                         pOutput.accept(ModItems.BROWNIE.get());
                         pOutput.accept(ModItems.COFFEE.get());
+                        pOutput.accept(ModItems.CULTIST_KNIFE.get());
+                        pOutput.accept(ModItems.BOTTLED_BLOOD.get());
+                        pOutput.accept(ModItems.HOLY_WATER.get());
+                        pOutput.accept(ModItems.CRYSTAL_BUDS.get());
+                        pOutput.accept(ModItems.BOOK_OF_ENOCH.get());
+                        pOutput.accept(ModItems.PRAYER_BOOK.get());
+                        pOutput.accept(ModItems.ONEH_MOTER.get());
+
                         //Crystal Items
                         pOutput.accept(ModItems.TRUE_CRYSTAL.get());
                         pOutput.accept(ModItems.STAR.get());
@@ -92,6 +102,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.FAMINE_CONJURE_TALISMAN.get());
                         pOutput.accept(ModItems.CONQUEST_CONJURE_TALISMAN.get());
                         pOutput.accept(ModItems.PESTILENCE_CONJURE_TALISMAN.get());
+
                         //Boss Drops
                         pOutput.accept(ModItems.UNDEAD_ESSENCE.get());
                         pOutput.accept(ModItems.VITALITY_ESSENCE.get());
@@ -102,8 +113,15 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SOUL_OF_FLAMING_CHOIRS.get());
                         pOutput.accept(ModItems.SOUL_OF_GODLY_JUDGEMENT.get());
                         pOutput.accept(ModItems.SOUL_OF_CRUMBLING_HEAVENS.get());
+
+                        //Armor
+                        pOutput.accept(ModItems.DEATH_BIRD_HELMET.get());
+                        pOutput.accept(ModItems.DEATH_BIRD_CHESTPLATE.get());
+                        pOutput.accept(ModItems.DEATH_BIRD_LEGGINGS.get());
+                        pOutput.accept(ModItems.DEATH_BIRD_BOOTS.get());
                         //Misc
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        pOutput.accept(ModItems.TIGER_SPAWN_EGG.get());
 
                     }))
                     .build());
@@ -113,6 +131,9 @@ public class ModCreativeModeTabs {
                     .displayItems(((pParameters, pOutput) -> {
                         //Crystal
                         pOutput.accept(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
+                        pOutput.accept(ModBlocks.BLOOD_STEEL_BLOCK.get());
+                        pOutput.accept(ModBlocks.ANGEL_GOLD_BLOCK.get());
+
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_LOG.get());
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_CRYSTAL_OAK_LOG.get());
@@ -124,6 +145,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                     }))
                     .build());
+    private static final Logger log = LoggerFactory.getLogger(ModCreativeModeTabs.class);
 
     public static void register(IEventBus eventBus) {
 

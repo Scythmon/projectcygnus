@@ -10,6 +10,7 @@
   "item.projectcygnus.strength_concentrate": "Strength Concentrate",
   "item.projectcygnus.star_concentrate": "Star Concentrate",
   "item.projectcygnus.starflame": "Starflame",
+
   "item.projectcygnus.blood_steel": "Blood Steel",
   "item.projectcygnus.angel_gold": "Angel Gold",
   "item.projectcygnus.altar_core": "Altar Core",
@@ -22,22 +23,60 @@
   "item.projectcygnus.afterlife_plate": "Afterlife Plate",
   "item.projectcygnus.angel_plate": "Angel Plate",
   "item.projectcygnus.carnage_plate": "Carnage Plate",
-  "item.projectcygnus.unstable_singularity": "Unstable Singularity",
-  "item.projectcygnus.singularity_shard": "Singularity Shard",
+
   "item.projectcygnus.crystal_flower": "Crystal Flower",
   "item.projectcygnus.crystal_berries": "Crystal Berries",
   "item.projectcygnus.brownie": "Brownie",
   "item.projectcygnus.coffee": "Coffee",
+
+  "item.projectcygnus.unstable_singularity": "Unstable Singularity",
+  "item.projectcygnus.singularity_shard": "Singularity Shard",
   "item.projectcygnus.wishing_core": "Wishing Core",
   "item.projectcygnus.wishing_token": "Wishing Token",
+
   "item.projectcygnus.empty_harbinger_talisman": "Empty Harbinger Talisman",
   "item.projectcygnus.empty_watching_talisman": "Empty Watching Talisman",
   "item.projectcygnus.empty_fetid_talisman": "Empty Fetid Talisman",
+
+  "item.projectcygnus.damned_conjure_talisman": "Damned Conjure Talisman",
+  "item.projectcygnus.vitality_conjure_talisman": "Vitality Conjure Talisman",
+  "item.projectcygnus.wither_conjure_talisman": "Wither Conjure Talisman",
+  "item.projectcygnus.lightning_conjure_talisman": "Lightning Conjure Talisman",
+  "item.projectcygnus.enflamed_conjure_talisman": "Enflamed Conjure Talisman",
+  "item.projectcygnus.star_conjure_talisman": "Star Conjure Talisman",
+  "item.projectcygnus.dominion_conjure_talisman": "Dominion Conjure Talisman",
+  "item.projectcygnus.cherub_conjure_talisman": "Cherub Conjure Talisman",
+  "item.projectcygnus.throne_conjure_talisman": "Throne Conjure Talisman",
+
+  "item.projectcygnus.watching_conjure_talisman": "Watching Conjure Talisman",
+  "item.projectcygnus.death_conjure_talisman": "Death Conjure Talisman",
+  "item.projectcygnus.conquest_conjure_talisman": "Conquest Conjure Talisman",
+  "item.projectcygnus.famine_conjure_talisman": "Famine Conjure Talisman",
+  "item.projectcygnus.pestilence_conjure_talisman": "Pestilence Conjure Talisman",
+
+  "item.projectcygnus.undead_essence": "Essence of the Undead",
+  "item.projectcygnus.vitality_essence": "Essence of Vitality",
+  "item.projectcygnus.wither_essence": "Essence of Withering",
+  "item.projectcygnus.lightning_essence": "Essence of Lightning",
+  "item.projectcygnus.enflamed_essence": "Essence of the Enflamed",
+  "item.projectcygnus.star_essence": "Essence of the Stars",
+  "item.projectcygnus.soul_of_flaming_choirs": "Soul of Flaming Choirs",
+  "item.projectcygnus.soul_of_godly_judgement": "Soul of Godly Judgement",
+  "item.projectcygnus.soul_of_crumbling_heavens": "Soul of Crumbling Heavens",
 
   "item.projectcygnus.metal_detector": "Metal Detector",
   "tooltip.projectcygnus.metal_detector.tooltip": "Finds Valuables Underground",
 
   "block.projectcygnus.concentrated_crystal_block": "Block of Concentrated Crystal",
+
+
+  "block.projectcygnus.crystal_oak_log": "Crystal Oak Log",
+  "block.projectcygnus.crystal_oak_wood": "Crystal Oak Wood",
+  "block.projectcygnus.stripped_crystal_oak_log": "Stripped Crystal Oak Log",
+  "block.projectcygnus.stripped_crystal_oak_wood": "Stripped Crystal Oak Wood",
+  "block.projectcygnus.crystal_oak_planks": "Crystal Oak Planks",
+  "block.projectcygnus.crystal_oak_leaves": "Crystal Oak Leaves",
+
   "block.projectcygnus.sound_block": "Sound Block",
 
 

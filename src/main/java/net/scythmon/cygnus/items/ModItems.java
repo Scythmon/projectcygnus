@@ -132,6 +132,82 @@ public class ModItems {
 
     public static final RegistryObject<Item> EMPTY_FETID_TALISMAN = ITEMS.register("empty_fetid_talisman",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    //Filled Celestial Talismans
+
+    public static final RegistryObject<Item> DAMNED_CONJURE_TALISMAN = ITEMS.register("damned_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> VITALITY_CONJURE_TALISMAN = ITEMS.register("vitality_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> WITHER_CONJURE_TALISMAN = ITEMS.register("wither_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> LIGHTNING_CONJURE_TALISMAN = ITEMS.register("lightning_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> ENFLAMED_CONJURE_TALISMAN = ITEMS.register("enflamed_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> STAR_CONJURE_TALISMAN = ITEMS.register("star_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> DOMINION_CONJURE_TALISMAN = ITEMS.register("dominion_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> CHERUB_CONJURE_TALISMAN = ITEMS.register("cherub_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THRONE_CONJURE_TALISMAN = ITEMS.register("throne_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    //Filled Carnage Talisman
+
+    public static final RegistryObject<Item> WATCHING_CONJURE_TALISMAN = ITEMS.register("watching_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> CONQUEST_CONJURE_TALISMAN = ITEMS.register("conquest_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> DEATH_CONJURE_TALISMAN = ITEMS.register("death_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> FAMINE_CONJURE_TALISMAN = ITEMS.register("famine_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> PESTILENCE_CONJURE_TALISMAN = ITEMS.register("pestilence_conjure_talisman",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    //Boss Drops
+
+    public static final RegistryObject<Item> UNDEAD_ESSENCE = ITEMS.register("undead_essence",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> VITALITY_ESSENCE = ITEMS.register("vitality_essence",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> WITHER_ESSENCE = ITEMS.register("wither_essence",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> LIGHTNING_ESSENCE = ITEMS.register("lightning_essence",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> ENFLAMED_ESSENCE = ITEMS.register("enflamed_essence",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> STAR_ESSENCE = ITEMS.register("star_essence",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> SOUL_OF_FLAMING_CHOIRS = ITEMS.register("soul_of_flaming_choirs",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> SOUL_OF_GODLY_JUDGEMENT = ITEMS.register("soul_of_godly_judgement",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> SOUL_OF_CRUMBLING_HEAVENS = ITEMS.register("soul_of_crumbling_heavens",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
     //ignore this
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",

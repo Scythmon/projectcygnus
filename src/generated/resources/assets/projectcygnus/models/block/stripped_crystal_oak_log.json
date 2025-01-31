@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "projectcygnus:block/stripped_crystal_oak_log_top",
+    "side": "projectcygnus:block/stripped_crystal_oak_log"
+  }
+}

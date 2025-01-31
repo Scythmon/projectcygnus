@@ -23,10 +23,23 @@ public class ModblockTagGenerator extends BlockTagsProvider {
         this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES)
                 .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get()).addTag(Tags.Blocks.ORES);
 
-        this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
+        this.tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(ModBlocks.CRYSTAL_OAK_LEAVES.get());
+
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
+
+        this.tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CRYSTAL_OAK_LOG.get())
+                .add(ModBlocks.CRYSTAL_OAK_WOOD.get())
+                .add(ModBlocks.STRIPPED_CRYSTAL_OAK_LOG.get())
+                .add(ModBlocks.STRIPPED_CRYSTAL_OAK_WOOD.get());
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.CRYSTAL_OAK_PLANKS.get());
+
     }
 }

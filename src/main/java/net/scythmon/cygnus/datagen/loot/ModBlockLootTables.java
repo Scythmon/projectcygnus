@@ -20,6 +20,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
         this.dropSelf(ModBlocks.SOUND_BLOCK.get());
+
+        this.dropSelf(ModBlocks.CRYSTAL_OAK_LOG.get());
+        this.dropSelf(ModBlocks.CRYSTAL_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_CRYSTAL_OAK_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_CRYSTAL_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.CRYSTAL_OAK_PLANKS.get());
+
+        this.add(ModBlocks.CRYSTAL_OAK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_WOOD.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to a sapling!
     }
 
     @Override

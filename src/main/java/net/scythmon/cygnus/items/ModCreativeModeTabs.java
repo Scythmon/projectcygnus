@@ -76,8 +76,32 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.EMPTY_WATCHING_TALISMAN.get());
 
                         //Filled Celestial Talismans
+                        pOutput.accept(ModItems.DAMNED_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.VITALITY_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.WITHER_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.LIGHTNING_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.ENFLAMED_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.STAR_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.DOMINION_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.CHERUB_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.THRONE_CONJURE_TALISMAN.get());
+
                         //Filled Carnage Talismans
+                        pOutput.accept(ModItems.WATCHING_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.DEATH_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.FAMINE_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.CONQUEST_CONJURE_TALISMAN.get());
+                        pOutput.accept(ModItems.PESTILENCE_CONJURE_TALISMAN.get());
                         //Boss Drops
+                        pOutput.accept(ModItems.UNDEAD_ESSENCE.get());
+                        pOutput.accept(ModItems.VITALITY_ESSENCE.get());
+                        pOutput.accept(ModItems.WITHER_ESSENCE.get());
+                        pOutput.accept(ModItems.LIGHTNING_ESSENCE.get());
+                        pOutput.accept(ModItems.ENFLAMED_ESSENCE.get());
+                        pOutput.accept(ModItems.STAR_ESSENCE.get());
+                        pOutput.accept(ModItems.SOUL_OF_FLAMING_CHOIRS.get());
+                        pOutput.accept(ModItems.SOUL_OF_GODLY_JUDGEMENT.get());
+                        pOutput.accept(ModItems.SOUL_OF_CRUMBLING_HEAVENS.get());
                         //Misc
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
 
@@ -89,6 +113,13 @@ public class ModCreativeModeTabs {
                     .displayItems(((pParameters, pOutput) -> {
                         //Crystal
                         pOutput.accept(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_LOG.get());
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_WOOD.get());
+                        pOutput.accept(ModBlocks.STRIPPED_CRYSTAL_OAK_LOG.get());
+                        pOutput.accept(ModBlocks.STRIPPED_CRYSTAL_OAK_WOOD.get());
+
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_PLANKS.get());
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_LEAVES.get());
                         //Misc
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                     }))

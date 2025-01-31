@@ -67,6 +67,38 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.EMPTY_WATCHING_TALISMAN);
         simpleItem(ModItems.EMPTY_FETID_TALISMAN);
 
+        //Filled celestial talisman
+
+        simpleItem(ModItems.DAMNED_CONJURE_TALISMAN);
+        simpleItem(ModItems.VITALITY_CONJURE_TALISMAN);
+        simpleItem(ModItems.WITHER_CONJURE_TALISMAN);
+        simpleItem(ModItems.LIGHTNING_CONJURE_TALISMAN);
+        simpleItem(ModItems.ENFLAMED_CONJURE_TALISMAN);
+        simpleItem(ModItems.STAR_CONJURE_TALISMAN);
+        simpleItem(ModItems.DOMINION_CONJURE_TALISMAN);
+        simpleItem(ModItems.CHERUB_CONJURE_TALISMAN);
+        simpleItem(ModItems.THRONE_CONJURE_TALISMAN);
+
+        //Filled Carnage Talismans
+
+        simpleItem(ModItems.WATCHING_CONJURE_TALISMAN);
+        simpleItem(ModItems.DEATH_CONJURE_TALISMAN);
+        simpleItem(ModItems.CONQUEST_CONJURE_TALISMAN);
+        simpleItem(ModItems.FAMINE_CONJURE_TALISMAN);
+        simpleItem(ModItems.PESTILENCE_CONJURE_TALISMAN);
+
+        //Boss Drops
+
+        simpleItem(ModItems.UNDEAD_ESSENCE);
+        simpleItem(ModItems.VITALITY_ESSENCE);
+        simpleItem(ModItems.WITHER_ESSENCE);
+        simpleItem(ModItems.LIGHTNING_ESSENCE);
+        simpleItem(ModItems.STAR_ESSENCE);
+        simpleItem(ModItems.ENFLAMED_ESSENCE);
+        simpleItem(ModItems.SOUL_OF_FLAMING_CHOIRS);
+        simpleItem(ModItems.SOUL_OF_CRUMBLING_HEAVENS);
+        simpleItem(ModItems.SOUL_OF_GODLY_JUDGEMENT);
+
         //ignore this
 
         simpleItem(ModItems.METAL_DETECTOR);

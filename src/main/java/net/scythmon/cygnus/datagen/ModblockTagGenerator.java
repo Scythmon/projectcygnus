@@ -24,8 +24,9 @@ public class ModblockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get()).addTag(Tags.Blocks.ORES);
 
         this.tag(BlockTags.MINEABLE_WITH_HOE)
-                .add(ModBlocks.CRYSTAL_OAK_LEAVES.get());
-
+                .add(ModBlocks.CRYSTAL_OAK_LEAVES.get())
+                .add(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES.get())
+                .add(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get())

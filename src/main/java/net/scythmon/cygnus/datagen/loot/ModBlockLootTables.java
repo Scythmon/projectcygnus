@@ -31,6 +31,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.CRYSTAL_OAK_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_WOOD.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to a sapling!
+
+        this.add(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_WOOD.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.add(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_WOOD.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override

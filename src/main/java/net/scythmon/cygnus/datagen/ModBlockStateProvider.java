@@ -26,6 +26,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BLOOD_STEEL_BLOCK);
         blockWithItem(ModBlocks.ANGEL_GOLD_BLOCK);
         blockWithItem(ModBlocks.CRYSTAL_OAK_LEAVES);
+        blockWithItem(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES);
+        blockWithItem(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
         blockWithItem(ModBlocks.SOUND_BLOCK);
 
         logBlock(((RotatedPillarBlock) ModBlocks.CRYSTAL_OAK_LOG.get()));
@@ -42,6 +44,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_CRYSTAL_OAK_WOOD);
 
         leavesBlock(ModBlocks.CRYSTAL_OAK_LEAVES);
+        leavesBlock(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES);
+        leavesBlock(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
 
         blockWithItem(ModBlocks.CRYSTAL_OAK_PLANKS);
     }

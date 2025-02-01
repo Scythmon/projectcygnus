@@ -141,6 +141,8 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_PLANKS.get());
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_LEAVES.get());
+                        pOutput.accept(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES.get());
+                        pOutput.accept(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES.get());
                         //Misc
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                     }))

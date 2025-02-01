@@ -1,7 +1,5 @@
 package net.scythmon.cygnus.items;
 
-import net.minecraft.client.resources.sounds.Sound;
-import net.minecraft.client.server.LanServerPinger;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
@@ -12,8 +10,26 @@ import net.scythmon.cygnus.ProjectCygnus;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    DEATH_BIRD("death_bird", 30, new int[]{ 7, 10, 12, 8 }, 9,
-            SoundEvents.ARMOR_EQUIP_CHAIN, 4f, 0.1f, () -> Ingredient.of(ModItems.CARNAGE_PLATE.get()));
+    DBIRD("dbird", 30, new int[]{ 7, 10, 12, 8 }, 9,
+            SoundEvents.ARMOR_EQUIP_CHAIN, 4f, 0.1f, () -> Ingredient.of(ModItems.CARNAGE_PLATE.get())),
+
+    PMASK("pmask", 8, new int[]{ 10, 6, 5, 2 }, 25,
+            SoundEvents.ARMOR_EQUIP_GOLD, 4f, 0.1f, () -> Ingredient.of(ModItems.SINGULARITY_STONE.get())),
+
+    PCROWN("pcrown", 8, new int[]{ 12, 6, 5, 2 }, 25,
+            SoundEvents.ARMOR_EQUIP_GOLD, 4f, 0.1f, () -> Ingredient.of(ModItems.SINGULARITY_STONE.get())),
+
+    CROWN("crown", 8, new int[]{ 1, 6, 5, 2 }, 25,
+            SoundEvents.ARMOR_EQUIP_GOLD, 4f, 0.1f, () -> Ingredient.of(ModItems.ANGEL_GOLD.get())),
+
+    MASK("mask", 5, new int[]{ 2, 6, 5, 2 }, 25,
+    SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(ModItems.BLOOD_STEEL.get()));
+
+    private static final int[] BASE_DURABILITY;
+
+    static {
+        BASE_DURABILITY = new int[]{13, 15, 16, 11};
+    }
 
     private final String name;
     private final int durabilityMultiplier;
@@ -24,7 +40,9 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final Supplier<Ingredient> repairIngredients;
 
-    private static final int[] BASE_DURABILITY = { 11, 16, 16, 13};
+
+
+
 
     ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantmentValue, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredients) {
         this.name = name;

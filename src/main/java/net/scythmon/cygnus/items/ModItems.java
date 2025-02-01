@@ -1,6 +1,5 @@
 package net.scythmon.cygnus.items;
 
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -11,9 +10,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.entity.ModEntities;
+import net.scythmon.cygnus.items.custom.ModDebuffDrinkItem;
 import net.scythmon.cygnus.items.custom.FuelItem;
 import net.scythmon.cygnus.items.custom.MetalDetectorItem;
-import net.scythmon.cygnus.items.custom.OnehMoterItem;
+import net.scythmon.cygnus.items.custom.ModDrinkItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -25,7 +25,7 @@ public class ModItems {
             () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_FLOWER).rarity(Rarity.COMMON))));
 
     public static final RegistryObject<Item> ONEH_MOTER = ITEMS.register("oneh_moter",
-            () -> new OnehMoterItem((new Item.Properties().food(ModFoods.ONEH_MOTER).rarity(Rarity.EPIC))));
+            () -> new ModDebuffDrinkItem((new Item.Properties().food(ModFoods.ONEH_MOTER).rarity(Rarity.EPIC))));
 
     public static final RegistryObject<Item> CRYSTAL_BERRIES = ITEMS.register("crystal_berries",
             () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_BERRIES).rarity(Rarity.COMMON))));
@@ -37,7 +37,7 @@ public class ModItems {
             () -> new Item((new Item.Properties().food(ModFoods.BROWNIE).rarity(Rarity.COMMON))));
 
     public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
-            () -> new Item((new Item.Properties().food(ModFoods.COFFEE).rarity(Rarity.COMMON))));
+            () -> new ModDrinkItem((new Item.Properties().food(ModFoods.COFFEE).rarity(Rarity.COMMON))));
     //PreCrafting
     public static final RegistryObject<Item> BOOK_OF_ENOCH = ITEMS.register("book_of_enoch",
             () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
@@ -236,17 +236,40 @@ public class ModItems {
 
     //Armour Sets ----------------------------------------------------------------------------------
 
+    //Unpowered crowns/masks
+
+    public static final RegistryObject<Item> MASK_OF_THE_DAMNED = ITEMS.register("mask_of_the_damned",
+            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> MASK_OF_WITHERING = ITEMS.register("mask_of_withering",
+            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> MASK_OF_VITALITY = ITEMS.register("mask_of_vitality",
+            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> SPEED_CROWN = ITEMS.register("speed_crown",
+            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> STRENGTH_CROWN = ITEMS.register("strength_crown",
+            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> STAR_CROWN = ITEMS.register("star_crown",
+            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    //Death bird
+
+
     public static final RegistryObject<Item> DEATH_BIRD_HELMET = ITEMS.register("death_bird_helmet",
-            () -> new ArmorItem(ModArmorMaterials.DEATH_BIRD, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.DBIRD, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> DEATH_BIRD_CHESTPLATE = ITEMS.register("death_bird_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.DEATH_BIRD, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.DBIRD, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<Item> DEATH_BIRD_LEGGINGS = ITEMS.register("death_bird_leggings",
-            () -> new ArmorItem(ModArmorMaterials.DEATH_BIRD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.DBIRD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> DEATH_BIRD_BOOTS = ITEMS.register("death_bird_boots",
-            () -> new ArmorItem(ModArmorMaterials.DEATH_BIRD, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.DBIRD, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     //ignore this
 

@@ -19,6 +19,7 @@ import net.scythmon.cygnus.entity.ModEntities;
 import net.scythmon.cygnus.entity.client.TigerRenderer;
 import net.scythmon.cygnus.items.ModCreativeModeTabs;
 import net.scythmon.cygnus.items.ModItems;
+import net.scythmon.cygnus.items.potions.ModPotion;
 import org.slf4j.Logger;
 
 
@@ -35,6 +36,8 @@ public class ProjectCygnus  {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModPotion.register(modEventBus);
+
 
         ModEntities.register(modEventBus);
 

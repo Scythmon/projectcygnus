@@ -24,6 +24,7 @@ minecraft {
     copyIdeResources = true
 
     runs {
+        //a
         // applies to all the run configs below
         configureEach {
             workingDirectory project.file('run')

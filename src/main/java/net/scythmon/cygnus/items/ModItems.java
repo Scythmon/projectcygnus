@@ -248,29 +248,91 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> SPEED_CROWN = ITEMS.register("speed_crown",
-            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.CROWN, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> STRENGTH_CROWN = ITEMS.register("strength_crown",
-            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.CROWN, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> STAR_CROWN = ITEMS.register("star_crown",
-            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.CROWN, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    //Powered crowns/masks
+
+    public static final RegistryObject<Item> AWAKENED_MASK_OF_THE_DAMNED = ITEMS.register("awakened_mask_of_the_damned",
+            () -> new ArmorItem(ModArmorMaterials.PMASK, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> AWAKENED_MASK_OF_WITHERING = ITEMS.register("awakened_mask_of_withering",
+            () -> new ArmorItem(ModArmorMaterials.PMASK, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> AWAKENED_MASK_OF_VITALITY = ITEMS.register("awakened_mask_of_vitality",
+            () -> new ArmorItem(ModArmorMaterials.PMASK, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> EMPOWERED_CROWN_OF_STARS = ITEMS.register("empowered_star_crown",
+            () -> new ArmorItem(ModArmorMaterials.PCROWN, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> EMPOWERED_CROWN_OF_STRENGTH = ITEMS.register("empowered_strength_crown",
+            () -> new ArmorItem(ModArmorMaterials.PCROWN, ArmorItem.Type.HELMET, new Item.Properties()));
+
+
+    public static final RegistryObject<Item> EMPOWERED_CROWN_OF_SPEED = ITEMS.register("empowered_speed_crown",
+            () -> new ArmorItem(ModArmorMaterials.PCROWN, ArmorItem.Type.HELMET, new Item.Properties()));
+
 
     //Death bird
 
 
     public static final RegistryObject<Item> DEATH_BIRD_HELMET = ITEMS.register("death_bird_helmet",
-            () -> new ArmorItem(ModArmorMaterials.DBIRD, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> DEATH_BIRD_CHESTPLATE = ITEMS.register("death_bird_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.DBIRD, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<Item> DEATH_BIRD_LEGGINGS = ITEMS.register("death_bird_leggings",
-            () -> new ArmorItem(ModArmorMaterials.DBIRD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> DEATH_BIRD_BOOTS = ITEMS.register("death_bird_boots",
-            () -> new ArmorItem(ModArmorMaterials.DBIRD, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+    //Plagued Lord
+
+    public static final RegistryObject<Item> PLAGUED_LORD_HELMET = ITEMS.register("plagued_lord_helmet",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> PLAGUED_LORD_CHESTPLATE = ITEMS.register("plagued_lord_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+
+    public static final RegistryObject<Item> PLAGUED_LORD_LEGGINGS = ITEMS.register("plagued_lord_leggings",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+
+    public static final RegistryObject<Item> PLAGUED_LORD_BOOTS = ITEMS.register("plagued_lord_boots",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    //Famine
+
+    public static final RegistryObject<Item> FAMINE_HELMET = ITEMS.register("famine_helmet",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> FAMINE_CHESTPLATE = ITEMS.register("famine_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+
+    public static final RegistryObject<Item> FAMINE_LEGGINGS = ITEMS.register("famine_leggings",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+
+    public static final RegistryObject<Item> FAMINE_BOOTS = ITEMS.register("famine_boots",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.BOOTS, new Item.Properties()));
+    //Conquest
+
+    public static final RegistryObject<Item> CONQUEST_HELMET = ITEMS.register("conquest_helmet",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> CONQUEST_CHESTPLATE = ITEMS.register("conquest_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+
+    public static final RegistryObject<Item> CONQUEST_LEGGINGS = ITEMS.register("conquest_leggings",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+
+    public static final RegistryObject<Item> CONQUEST_BOOTS = ITEMS.register("conquest_boots",
+            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.BOOTS, new Item.Properties()));
     //ignore this
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",

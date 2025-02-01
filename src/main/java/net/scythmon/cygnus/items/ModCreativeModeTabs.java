@@ -114,11 +114,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SOUL_OF_GODLY_JUDGEMENT.get());
                         pOutput.accept(ModItems.SOUL_OF_CRUMBLING_HEAVENS.get());
 
-                        //Armor
-                        pOutput.accept(ModItems.DEATH_BIRD_HELMET.get());
-                        pOutput.accept(ModItems.DEATH_BIRD_CHESTPLATE.get());
-                        pOutput.accept(ModItems.DEATH_BIRD_LEGGINGS.get());
-                        pOutput.accept(ModItems.DEATH_BIRD_BOOTS.get());
                         //Misc
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
                         pOutput.accept(ModItems.TIGER_SPAWN_EGG.get());
@@ -147,6 +142,42 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                     }))
                     .build());
+    public static final RegistryObject<CreativeModeTab> CYGNUS_ARMOR = CREATIVE_MODE_TABS.register("cygnus_armor",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.EMPOWERED_CROWN_OF_STARS.get()))
+                    .title(Component.translatable("creativetab.cygnus_armor_tab"))
+                    .displayItems(((pParameters, pOutput) -> {
+                        //Crystal
+                        pOutput.accept(ModItems.MASK_OF_THE_DAMNED.get());
+                        pOutput.accept(ModItems.MASK_OF_VITALITY.get());
+                        pOutput.accept(ModItems.MASK_OF_WITHERING.get());
+                        pOutput.accept(ModItems.AWAKENED_MASK_OF_THE_DAMNED.get());
+                        pOutput.accept(ModItems.AWAKENED_MASK_OF_VITALITY.get());
+                        pOutput.accept(ModItems.AWAKENED_MASK_OF_WITHERING.get());
+                        pOutput.accept(ModItems.STAR_CROWN.get());
+                        pOutput.accept(ModItems.STRENGTH_CROWN.get());
+                        pOutput.accept(ModItems.SPEED_CROWN.get());
+                        pOutput.accept(ModItems.EMPOWERED_CROWN_OF_STARS.get());
+                        pOutput.accept(ModItems.EMPOWERED_CROWN_OF_STRENGTH.get());
+                        pOutput.accept(ModItems.EMPOWERED_CROWN_OF_SPEED.get());
+                        pOutput.accept(ModItems.DEATH_BIRD_HELMET.get());
+                        pOutput.accept(ModItems.DEATH_BIRD_CHESTPLATE.get());
+                        pOutput.accept(ModItems.DEATH_BIRD_LEGGINGS.get());
+                        pOutput.accept(ModItems.DEATH_BIRD_BOOTS.get());
+                        pOutput.accept(ModItems.PLAGUED_LORD_HELMET.get());
+                        pOutput.accept(ModItems.PLAGUED_LORD_CHESTPLATE.get());
+                        pOutput.accept(ModItems.PLAGUED_LORD_LEGGINGS.get());
+                        pOutput.accept(ModItems.PLAGUED_LORD_BOOTS.get());
+                        pOutput.accept(ModItems.FAMINE_HELMET.get());
+                        pOutput.accept(ModItems.FAMINE_CHESTPLATE.get());
+                        pOutput.accept(ModItems.FAMINE_LEGGINGS.get());
+                        pOutput.accept(ModItems.FAMINE_BOOTS.get());
+                        pOutput.accept(ModItems.CONQUEST_HELMET.get());
+                        pOutput.accept(ModItems.CONQUEST_CHESTPLATE.get());
+                        pOutput.accept(ModItems.CONQUEST_LEGGINGS.get());
+                        pOutput.accept(ModItems.CONQUEST_BOOTS.get());
+                    }))
+                    .build());
+
     private static final Logger log = LoggerFactory.getLogger(ModCreativeModeTabs.class);
 
     public static void register(IEventBus eventBus) {

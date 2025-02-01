@@ -108,6 +108,36 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SOUL_OF_CRUMBLING_HEAVENS);
         simpleItem(ModItems.SOUL_OF_GODLY_JUDGEMENT);
 
+        //Armor ---------------------------------------------------------------
+        simpleItem(ModItems.MASK_OF_THE_DAMNED);
+        simpleItem(ModItems.MASK_OF_VITALITY);
+        simpleItem(ModItems.MASK_OF_WITHERING);
+        simpleItem(ModItems.AWAKENED_MASK_OF_THE_DAMNED);
+        simpleItem(ModItems.AWAKENED_MASK_OF_VITALITY);
+        simpleItem(ModItems.AWAKENED_MASK_OF_WITHERING);
+        simpleItem(ModItems.STAR_CROWN);
+        simpleItem(ModItems.STRENGTH_CROWN);
+        simpleItem(ModItems.SPEED_CROWN);
+        simpleItem(ModItems.EMPOWERED_CROWN_OF_SPEED);
+        simpleItem(ModItems.EMPOWERED_CROWN_OF_STARS);
+        simpleItem(ModItems.EMPOWERED_CROWN_OF_STRENGTH);
+        simpleItem(ModItems.DEATH_BIRD_HELMET);
+        simpleItem(ModItems.DEATH_BIRD_CHESTPLATE);
+        simpleItem(ModItems.DEATH_BIRD_LEGGINGS);
+        simpleItem(ModItems.DEATH_BIRD_BOOTS);
+        simpleItem(ModItems.PLAGUED_LORD_HELMET);
+        simpleItem(ModItems.PLAGUED_LORD_CHESTPLATE);
+        simpleItem(ModItems.PLAGUED_LORD_LEGGINGS);
+        simpleItem(ModItems.PLAGUED_LORD_BOOTS);
+        simpleItem(ModItems.FAMINE_HELMET);
+        simpleItem(ModItems.FAMINE_CHESTPLATE);
+        simpleItem(ModItems.FAMINE_LEGGINGS);
+        simpleItem(ModItems.FAMINE_BOOTS);
+        simpleItem(ModItems.CONQUEST_HELMET);
+        simpleItem(ModItems.CONQUEST_CHESTPLATE);
+        simpleItem(ModItems.CONQUEST_LEGGINGS);
+        simpleItem(ModItems.CONQUEST_BOOTS);
+
         //ignore this
         withExistingParent(ModItems.TIGER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         simpleItem(ModItems.METAL_DETECTOR);

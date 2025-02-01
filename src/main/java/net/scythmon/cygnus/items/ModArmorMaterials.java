@@ -10,8 +10,8 @@ import net.scythmon.cygnus.ProjectCygnus;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    DBIRD("dbird", 30, new int[]{ 7, 10, 12, 8 }, 9,
-            SoundEvents.ARMOR_EQUIP_CHAIN, 4f, 0.1f, () -> Ingredient.of(ModItems.CARNAGE_PLATE.get())),
+    HMEN("hmen", 30, new int[]{ 7, 10, 12, 8 }, 9,
+            SoundEvents.ARMOR_EQUIP_CHAIN, 4f, 0.3f, () -> Ingredient.of(ModItems.CARNAGE_PLATE.get())),
 
     PMASK("pmask", 8, new int[]{ 10, 6, 5, 2 }, 25,
             SoundEvents.ARMOR_EQUIP_GOLD, 4f, 0.1f, () -> Ingredient.of(ModItems.SINGULARITY_STONE.get())),

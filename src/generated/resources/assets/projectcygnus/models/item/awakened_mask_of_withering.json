@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "projectcygnus:item/awakened_mask_of_withering"
+  }
+}

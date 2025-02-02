@@ -1,8 +1,8 @@
-package net.scythmon.cygnus.items.client;
+package net.scythmon.cygnus.items.client.armor;
 
 import net.minecraft.resources.ResourceLocation;
 import net.scythmon.cygnus.ProjectCygnus;
-import net.scythmon.cygnus.items.custom.ConquestArmorItem;
+import net.scythmon.cygnus.items.custom.armor.ConquestArmorItem;
 import software.bernie.geckolib.model.GeoModel;
 
 public class ConquestArmorModel extends GeoModel<ConquestArmorItem> {
@@ -18,6 +18,6 @@ public class ConquestArmorModel extends GeoModel<ConquestArmorItem> {
 
     @Override
     public ResourceLocation getAnimationResource(ConquestArmorItem animatable) {
-        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/conquest_armor.animation.json");
+        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/defualt_idle.animation.json");
     }
 }

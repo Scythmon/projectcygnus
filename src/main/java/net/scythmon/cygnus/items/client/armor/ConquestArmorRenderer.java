@@ -1,7 +1,6 @@
-package net.scythmon.cygnus.items.client;
+package net.scythmon.cygnus.items.client.armor;
 
-import net.scythmon.cygnus.items.custom.ConquestArmorItem;
-import software.bernie.geckolib.model.GeoModel;
+import net.scythmon.cygnus.items.custom.armor.ConquestArmorItem;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class ConquestArmorRenderer extends GeoArmorRenderer<ConquestArmorItem> {

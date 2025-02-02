@@ -11,6 +11,12 @@ import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.entity.ModEntities;
 import net.scythmon.cygnus.items.custom.*;
+import net.scythmon.cygnus.items.custom.armor.ConquestArmorItem;
+import net.scythmon.cygnus.items.custom.crowns.*;
+import net.scythmon.cygnus.items.custom.masks.AVitMaskArmorItem;
+import net.scythmon.cygnus.items.custom.masks.AWitMaskArmorItem;
+import net.scythmon.cygnus.items.custom.masks.VitMaskArmorItem;
+import net.scythmon.cygnus.items.custom.masks.WitMaskArmorItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -239,19 +245,19 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> MASK_OF_WITHERING = ITEMS.register("mask_of_withering",
-            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new WitMaskArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> MASK_OF_VITALITY = ITEMS.register("mask_of_vitality",
-            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new VitMaskArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> SPEED_CROWN = ITEMS.register("speed_crown",
-            () -> new ArmorItem(ModArmorMaterials.CROWN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new SpeedCrownArmorItem(ModArmorMaterials.CROWN, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> STRENGTH_CROWN = ITEMS.register("strength_crown",
-            () -> new ArmorItem(ModArmorMaterials.CROWN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new StrengthCrownArmorItem(ModArmorMaterials.CROWN, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> STAR_CROWN = ITEMS.register("star_crown",
-            () -> new ArmorItem(ModArmorMaterials.CROWN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new StarCrownArmorItem(ModArmorMaterials.CROWN, ArmorItem.Type.HELMET, new Item.Properties()));
 
     //Powered crowns/masks
 
@@ -259,20 +265,20 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.PMASK, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> AWAKENED_MASK_OF_WITHERING = ITEMS.register("awakened_mask_of_withering",
-            () -> new ArmorItem(ModArmorMaterials.PMASK, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new AWitMaskArmorItem(ModArmorMaterials.PMASK, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> AWAKENED_MASK_OF_VITALITY = ITEMS.register("awakened_mask_of_vitality",
-            () -> new ArmorItem(ModArmorMaterials.PMASK, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new AVitMaskArmorItem(ModArmorMaterials.PMASK, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> EMPOWERED_CROWN_OF_STARS = ITEMS.register("empowered_star_crown",
-            () -> new ArmorItem(ModArmorMaterials.PCROWN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new EStarCrownArmorItem(ModArmorMaterials.PCROWN, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> EMPOWERED_CROWN_OF_STRENGTH = ITEMS.register("empowered_strength_crown",
-            () -> new ArmorItem(ModArmorMaterials.PCROWN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new EStrengthCrownArmorItem(ModArmorMaterials.PCROWN, ArmorItem.Type.HELMET, new Item.Properties()));
 
 
     public static final RegistryObject<Item> EMPOWERED_CROWN_OF_SPEED = ITEMS.register("empowered_speed_crown",
-            () -> new ArmorItem(ModArmorMaterials.PCROWN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ESpeedCrownArmorItem(ModArmorMaterials.PCROWN, ArmorItem.Type.HELMET, new Item.Properties()));
 
 
     //Death bird

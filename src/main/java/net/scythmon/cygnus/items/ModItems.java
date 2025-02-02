@@ -10,10 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.entity.ModEntities;
-import net.scythmon.cygnus.items.custom.ModDebuffDrinkItem;
-import net.scythmon.cygnus.items.custom.FuelItem;
-import net.scythmon.cygnus.items.custom.MetalDetectorItem;
-import net.scythmon.cygnus.items.custom.ModDrinkItem;
+import net.scythmon.cygnus.items.custom.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -323,16 +320,16 @@ public class ModItems {
     //Conquest
 
     public static final RegistryObject<Item> CONQUEST_HELMET = ITEMS.register("conquest_helmet",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ConquestArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> CONQUEST_CHESTPLATE = ITEMS.register("conquest_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ConquestArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<Item> CONQUEST_LEGGINGS = ITEMS.register("conquest_leggings",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ConquestArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> CONQUEST_BOOTS = ITEMS.register("conquest_boots",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ConquestArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.BOOTS, new Item.Properties()));
     //ignore this
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",

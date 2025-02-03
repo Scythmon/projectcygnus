@@ -10,7 +10,16 @@ import net.scythmon.cygnus.ProjectCygnus;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    HMEN("hmen", 30, new int[]{ 7, 10, 12, 8 }, 9,
+    FAMINE("famine", 30, new int[]{ 7, 10, 12, 8 }, 9,
+            SoundEvents.ARMOR_EQUIP_CHAIN, 4f, 0.3f, () -> Ingredient.of(ModItems.CARNAGE_PLATE.get())),
+
+    DEATH("death", 30, new int[]{ 7, 10, 12, 8 }, 9,
+            SoundEvents.ARMOR_EQUIP_CHAIN, 4f, 0.3f, () -> Ingredient.of(ModItems.CARNAGE_PLATE.get())),
+
+    CONQUEST("conquest", 30, new int[]{ 7, 10, 12, 8 }, 9,
+            SoundEvents.ARMOR_EQUIP_CHAIN, 4f, 0.3f, () -> Ingredient.of(ModItems.CARNAGE_PLATE.get())),
+
+    PESTILENCE("pestilence", 30, new int[]{ 7, 10, 12, 8 }, 9,
             SoundEvents.ARMOR_EQUIP_CHAIN, 4f, 0.3f, () -> Ingredient.of(ModItems.CARNAGE_PLATE.get())),
 
     PMASK("pmask", 8, new int[]{ 10, 6, 5, 2 }, 25,

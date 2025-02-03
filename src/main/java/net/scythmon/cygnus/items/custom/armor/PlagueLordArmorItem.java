@@ -16,6 +16,8 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.scythmon.cygnus.items.ModArmorMaterials;
 import net.scythmon.cygnus.items.client.armor.ConquestArmorRenderer;
+import net.scythmon.cygnus.items.client.armor.PlagueLordArmorModel;
+import net.scythmon.cygnus.items.client.armor.PlagueLordArmorRenderer;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -27,12 +29,12 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 
-public class ConquestArmorItem extends ArmorItem implements GeoItem {
+public class PlagueLordArmorItem extends ArmorItem implements GeoItem {
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
 
-    public ConquestArmorItem(ArmorMaterial material, Type type, Properties pProperties) {
-        super(material, type, pProperties);
+    public PlagueLordArmorItem(ArmorMaterial material, Type type, Properties properties) {
+        super(material, type, properties);
     }
 
     private static boolean isPlayerWearingFullSet(Player player, ArmorMaterial material) {
@@ -50,21 +52,21 @@ public class ConquestArmorItem extends ArmorItem implements GeoItem {
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
         if (pLevel.getGameTime() % 20 != 0
                 || !(pEntity instanceof Player player)
-                || !isPlayerWearingFullSet(player, ModArmorMaterials.CONQUEST)
+                || !isPlayerWearingFullSet(player, ModArmorMaterials.PESTILENCE)
         ) return;
-        player.removeEffect(MobEffects.POISON);
+        player.removeEffect(MobEffects.REGENERATION );
     }
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         consumer.accept(new IClientItemExtensions() {
-            private ConquestArmorRenderer renderer;
+            private PlagueLordArmorRenderer renderer;
 
             @Override
             public @NotNull HumanoidModel<?> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack,
                                                                    EquipmentSlot equipmentSlot, HumanoidModel<?> original) {
                 if (this.renderer == null)
-                    this.renderer = new ConquestArmorRenderer();
+                    this.renderer = new PlagueLordArmorRenderer();
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;

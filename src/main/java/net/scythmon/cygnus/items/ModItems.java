@@ -12,6 +12,9 @@ import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.entity.ModEntities;
 import net.scythmon.cygnus.items.custom.*;
 import net.scythmon.cygnus.items.custom.armor.ConquestArmorItem;
+import net.scythmon.cygnus.items.custom.armor.DeathBirdArmorItem;
+import net.scythmon.cygnus.items.custom.armor.FamineArmorItem;
+import net.scythmon.cygnus.items.custom.armor.PlagueLordArmorItem;
 import net.scythmon.cygnus.items.custom.crowns.*;
 import net.scythmon.cygnus.items.custom.masks.AVitMaskArmorItem;
 import net.scythmon.cygnus.items.custom.masks.AWitMaskArmorItem;
@@ -285,57 +288,57 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> DEATH_BIRD_HELMET = ITEMS.register("death_bird_helmet",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new DeathBirdArmorItem(ModArmorMaterials.DEATH, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> DEATH_BIRD_CHESTPLATE = ITEMS.register("death_bird_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new DeathBirdArmorItem(ModArmorMaterials.DEATH, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<Item> DEATH_BIRD_LEGGINGS = ITEMS.register("death_bird_leggings",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new DeathBirdArmorItem(ModArmorMaterials.DEATH, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> DEATH_BIRD_BOOTS = ITEMS.register("death_bird_boots",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new DeathBirdArmorItem(ModArmorMaterials.DEATH, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     //Plagued Lord
 
     public static final RegistryObject<Item> PLAGUED_LORD_HELMET = ITEMS.register("plagued_lord_helmet",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new PlagueLordArmorItem(ModArmorMaterials.PESTILENCE, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> PLAGUED_LORD_CHESTPLATE = ITEMS.register("plagued_lord_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new PlagueLordArmorItem(ModArmorMaterials.PESTILENCE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<Item> PLAGUED_LORD_LEGGINGS = ITEMS.register("plagued_lord_leggings",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new PlagueLordArmorItem(ModArmorMaterials.PESTILENCE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> PLAGUED_LORD_BOOTS = ITEMS.register("plagued_lord_boots",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new PlagueLordArmorItem(ModArmorMaterials.PESTILENCE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     //Famine
 
     public static final RegistryObject<Item> FAMINE_HELMET = ITEMS.register("famine_helmet",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new FamineArmorItem(ModArmorMaterials.FAMINE, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> FAMINE_CHESTPLATE = ITEMS.register("famine_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new FamineArmorItem(ModArmorMaterials.FAMINE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<Item> FAMINE_LEGGINGS = ITEMS.register("famine_leggings",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new FamineArmorItem(ModArmorMaterials.FAMINE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> FAMINE_BOOTS = ITEMS.register("famine_boots",
-            () -> new ArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new FamineArmorItem(ModArmorMaterials.FAMINE, ArmorItem.Type.BOOTS, new Item.Properties()));
     //Conquest
 
     public static final RegistryObject<Item> CONQUEST_HELMET = ITEMS.register("conquest_helmet",
-            () -> new ConquestArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ConquestArmorItem(ModArmorMaterials.CONQUEST, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> CONQUEST_CHESTPLATE = ITEMS.register("conquest_chestplate",
-            () -> new ConquestArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ConquestArmorItem(ModArmorMaterials.CONQUEST, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<Item> CONQUEST_LEGGINGS = ITEMS.register("conquest_leggings",
-            () -> new ConquestArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ConquestArmorItem(ModArmorMaterials.CONQUEST, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> CONQUEST_BOOTS = ITEMS.register("conquest_boots",
-            () -> new ConquestArmorItem(ModArmorMaterials.HMEN, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ConquestArmorItem(ModArmorMaterials.CONQUEST, ArmorItem.Type.BOOTS, new Item.Properties()));
     //ignore this
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",

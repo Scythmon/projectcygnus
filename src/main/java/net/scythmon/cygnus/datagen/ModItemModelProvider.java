@@ -24,6 +24,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CRYSTAL_BERRIES);
         simpleItem(ModItems.CRYSTAL_FLOWER);
         simpleItem(ModItems.COFFEE);
+        simpleItem(ModItems.COFFEE_SEEDS);
+        simpleItem(ModItems.COFFEE_BEANS);
+
         simpleItem(ModItems.ONEH_MOTER);
 
         //Precrafting

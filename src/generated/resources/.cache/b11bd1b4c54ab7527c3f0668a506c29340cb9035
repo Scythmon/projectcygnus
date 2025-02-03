@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-01T07:19:35.4099951	Item Models: projectcygnus
+// 1.20.1	2025-02-03T00:45:20.3843444	Item Models: projectcygnus
 904ce2feac93e2a7ecae0df3aeec8d93e482a8d8 assets/projectcygnus/models/item/afterlife_plate.json
 5d3563b60c002fa30d79733769ecdad93578b297 assets/projectcygnus/models/item/altar_core.json
 092c421b21868ba7e8a22dfcafbba6885da532b3 assets/projectcygnus/models/item/angel_gold.json
@@ -14,6 +14,8 @@ be446fb2145701db679b59c8225094fba593f924 assets/projectcygnus/models/item/bottle
 c6b848cc171e3aba13dff2a344762203b70d7adf assets/projectcygnus/models/item/cherub_conjure_talisman.json
 b22faac0da71ab3990584dd1a0f245202a710497 assets/projectcygnus/models/item/cherub_tear.json
 d288fb9a99159af5dc5eed411340242e374c584b assets/projectcygnus/models/item/coffee.json
+e4fe00a12877f36103937100db786fae8cbe4572 assets/projectcygnus/models/item/coffee_beans.json
+a94c98f5e0235471951181051d0ac749934f6aca assets/projectcygnus/models/item/coffee_seeds.json
 47e8f7df3f17ff1c57f2e56761169b399f6b1da4 assets/projectcygnus/models/item/concentrated_crystal_cluster.json
 ce1f968a1ad16e15b6675345058a12d3ebb32d92 assets/projectcygnus/models/item/conquest_boots.json
 e01a26a06aed2082bae5f06cc65cdad080de8ae2 assets/projectcygnus/models/item/conquest_chestplate.json

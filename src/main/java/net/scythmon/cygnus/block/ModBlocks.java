@@ -16,6 +16,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.block.custom.ModCropBlock;
 import net.scythmon.cygnus.block.custom.ModFlammableRotatedPillarBlock;
 import net.scythmon.cygnus.block.custom.SoundBlock;
 import net.scythmon.cygnus.items.ModItems;
@@ -47,6 +48,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> STRIPPED_CRYSTAL_OAK_WOOD = registerBlock("stripped_crystal_oak_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3.0f)));
+
+    public static final RegistryObject<Block> COFFEE_CROP = BLOCKS.register("coffee_crop",
+            () -> new ModCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
 
     public static final RegistryObject<Block> CRYSTAL_OAK_PLANKS = registerBlock("crystal_oak_planks",

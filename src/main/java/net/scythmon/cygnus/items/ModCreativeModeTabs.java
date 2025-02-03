@@ -38,6 +38,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.BOOK_OF_ENOCH.get());
                         pOutput.accept(ModItems.PRAYER_BOOK.get());
                         pOutput.accept(ModItems.ONEH_MOTER.get());
+                        pOutput.accept(ModItems.COFFEE_SEEDS.get());
 
                         //Crystal Items
                         pOutput.accept(ModItems.TRUE_CRYSTAL.get());

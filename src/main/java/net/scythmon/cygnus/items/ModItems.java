@@ -2,6 +2,7 @@ package net.scythmon.cygnus.items;
 
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -9,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.block.ModBlocks;
 import net.scythmon.cygnus.entity.ModEntities;
 import net.scythmon.cygnus.items.custom.*;
 import net.scythmon.cygnus.items.custom.armor.ConquestArmorItem;
@@ -349,6 +351,13 @@ public class ModItems {
                     new Item.Properties()));
 
     //Food items are below this comment
+
+    public static final RegistryObject<Item> COFFEE_SEEDS = ITEMS.register("coffee_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.COFFEE_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> COFFEE_BEANS = ITEMS.register("coffee_beans",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
 
 
 

@@ -3,9 +3,12 @@ package net.scythmon.cygnus.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fml.common.Mod;
@@ -13,6 +16,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.block.ModBlocks;
+import net.scythmon.cygnus.block.custom.ModCropBlock;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -48,6 +54,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
 
         blockWithItem(ModBlocks.CRYSTAL_OAK_PLANKS);
+
+        makeCoffeeCrop((CropBlock) ModBlocks.COFFEE_CROP.get(), "coffee_crop_stage", "coffee_crop_stage");
+    }
+
+    public void makeCoffeeCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> coffeeStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] coffeeStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((ModCropBlock) block).getAgeProperty()),
+                new ResourceLocation(ProjectCygnus.MOD_ID, "block/" + textureName + state.getValue(((ModCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {

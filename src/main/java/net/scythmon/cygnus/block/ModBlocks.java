@@ -18,6 +18,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.block.custom.ModCropBlock;
 import net.scythmon.cygnus.block.custom.ModFlammableRotatedPillarBlock;
+import net.scythmon.cygnus.block.custom.ModLeafCropBlock;
 import net.scythmon.cygnus.block.custom.SoundBlock;
 import net.scythmon.cygnus.items.ModItems;
 
@@ -52,6 +53,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> COFFEE_CROP = BLOCKS.register("coffee_crop",
             () -> new ModCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> FLOWERING_CRYSTAL_OAK_LEAVES = BLOCKS.register("flowering_crystal_oak_leaves",
+            () -> new ModLeafCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).destroyTime(0.3f).noOcclusion()));
+
 
     public static final RegistryObject<Block> CRYSTAL_OAK_PLANKS = registerBlock("crystal_oak_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2.0f)){
@@ -72,7 +76,7 @@ public class ModBlocks {
             });
 
     public static final RegistryObject<Block> CRYSTAL_OAK_LEAVES = registerBlock("crystal_oak_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(1.0f)){
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).destroyTime(0.3f).strength(1.0f)){
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;
@@ -90,27 +94,10 @@ public class ModBlocks {
             });
 
 
-    public static final RegistryObject<Block> FLOWERING_CRYSTAL_OAK_LEAVES = registerBlock("flowering_crystal_oak_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(1.0f)){
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 30;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 60;
-                }
-            });
 
 
     public static final RegistryObject<Block> BUDDING_CRYSTAL_OAK_LEAVES = registerBlock("budding_crystal_oak_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(1.0f)){
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).destroyTime(0.3f).strength(1.0f)){
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;

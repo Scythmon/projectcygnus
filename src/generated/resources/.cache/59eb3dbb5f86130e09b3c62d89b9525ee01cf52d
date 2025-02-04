@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-03T00:36:14.136953	Loot Tables
+// 1.20.1	2025-02-03T20:32:48.4175633	Loot Tables
 3d91623397a7c89db7ee4bd9bdc662175c836b2b data/projectcygnus/loot_tables/blocks/angel_gold_block.json
 73d15fca8e330529ee72348d64d918887a9486dc data/projectcygnus/loot_tables/blocks/blood_steel_block.json
 4202207620df49dfacf5bac776ebe0988034c669 data/projectcygnus/loot_tables/blocks/budding_crystal_oak_leaves.json
@@ -8,7 +8,7 @@ c15f993cd2903a7f4145adc0358c76252cb23038 data/projectcygnus/loot_tables/blocks/c
 04b9b6dde13443dd5e979a30b19edb9189e6fbee data/projectcygnus/loot_tables/blocks/crystal_oak_log.json
 742fb07646a8a52c904083ed1e3ca803b951b843 data/projectcygnus/loot_tables/blocks/crystal_oak_planks.json
 ba99325ceb1843154d4a779eb6d0983e8cc8499f data/projectcygnus/loot_tables/blocks/crystal_oak_wood.json
-da3258ece44771cb5defc326ec1bb2ddb26247da data/projectcygnus/loot_tables/blocks/flowering_crystal_oak_leaves.json
+b0499b811fac9e40a6c9d2ce3d2b164004459121 data/projectcygnus/loot_tables/blocks/flowering_crystal_oak_leaves.json
 35009a05c96c5323485a5ba3b805b45dcc1fc832 data/projectcygnus/loot_tables/blocks/sound_block.json
 e188f4723cd364dea80b89d025bfb238a4bd3472 data/projectcygnus/loot_tables/blocks/stripped_crystal_oak_log.json
 98a2625023ff054e7541aa5c681613b8518a448b data/projectcygnus/loot_tables/blocks/stripped_crystal_oak_wood.json

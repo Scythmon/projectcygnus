@@ -1,5 +1,10 @@
 {
   "type": "minecraft:block",
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ],
   "pools": [
     {
       "bonus_rolls": 0.0,
@@ -11,52 +16,18 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "condition": "minecraft:any_of",
-                  "terms": [
-                    {
-                      "condition": "minecraft:match_tool",
-                      "predicate": {
-                        "items": [
-                          "minecraft:shears"
-                        ]
-                      }
-                    },
-                    {
-                      "condition": "minecraft:match_tool",
-                      "predicate": {
-                        "enchantments": [
-                          {
-                            "enchantment": "minecraft:silk_touch",
-                            "levels": {
-                              "min": 1
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
+                  "block": "projectcygnus:flowering_crystal_oak_leaves",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "age": "3"
+                  }
                 }
               ],
-              "name": "projectcygnus:flowering_crystal_oak_leaves"
+              "name": "projectcygnus:crystal_flower"
             },
             {
               "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:survives_explosion"
-                },
-                {
-                  "chances": [
-                    0.05,
-                    0.0625,
-                    0.083333336,
-                    0.1
-                  ],
-                  "condition": "minecraft:table_bonus",
-                  "enchantment": "minecraft:fortune"
-                }
-              ],
-              "name": "projectcygnus:crystal_oak_wood"
+              "name": "minecraft:stick"
             }
           ]
         }
@@ -67,63 +38,25 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:any_of",
-            "terms": [
-              {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "items": [
-                    "minecraft:shears"
-                  ]
-                }
-              },
-              {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "enchantments": [
-                    {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": {
-                        "min": 1
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
+          "block": "projectcygnus:flowering_crystal_oak_leaves",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "age": "3"
           }
         }
       ],
       "entries": [
         {
           "type": "minecraft:item",
-          "conditions": [
-            {
-              "chances": [
-                0.02,
-                0.022222223,
-                0.025,
-                0.033333335,
-                0.1
-              ],
-              "condition": "minecraft:table_bonus",
-              "enchantment": "minecraft:fortune"
-            }
-          ],
           "functions": [
             {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 2.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "function": "minecraft:explosion_decay"
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:binomial_with_bonus_count",
+              "function": "minecraft:apply_bonus",
+              "parameters": {
+                "extra": 3,
+                "probability": 0.5714286
+              }
             }
           ],
           "name": "minecraft:stick"

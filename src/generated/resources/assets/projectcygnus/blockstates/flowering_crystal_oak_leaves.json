@@ -1,7 +1,88 @@
 {
   "variants": {
-    "": {
-      "model": "projectcygnus:block/flowering_crystal_oak_leaves"
+    "age=0,distance=1": {
+      "model": "projectcygnus:block/flower_crop_stage0"
+    },
+    "age=0,distance=2": {
+      "model": "projectcygnus:block/flower_crop_stage0"
+    },
+    "age=0,distance=3": {
+      "model": "projectcygnus:block/flower_crop_stage0"
+    },
+    "age=0,distance=4": {
+      "model": "projectcygnus:block/flower_crop_stage0"
+    },
+    "age=0,distance=5": {
+      "model": "projectcygnus:block/flower_crop_stage0"
+    },
+    "age=0,distance=6": {
+      "model": "projectcygnus:block/flower_crop_stage0"
+    },
+    "age=0,distance=7": {
+      "model": "projectcygnus:block/flower_crop_stage0"
+    },
+    "age=1,distance=1": {
+      "model": "projectcygnus:block/flower_crop_stage1"
+    },
+    "age=1,distance=2": {
+      "model": "projectcygnus:block/flower_crop_stage1"
+    },
+    "age=1,distance=3": {
+      "model": "projectcygnus:block/flower_crop_stage1"
+    },
+    "age=1,distance=4": {
+      "model": "projectcygnus:block/flower_crop_stage1"
+    },
+    "age=1,distance=5": {
+      "model": "projectcygnus:block/flower_crop_stage1"
+    },
+    "age=1,distance=6": {
+      "model": "projectcygnus:block/flower_crop_stage1"
+    },
+    "age=1,distance=7": {
+      "model": "projectcygnus:block/flower_crop_stage1"
+    },
+    "age=2,distance=1": {
+      "model": "projectcygnus:block/flower_crop_stage2"
+    },
+    "age=2,distance=2": {
+      "model": "projectcygnus:block/flower_crop_stage2"
+    },
+    "age=2,distance=3": {
+      "model": "projectcygnus:block/flower_crop_stage2"
+    },
+    "age=2,distance=4": {
+      "model": "projectcygnus:block/flower_crop_stage2"
+    },
+    "age=2,distance=5": {
+      "model": "projectcygnus:block/flower_crop_stage2"
+    },
+    "age=2,distance=6": {
+      "model": "projectcygnus:block/flower_crop_stage2"
+    },
+    "age=2,distance=7": {
+      "model": "projectcygnus:block/flower_crop_stage2"
+    },
+    "age=3,distance=1": {
+      "model": "projectcygnus:block/flower_crop_stage3"
+    },
+    "age=3,distance=2": {
+      "model": "projectcygnus:block/flower_crop_stage3"
+    },
+    "age=3,distance=3": {
+      "model": "projectcygnus:block/flower_crop_stage3"
+    },
+    "age=3,distance=4": {
+      "model": "projectcygnus:block/flower_crop_stage3"
+    },
+    "age=3,distance=5": {
+      "model": "projectcygnus:block/flower_crop_stage3"
+    },
+    "age=3,distance=6": {
+      "model": "projectcygnus:block/flower_crop_stage3"
+    },
+    "age=3,distance=7": {
+      "model": "projectcygnus:block/flower_crop_stage3"
     }
   }
 }

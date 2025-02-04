@@ -17,6 +17,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.block.ModBlocks;
 import net.scythmon.cygnus.block.custom.ModCropBlock;
+import net.scythmon.cygnus.block.custom.ModLeafCropBlock;
 
 import java.util.function.Function;
 
@@ -32,7 +33,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BLOOD_STEEL_BLOCK);
         blockWithItem(ModBlocks.ANGEL_GOLD_BLOCK);
         blockWithItem(ModBlocks.CRYSTAL_OAK_LEAVES);
-        blockWithItem(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES);
         blockWithItem(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
         blockWithItem(ModBlocks.SOUND_BLOCK);
 
@@ -50,12 +50,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_CRYSTAL_OAK_WOOD);
 
         leavesBlock(ModBlocks.CRYSTAL_OAK_LEAVES);
-        leavesBlock(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES);
         leavesBlock(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
 
         blockWithItem(ModBlocks.CRYSTAL_OAK_PLANKS);
 
         makeCoffeeCrop((CropBlock) ModBlocks.COFFEE_CROP.get(), "coffee_crop_stage", "coffee_crop_stage");
+
+        makeFlowerCrop((CropBlock) ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES.get(), "flower_crop_stage", "flower_crop_stage");
+    }
+
+    public void makeFlowerCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> flowerStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] flowerStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().cubeAll(modelName + state.getValue(((ModLeafCropBlock) block).getAgeProperty()),
+                new ResourceLocation(ProjectCygnus.MOD_ID, "block/" + textureName + state.getValue(((ModLeafCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
     public void makeCoffeeCrop(CropBlock block, String modelName, String textureName) {

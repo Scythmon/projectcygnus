@@ -1,7 +1,6 @@
 package net.scythmon.cygnus.block.custom;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -16,6 +15,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.scythmon.cygnus.items.ModItems;
+import org.jetbrains.annotations.NotNull;
 
 public class ModCropBlock extends CropBlock {
 
@@ -27,12 +27,12 @@ public class ModCropBlock extends CropBlock {
     }
 
     @Override
-    protected ItemLike getBaseSeedId() {
+    protected @NotNull ItemLike getBaseSeedId() {
         return ModItems.COFFEE_SEEDS.get();
     }
 
     @Override
-    public IntegerProperty getAgeProperty() {
+    public @NotNull IntegerProperty getAgeProperty() {
         return AGE;
     }
 
@@ -40,6 +40,7 @@ public class ModCropBlock extends CropBlock {
     public int getMaxAge() {
         return MAX_AGE;
     }
+
 
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (getAge(state) == getMaxAge()) {

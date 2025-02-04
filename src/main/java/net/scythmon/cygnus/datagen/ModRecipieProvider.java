@@ -210,7 +210,7 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COFFEE.get(), 2)
                 .requires(Items.GLASS_BOTTLE)
-                .requires(Items.BLAZE_POWDER)
+                .requires(ModItems.COFFEE_BEANS.get())
                 .requires(Items.SUGAR)
                 .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
                 .save(pWriter);

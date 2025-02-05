@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "projectcygnus:true_crystal"
+        "recipe": "projectcygnus:attuned_crystal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "projectcygnus:true_crystal"
+      "projectcygnus:attuned_crystal"
     ]
   },
   "sends_telemetry_event": false

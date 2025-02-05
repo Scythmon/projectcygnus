@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "projectcygnus:concentrated_crystal_cluster_crafted"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_true_crystal": {
+    "has_attuned_crystal": {
       "conditions": {
         "items": [
           {
             "items": [
-              "projectcygnus:true_crystal"
+              "projectcygnus:attuned_crystal"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "projectcygnus:concentrated_crystal_cluster_crafted"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_true_crystal",
+      "has_attuned_crystal",
       "has_the_recipe"
     ]
   ],

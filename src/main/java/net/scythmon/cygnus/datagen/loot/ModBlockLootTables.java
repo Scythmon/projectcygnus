@@ -2,14 +2,18 @@ package net.scythmon.cygnus.datagen.loot;
 
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.block.ModBlocks;
 import net.scythmon.cygnus.block.custom.ModCropBlock;
@@ -47,6 +51,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.CRYSTAL_OAK_DOOR.get(),
                 block -> createDoorTable(ModBlocks.CRYSTAL_OAK_DOOR.get()));
 
+        this.add(ModBlocks.ATTUNED_CRYSTAL_ORE.get(),
+                block -> multiOreDrops(ModBlocks.ATTUNED_CRYSTAL_ORE.get(), ModItems.ATTUNED_CRYSTAL.get()));
+
         this.add(ModBlocks.CRYSTAL_OAK_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_WOOD.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to a sapling!
 
@@ -66,6 +73,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_WOOD.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+    }
+
+    protected LootTable.Builder multiOreDrops(Block pBlock, Item item) {
+        return createSilkTouchDispatchTable(pBlock,
+                this.applyExplosionDecay(pBlock,
+                        LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
 
     @Override

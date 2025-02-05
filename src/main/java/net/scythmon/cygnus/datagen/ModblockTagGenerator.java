@@ -21,14 +21,18 @@ public class ModblockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES)
-                .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get()).addTag(Tags.Blocks.ORES);
+                .add(ModBlocks.ATTUNED_CRYSTAL_ORE.get()).addTag(Tags.Blocks.ORES);
 
 
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get())
                 .add(ModBlocks.BLOOD_STEEL_BLOCK.get())
+                .add(ModBlocks.ATTUNED_CRYSTAL_ORE.get())
                 .add(ModBlocks.ANGEL_GOLD_BLOCK.get());
+
+        this.tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.ATTUNED_CRYSTAL_ORE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get())

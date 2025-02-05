@@ -66,7 +66,7 @@ public class ModItems {
     // Tier one crafting items
 
 
-    public static final RegistryObject<Item> TRUE_CRYSTAL = ITEMS.register("true_crystal",
+    public static final RegistryObject<Item> ATTUNED_CRYSTAL = ITEMS.register("attuned_crystal",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> STARFLAME = ITEMS.register("starflame",

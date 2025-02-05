@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "projectcygnus:item/true_crystal"
+    "layer0": "projectcygnus:item/attuned_crystal"
   }
 }

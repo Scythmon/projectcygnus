@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-04T21:15:09.4921674	Block States: projectcygnus
+// 1.20.1	2025-02-05T18:38:48.6197921	Block States: projectcygnus
 317797d3f327bc602ab441b2a37ad77d6dcac1a0 assets/projectcygnus/blockstates/angel_gold_block.json
 2728ba14de6cb370d46a228abfbe527701c7e4a7 assets/projectcygnus/blockstates/blood_steel_block.json
 1f8317d4c21a81243367cab5f4b455119cac2ee4 assets/projectcygnus/blockstates/budding_crystal_oak_leaves.json
@@ -70,6 +70,7 @@ f84d8732630e472263e48526ba6b25f1e73d146a assets/projectcygnus/models/block/flowe
 7865b2b8c8cdea1218ae84e5f4e839d6a31f8089 assets/projectcygnus/models/block/stripped_crystal_oak_wood.json
 808fa28817e8e82427c6436f56d0136c2cc0e9dc assets/projectcygnus/models/block/stripped_crystal_oak_wood_horizontal.json
 e187593a6f555121a2cf42d99c011a2770a53938 assets/projectcygnus/models/item/angel_gold_block.json
+ee409dee9b1d7c90039b5edada60402adb09a8a3 assets/projectcygnus/models/item/attuned_crystal_ore.json
 5672bafe0af350d1e33c7f3fb88fe9a2a71c351e assets/projectcygnus/models/item/blood_steel_block.json
 1367113915b4c20e920d0b7df00ebf6adf17ee14 assets/projectcygnus/models/item/budding_crystal_oak_leaves.json
 8e3bb28dec63924e9fe32768d69da4a084f4042c assets/projectcygnus/models/item/concentrated_crystal_block.json

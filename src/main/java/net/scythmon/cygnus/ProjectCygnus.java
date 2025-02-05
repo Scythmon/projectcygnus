@@ -71,9 +71,6 @@ public class ProjectCygnus  {
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRYSTAL_BERRY.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRYSTAL_BERRY_VINE_PLANT.get(), RenderType.cutoutMipped());
             EntityRenderers.register(ModEntities.TIGER.get(), TigerRenderer::new);
         }
     }

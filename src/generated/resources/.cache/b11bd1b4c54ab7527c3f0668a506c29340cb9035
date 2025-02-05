@@ -1,8 +1,9 @@
-// 1.20.1	2025-02-04T21:15:09.4931597	Item Models: projectcygnus
+// 1.20.1	2025-02-05T18:38:48.6207842	Item Models: projectcygnus
 904ce2feac93e2a7ecae0df3aeec8d93e482a8d8 assets/projectcygnus/models/item/afterlife_plate.json
 5d3563b60c002fa30d79733769ecdad93578b297 assets/projectcygnus/models/item/altar_core.json
 092c421b21868ba7e8a22dfcafbba6885da532b3 assets/projectcygnus/models/item/angel_gold.json
 bf9fc3857da7ff170d9d4ea0ba4519528284c168 assets/projectcygnus/models/item/angel_plate.json
+fd0ea9fd3c902a2b4ee3e99a0d58a2a11fc389ee assets/projectcygnus/models/item/attuned_crystal.json
 c6cf5bd20231d33a812178eec3c16d6d0af9b8b8 assets/projectcygnus/models/item/awakened_mask_of_the_damned.json
 ea1f228ff170033f4fa791cc0f59debb4655ca9b assets/projectcygnus/models/item/awakened_mask_of_vitality.json
 cc6481a1a947507e5cf3744adf68043ba6ea9bf7 assets/projectcygnus/models/item/awakened_mask_of_withering.json
@@ -91,7 +92,6 @@ a42b93a7bd1cf968ae9f56bca6211d93ce23c371 assets/projectcygnus/models/item/streng
 1d8fb6db4976f66aee8c3da9cb8e41a234bcd3e9 assets/projectcygnus/models/item/throne_conjure_talisman.json
 cf4b10be8ae59eabef5ede82ebb0530e8bf4a706 assets/projectcygnus/models/item/throne_tear.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/projectcygnus/models/item/tiger_spawn_egg.json
-9670ac6ad8a9612e56e99c6d94d6045ecf28d7ee assets/projectcygnus/models/item/true_crystal.json
 75690d4c9e558a7452459a9c5a227f72ede7f4cc assets/projectcygnus/models/item/undead_concentrate.json
 98000acee6484487476235e76ab83363c84608d0 assets/projectcygnus/models/item/undead_essence.json
 71762a6d04b1faa76f298e1f5589e3f5c6cfd761 assets/projectcygnus/models/item/unstable_singularity.json

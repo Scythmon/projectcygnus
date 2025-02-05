@@ -1,10 +1,8 @@
 package net.scythmon.cygnus.items;
 
-import com.google.common.eventbus.EventBus;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,9 +11,6 @@ import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.block.ModBlocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.security.auth.login.Configuration;
-import javax.swing.*;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -41,7 +36,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.COFFEE_SEEDS.get());
 
                         //Crystal Items
-                        pOutput.accept(ModItems.TRUE_CRYSTAL.get());
+                        pOutput.accept(ModItems.ATTUNED_CRYSTAL.get());
                         pOutput.accept(ModItems.STAR.get());
                         pOutput.accept(ModItems.CRYSTAL_FLOWER.get());
                         pOutput.accept(ModItems.CRYSTAL_BERRIES.get());
@@ -126,6 +121,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.cygnus_blocks_tab"))
                     .displayItems(((pParameters, pOutput) -> {
                         //Crystal
+                        pOutput.accept(ModBlocks.ATTUNED_CRYSTAL_ORE.get());
                         pOutput.accept(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
                         pOutput.accept(ModBlocks.BLOOD_STEEL_BLOCK.get());
                         pOutput.accept(ModBlocks.ANGEL_GOLD_BLOCK.get());

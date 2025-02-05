@@ -6,14 +6,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.block.ModBlocks;
 import net.scythmon.cygnus.items.ModItems;
 
-import javax.sound.sampled.ReverbType;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -56,11 +54,11 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .define('F', ModItems.CRYSTAL_FLOWER.get())
                 .define('S', ModItems.SPEED_CONCENTRATE.get())
                 .define('U', ModItems.UNDEAD_CONCENTRATE.get())
-                .define('T', ModItems.TRUE_CRYSTAL.get())
+                .define('T', ModItems.ATTUNED_CRYSTAL.get())
                 .define('E', ModItems.STRENGTH_CONCENTRATE.get())
                 .define('W', ModItems.WITHER_CONCENTRATE.get())
                 .define('A', ModItems.STAR_CONCENTRATE.get())
-                .unlockedBy(getHasName(ModItems.TRUE_CRYSTAL.get()), has(ModItems.TRUE_CRYSTAL.get()))
+                .unlockedBy(getHasName(ModItems.ATTUNED_CRYSTAL.get()), has(ModItems.ATTUNED_CRYSTAL.get()))
                 .save(pWriter, new ResourceLocation(ProjectCygnus.MOD_ID, "concentrated_crystal_cluster") + "_crafted");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WISHING_CORE.get())
@@ -69,7 +67,7 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .pattern("SCS")
                 .define('S', ModItems.SINGULARITY_STONE.get())
                 .define('C', ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get())
-                .define('T', ModItems.TRUE_CRYSTAL.get())
+                .define('T', ModItems.ATTUNED_CRYSTAL.get())
                 .define('N', Items.NETHERITE_INGOT)
                 .unlockedBy(getHasName(ModItems.SINGULARITY_STONE.get()), has(ModItems.SINGULARITY_STONE.get()))
                 .save(pWriter);
@@ -79,7 +77,7 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .pattern("ATA")
                 .pattern(" A ")
                 .define('A', ModItems.ANGEL_GOLD.get())
-                .define('T', ModItems.TRUE_CRYSTAL.get())
+                .define('T', ModItems.ATTUNED_CRYSTAL.get())
                 .unlockedBy(getHasName(ModItems.ANGEL_GOLD.get()), has(ModItems.ANGEL_GOLD.get()))
                 .save(pWriter);
 
@@ -88,7 +86,7 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .pattern("ATA")
                 .pattern("BAB")
                 .define('A', ModItems.ANGEL_GOLD.get())
-                .define('T', ModItems.TRUE_CRYSTAL.get())
+                .define('T', ModItems.ATTUNED_CRYSTAL.get())
                 .define('B', ModItems.CRYSTAL_BUDS.get())
                 .unlockedBy(getHasName(ModItems.ANGEL_GOLD.get()), has(ModItems.ANGEL_GOLD.get()))
                 .save(pWriter);
@@ -109,13 +107,13 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .pattern("TST")
                 .pattern("SCS")
                 .pattern("TST")
-                .define('T', ModItems.TRUE_CRYSTAL.get())
+                .define('T', ModItems.ATTUNED_CRYSTAL.get())
                 .define('C', ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get())
                 .define('S', ModItems.SINGULARITY_SHARD.get())
                 .unlockedBy(getHasName(ModItems.SINGULARITY_SHARD.get()), has(ModItems.SINGULARITY_SHARD.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TRUE_CRYSTAL.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ATTUNED_CRYSTAL.get())
                 .pattern("PFQ")
                 .pattern("GBE")
                 .pattern("ACD")
@@ -183,10 +181,10 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .pattern("FBF")
                 .pattern("BTB")
                 .pattern("FBF")
-                .define('T', ModItems.TRUE_CRYSTAL.get())
+                .define('T', ModItems.ATTUNED_CRYSTAL.get())
                 .define('F', Items.FIRE_CHARGE)
                 .define('B', Items.BLAZE_POWDER)
-                .unlockedBy(getHasName(ModItems.TRUE_CRYSTAL.get()), has(ModItems.TRUE_CRYSTAL.get()))
+                .unlockedBy(getHasName(ModItems.ATTUNED_CRYSTAL.get()), has(ModItems.ATTUNED_CRYSTAL.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CULTIST_KNIFE.get())

@@ -1,8 +1,8 @@
-// 1.20.1	2025-02-04T21:15:09.4941525	Tags for minecraft:block mod id projectcygnus
+// 1.20.1	2025-02-05T18:43:50.9330694	Tags for minecraft:block mod id projectcygnus
 1b18608388bc302fe2f5f25c8ae8980ba10b33d4 data/minecraft/tags/blocks/fences.json
 082562e62115c8aa1e87c4a235480d16f2697bd8 data/minecraft/tags/blocks/fence_gates.json
 a9a133913972a3c12a3b262b4ff85d8f4d4a5995 data/minecraft/tags/blocks/logs_that_burn.json
-763fd8d18d634bc87e5cf1a21305ec5b937c4834 data/minecraft/tags/blocks/mineable/pickaxe.json
-763fd8d18d634bc87e5cf1a21305ec5b937c4834 data/minecraft/tags/blocks/needs_iron_tool.json
+fa17732b1e04207ce245e78d8c8ba5975ad6e9c4 data/minecraft/tags/blocks/mineable/pickaxe.json
+ebb507cc999637e79b19a8d425402f801ce294dd data/minecraft/tags/blocks/needs_iron_tool.json
 de4aa007ba89b5abbe1ea2511b422cb80072d597 data/minecraft/tags/blocks/planks.json
-80918d335c7d95227536db1d61c80216daa6b0af data/projectcygnus/tags/blocks/metal_detector_valuables.json
+8fe93e1ce547352d16c93a92435ff946186ffe6b data/projectcygnus/tags/blocks/metal_detector_valuables.json

@@ -1,0 +1,4 @@
+// 1.20.1	2025-02-05T18:38:48.619297	Registries
+a0411c0bf193b843d8dc4705df6feb754a09fc52 data/projectcygnus/forge/biome_modifier/add_attuned_crystal_ore.json
+82f6f6b955ce3a0060a13106764f65b5f977d04b data/projectcygnus/worldgen/configured_feature/attuned_crystal_ore.json
+d715dca350542d9e68ed0bbe038422da42a64833 data/projectcygnus/worldgen/placed_feature/attuned_crystal_ore_placed.json

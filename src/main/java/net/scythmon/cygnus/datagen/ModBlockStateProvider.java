@@ -2,9 +2,7 @@ package net.scythmon.cygnus.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -53,6 +51,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
 
         blockWithItem(ModBlocks.CRYSTAL_OAK_PLANKS);
+
+        stairsBlock(((StairBlock) ModBlocks.CRYSTAL_OAK_STAIRS.get()), blockTexture(ModBlocks.CRYSTAL_OAK_PLANKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.CRYSTAL_OAK_SLAB.get()), blockTexture(ModBlocks.CRYSTAL_OAK_PLANKS.get()), blockTexture(ModBlocks.CRYSTAL_OAK_PLANKS.get()));
+
+        buttonBlock(((ButtonBlock) ModBlocks.CRYSTAL_OAK_BUTTON.get()), blockTexture(ModBlocks.CRYSTAL_OAK_PLANKS.get()));
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.CRYSTAL_OAK_PRESSURE_PLATE.get()), blockTexture(ModBlocks.CRYSTAL_OAK_PLANKS.get()));
+
+        fenceBlock(((FenceBlock) ModBlocks.CRYSTAL_OAK_FENCE.get()), blockTexture(ModBlocks.CRYSTAL_OAK_PLANKS.get()));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.CRYSTAL_OAK_FENCE_GATE.get()), blockTexture(ModBlocks.CRYSTAL_OAK_PLANKS.get()));
+
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.CRYSTAL_OAK_DOOR.get()), modLoc("block/crystal_oak_door_bottom"), modLoc("block/crystal_oak_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.CRYSTAL_OAK_TRAPDOOR.get()), modLoc("block/crystal_oak_trapdoor"), true, "cutout");
 
         makeCoffeeCrop((CropBlock) ModBlocks.COFFEE_CROP.get(), "coffee_crop_stage", "coffee_crop_stage");
 

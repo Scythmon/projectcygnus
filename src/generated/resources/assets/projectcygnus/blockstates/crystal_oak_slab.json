@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "projectcygnus:block/crystal_oak_slab"
+    },
+    "type=double": {
+      "model": "projectcygnus:block/crystal_oak_planks"
+    },
+    "type=top": {
+      "model": "projectcygnus:block/crystal_oak_slab_top"
+    }
+  }
+}

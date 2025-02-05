@@ -136,6 +136,16 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.STRIPPED_CRYSTAL_OAK_WOOD.get());
 
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_PLANKS.get());
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_STAIRS.get());
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_SLAB.get());
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_BUTTON.get());
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_PRESSURE_PLATE.get());
+
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_FENCE.get());
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_FENCE_GATE.get());
+
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_DOOR.get());
+                        pOutput.accept(ModBlocks.CRYSTAL_OAK_TRAPDOOR.get());
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_LEAVES.get());
                         pOutput.accept(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES.get());
                         //Misc

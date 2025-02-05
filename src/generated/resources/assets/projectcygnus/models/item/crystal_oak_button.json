@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "projectcygnus:block/crystal_oak_planks"
+  }
+}

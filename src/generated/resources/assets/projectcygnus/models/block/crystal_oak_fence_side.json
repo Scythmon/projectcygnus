@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "projectcygnus:block/crystal_oak_planks"
+  }
+}

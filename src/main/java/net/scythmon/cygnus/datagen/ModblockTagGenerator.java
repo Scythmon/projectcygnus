@@ -35,6 +35,11 @@ public class ModblockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.BLOOD_STEEL_BLOCK.get())
                 .add(ModBlocks.ANGEL_GOLD_BLOCK.get());
 
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.CRYSTAL_OAK_FENCE.get());
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.CRYSTAL_OAK_FENCE_GATE.get());
+
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CRYSTAL_OAK_LOG.get())

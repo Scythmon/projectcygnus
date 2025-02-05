@@ -35,6 +35,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_CRYSTAL_OAK_WOOD.get());
         this.dropSelf(ModBlocks.CRYSTAL_OAK_PLANKS.get());
 
+        this.dropSelf(ModBlocks.CRYSTAL_OAK_STAIRS.get());
+        this.dropSelf(ModBlocks.CRYSTAL_OAK_BUTTON.get());
+        this.dropSelf(ModBlocks.CRYSTAL_OAK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.CRYSTAL_OAK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.CRYSTAL_OAK_FENCE.get());
+        this.dropSelf(ModBlocks.CRYSTAL_OAK_FENCE_GATE.get());
+
+        this.add(ModBlocks.CRYSTAL_OAK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CRYSTAL_OAK_SLAB.get()));
+        this.add(ModBlocks.CRYSTAL_OAK_DOOR.get(),
+                block -> createDoorTable(ModBlocks.CRYSTAL_OAK_DOOR.get()));
+
         this.add(ModBlocks.CRYSTAL_OAK_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_WOOD.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to a sapling!
 

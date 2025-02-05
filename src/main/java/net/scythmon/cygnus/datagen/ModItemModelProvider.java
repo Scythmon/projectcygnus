@@ -3,12 +3,15 @@ package net.scythmon.cygnus.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.block.ModBlocks;
 import net.scythmon.cygnus.items.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -28,6 +31,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COFFEE_BEANS);
 
         simpleItem(ModItems.ONEH_MOTER);
+
+        //Crystal gen
+
+        simpleBlockItem(ModBlocks.CRYSTAL_OAK_DOOR);
+
+        fenceItem(ModBlocks.CRYSTAL_OAK_FENCE, ModBlocks.CRYSTAL_OAK_PLANKS);
+        buttonItem(ModBlocks.CRYSTAL_OAK_BUTTON, ModBlocks.CRYSTAL_OAK_PLANKS);
+
+        evenSimplerBlockItem(ModBlocks.CRYSTAL_OAK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CRYSTAL_OAK_SLAB);
+        evenSimplerBlockItem(ModBlocks.CRYSTAL_OAK_PRESSURE_PLATE);
+        evenSimplerBlockItem(ModBlocks.CRYSTAL_OAK_FENCE_GATE);
+
+        trapdoorItem(ModBlocks.CRYSTAL_OAK_TRAPDOOR);
 
         //Precrafting
         simpleItem(ModItems.CULTIST_KNIFE);
@@ -144,6 +161,32 @@ public class ModItemModelProvider extends ItemModelProvider {
         //ignore this
         withExistingParent(ModItems.TIGER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         simpleItem(ModItems.METAL_DETECTOR);
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(ProjectCygnus.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    public void evenSimplerBlockItem(RegistryObject<Block> block) {
+        this.withExistingParent(ProjectCygnus.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    }
+
+    public void trapdoorItem(RegistryObject<Block> block) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));
+    }
+
+    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  new ResourceLocation(ProjectCygnus.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  new ResourceLocation(ProjectCygnus.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

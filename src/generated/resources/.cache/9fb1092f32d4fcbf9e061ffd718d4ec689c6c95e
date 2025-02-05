@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-31T06:22:01.9372488	Recipes
+// 1.20.1	2025-02-04T21:15:09.4911756	Recipes
 0e1eb543932318f9b5865b2de95bf34c85ddc9cb data/minecraft/advancements/recipes/misc/amethyst_shard.json
 bbbb1cc617afd1f504e7cd9e559f2652be2f7537 data/minecraft/advancements/recipes/misc/nether_wart.json
 d518b05c87c9b78705f33be9fe45fcdd4ebedf49 data/minecraft/advancements/recipes/misc/prismarine_shard.json
@@ -44,7 +44,7 @@ b460398fb020320b44188cfd845fb8dba967ecfa data/projectcygnus/recipes/blood_steel_
 b2f1854d71f355b2e5a7cfb19137f0d3a013f09f data/projectcygnus/recipes/blood_steel_from_block.json
 895bdfe899314ab5a64522193ba38c7d61cb0e5e data/projectcygnus/recipes/book_of_enoch.json
 365803aadaf30edfabd3cfe7480447ad5da61f5f data/projectcygnus/recipes/brownie.json
-f550796f2a1c6cbca7f9dbc97616f58440ad8914 data/projectcygnus/recipes/coffee.json
+99ffacb77e5c60fdfaf98af3ff8aef523b10e2a0 data/projectcygnus/recipes/coffee.json
 31ff8d0549c41904d3d662db24100350c8f921f2 data/projectcygnus/recipes/concentrated_crystal_block.json
 362091233f402e22a12806cec25f2f9d19d3fd20 data/projectcygnus/recipes/concentrated_crystal_cluster_crafted.json
 363eb2d9bc1085b9992dccf0500402eaa1ee1d21 data/projectcygnus/recipes/concentrated_crystal_cluster_from_block.json

@@ -77,7 +77,16 @@
   "block.projectcygnus.crystal_oak_wood": "Crystal Oak Wood",
   "block.projectcygnus.stripped_crystal_oak_log": "Stripped Crystal Oak Log",
   "block.projectcygnus.stripped_crystal_oak_wood": "Stripped Crystal Oak Wood",
-  "block.projectcygnus.crystal_oak_planks": "Crystal Oak Planks",
+
+  "block.projectcygnus.crystal_oak_stairs": "Crystal Oak Stairs",
+  "block.projectcygnus.crystal_oak_slab": "Crystal Oak Slab",
+  "block.projectcygnus.crystal_oak_button": "Crystal Oak Button",
+  "block.projectcygnus.crystal_oak_pressure_plate": "Crystal Oak Pressure Plate",
+  "block.projectcygnus.crystal_oak_fence": "Crystal Oak Fence",
+  "block.projectcygnus.crystal_oak_fence_gate": "Crystal Oak Fence Gate",
+  "block.projectcygnus.crystal_oak_door": "Crystal Oak Planks",
+  "block.projectcygnus.crystal_oak_trapdoor": "Crystal Oak Trapdoor",
+
   "block.projectcygnus.crystal_oak_leaves": "Crystal Oak Leaves",
   "block.projectcygnus.flowering_crystal_oak_leaves": "Flowering Crystal Oak Leaves",
   "block.projectcygnus.budding_crystal_oak_leaves": "Budding Crystal Oak Leaves",

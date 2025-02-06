@@ -28,7 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK);
-        blockItem(ModBlocks.ATTUNED_CRYSTAL_ORE);
+        blockWithItem(ModBlocks.ATTUNED_CRYSTAL_ORE);
         blockWithItem(ModBlocks.BLOOD_STEEL_BLOCK);
         blockWithItem(ModBlocks.ANGEL_GOLD_BLOCK);
         blockWithItem(ModBlocks.CRYSTAL_OAK_LEAVES);

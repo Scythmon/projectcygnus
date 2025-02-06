@@ -60,6 +60,7 @@ public class ModLeafCropBlock extends ModCropBlock{
         return true;
     }
 
+
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (getAge(state) == getMaxAge()) {
             player.awardStat(Stats.BLOCK_MINED.get(this));

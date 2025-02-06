@@ -34,6 +34,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.CRYSTAL_OAK_LEAVES);
         blockWithItem(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
         blockWithItem(ModBlocks.SOUND_BLOCK);
+        blockWithItem(ModBlocks.TEST_BLOCK_RED);
+        blockWithItem(ModBlocks.BUDDING_ATTUNED_AMETHYST);
 
         logBlock(((RotatedPillarBlock) ModBlocks.CRYSTAL_OAK_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.CRYSTAL_OAK_WOOD.get()), blockTexture(ModBlocks.CRYSTAL_OAK_LOG.get()), blockTexture(ModBlocks.CRYSTAL_OAK_LOG.get()));

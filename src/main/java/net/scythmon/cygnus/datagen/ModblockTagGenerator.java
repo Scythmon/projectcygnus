@@ -29,15 +29,17 @@ public class ModblockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get())
                 .add(ModBlocks.BLOOD_STEEL_BLOCK.get())
                 .add(ModBlocks.ATTUNED_CRYSTAL_ORE.get())
-                .add(ModBlocks.ANGEL_GOLD_BLOCK.get());
+                .add(ModBlocks.ANGEL_GOLD_BLOCK.get())
+                .add(ModBlocks.BUDDING_ATTUNED_AMETHYST.get());
 
-        this.tag(BlockTags.NEEDS_IRON_TOOL)
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.ATTUNED_CRYSTAL_ORE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get())
                 .add(ModBlocks.BLOOD_STEEL_BLOCK.get())
-                .add(ModBlocks.ANGEL_GOLD_BLOCK.get());
+                .add(ModBlocks.ANGEL_GOLD_BLOCK.get())
+                .add(ModBlocks.BUDDING_ATTUNED_AMETHYST.get());
 
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.CRYSTAL_OAK_FENCE.get());

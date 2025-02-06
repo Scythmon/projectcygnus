@@ -32,6 +32,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BLOOD_STEEL_BLOCK.get());
         this.dropSelf(ModBlocks.ANGEL_GOLD_BLOCK.get());
         this.dropSelf(ModBlocks.SOUND_BLOCK.get());
+        this.dropSelf(ModBlocks.TEST_BLOCK_RED.get());
 
         this.dropSelf(ModBlocks.CRYSTAL_OAK_LOG.get());
         this.dropSelf(ModBlocks.CRYSTAL_OAK_WOOD.get());
@@ -53,6 +54,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.ATTUNED_CRYSTAL_ORE.get(),
                 block -> multiOreDrops(ModBlocks.ATTUNED_CRYSTAL_ORE.get(), ModItems.ATTUNED_CRYSTAL.get()));
+
+        this.add(ModBlocks.BUDDING_ATTUNED_AMETHYST.get(),
+                block -> multiOreDrops(ModBlocks.BUDDING_ATTUNED_AMETHYST.get(), ModItems.ATTUNED_CRYSTAL.get()));
 
         this.add(ModBlocks.CRYSTAL_OAK_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_WOOD.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to a sapling!

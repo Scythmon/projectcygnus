@@ -1,5 +1,6 @@
-// 1.20.1	2025-02-05T18:38:48.6197921	Block States: projectcygnus
+// 1.20.1	2025-02-05T19:24:25.3537876	Block States: projectcygnus
 317797d3f327bc602ab441b2a37ad77d6dcac1a0 assets/projectcygnus/blockstates/angel_gold_block.json
+ca35fddb99a645d383e9629165c92cfb88bf6fe5 assets/projectcygnus/blockstates/attuned_crystal_ore.json
 2728ba14de6cb370d46a228abfbe527701c7e4a7 assets/projectcygnus/blockstates/blood_steel_block.json
 1f8317d4c21a81243367cab5f4b455119cac2ee4 assets/projectcygnus/blockstates/budding_crystal_oak_leaves.json
 987e7cf52ae4911594e122a5f33033aa91c3aa2c assets/projectcygnus/blockstates/coffee_crop.json
@@ -21,6 +22,7 @@ e6c5369642132612e121c5def448d7c818e97fe5 assets/projectcygnus/blockstates/sound_
 34c6e2f5ecbc9d2cacb3293cff1927276534f472 assets/projectcygnus/blockstates/stripped_crystal_oak_log.json
 458bb1be220d2bc37eec9b2691569822b82293fe assets/projectcygnus/blockstates/stripped_crystal_oak_wood.json
 092a63e0abe5940b37fe979392f20a0d2a2af51c assets/projectcygnus/models/block/angel_gold_block.json
+e41d81f4cc5a6389472ca7ae6062b81123409036 assets/projectcygnus/models/block/attuned_crystal_ore.json
 cf8b2aac807308f185a90334b019ef388904954d assets/projectcygnus/models/block/blood_steel_block.json
 6fe42dada0c5c95ece1c81957c8afc9c17c9ebb3 assets/projectcygnus/models/block/budding_crystal_oak_leaves.json
 0be04c6b47167f99799569733737d1158472ff0e assets/projectcygnus/models/block/coffee_crop_stage0.json

@@ -30,9 +30,10 @@ public class ModPlacedFeatures {
                 ModOrePlacement.rareOrePlacement(2,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0))));
 
+
         register(context, CRYSTAL_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTAL_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
-                        ModBlocks.CRYSTAL_OAK_LOG.get()));
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 1),
+                        ModBlocks.CRYSTAL_OAK_SAPLING.get()));
 
 
     }

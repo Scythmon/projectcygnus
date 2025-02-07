@@ -123,6 +123,7 @@ public class ModCreativeModeTabs {
                         //Crystal
                         pOutput.accept(ModBlocks.ATTUNED_CRYSTAL_ORE.get());
                         pOutput.accept(ModBlocks.BUDDING_ATTUNED_AMETHYST.get());
+                        pOutput.accept(ModBlocks.ATTUNED_CRYSTAL_BLOCK.get());
                         pOutput.accept(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
                         pOutput.accept(ModBlocks.BLOOD_STEEL_BLOCK.get());
                         pOutput.accept(ModBlocks.ANGEL_GOLD_BLOCK.get());

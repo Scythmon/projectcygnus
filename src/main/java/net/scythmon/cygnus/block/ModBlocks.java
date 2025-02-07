@@ -33,7 +33,7 @@ public class ModBlocks {
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
     public static final  RegistryObject<Block> CONCENTRATED_CRYSTAL_BLOCK = registerBlock("concentrated_crystal_block",
-            () -> new ConcentratedCrystalBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new ConcentratedCrystalBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
 
     public static final RegistryObject<Block> BUDDING_ATTUNED_AMETHYST = registerBlock("budding_attuned_amethyst",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)
@@ -46,6 +46,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
 
     public static final  RegistryObject<Block> ANGEL_GOLD_BLOCK = registerBlock("angel_gold_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
+
+    public static final  RegistryObject<Block> ATTUNED_CRYSTAL_BLOCK = registerBlock("attuned_crystal_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
 
     public static final RegistryObject<Block> CRYSTAL_OAK_LOG = registerBlock("crystal_oak_log",

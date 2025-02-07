@@ -33,6 +33,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ANGEL_GOLD_BLOCK.get());
         this.dropSelf(ModBlocks.SOUND_BLOCK.get());
         this.dropSelf(ModBlocks.TEST_BLOCK_RED.get());
+        this.dropSelf(ModBlocks.ATTUNED_CRYSTAL_BLOCK.get());
 
         this.dropSelf(ModBlocks.CRYSTAL_OAK_LOG.get());
         this.dropSelf(ModBlocks.CRYSTAL_OAK_WOOD.get());

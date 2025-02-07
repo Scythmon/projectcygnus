@@ -18,6 +18,6 @@ public class VitMaskArmorModel extends GeoModel<VitMaskArmorItem> {
 
     @Override
     public ResourceLocation getAnimationResource(VitMaskArmorItem animatable) {
-        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/defualt_idle.animation.json");
+        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/dle.animation.json");
     }
 }

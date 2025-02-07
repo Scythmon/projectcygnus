@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-05T18:38:48.6207842	Item Models: projectcygnus
+// 1.20.1	2025-02-07T16:34:56.5480535	Item Models: projectcygnus
 904ce2feac93e2a7ecae0df3aeec8d93e482a8d8 assets/projectcygnus/models/item/afterlife_plate.json
 5d3563b60c002fa30d79733769ecdad93578b297 assets/projectcygnus/models/item/altar_core.json
 092c421b21868ba7e8a22dfcafbba6885da532b3 assets/projectcygnus/models/item/angel_gold.json
@@ -31,6 +31,7 @@ ceaeba0f2652c60c94236935efd495428a565390 assets/projectcygnus/models/item/crysta
 b29ac956bf92d79ea5aa237410cb4c7a96b1ab5a assets/projectcygnus/models/item/crystal_oak_fence.json
 51b0805c74220dfc716aa2c146b9190bbd7f5798 assets/projectcygnus/models/item/crystal_oak_fence_gate.json
 206e5faff4c41484d6246fd0c4aab70fbd33855a assets/projectcygnus/models/item/crystal_oak_pressure_plate.json
+40196a2fa64138310395a7a59a856abb74d1f724 assets/projectcygnus/models/item/crystal_oak_sapling.json
 1bb6707aa6459979184fdedd77b772b5e96ba981 assets/projectcygnus/models/item/crystal_oak_slab.json
 84d6d2bef434959f70f0e150a6f9a209289e48b9 assets/projectcygnus/models/item/crystal_oak_stairs.json
 c707ee6e8b264243bca442acc3797528eed14a64 assets/projectcygnus/models/item/crystal_oak_trapdoor.json

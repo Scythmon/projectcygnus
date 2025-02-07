@@ -20,6 +20,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.block.custom.*;
 import net.scythmon.cygnus.items.ModItems;
+import net.scythmon.cygnus.worldgen.tree.CrystalTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -33,7 +34,7 @@ public class ModBlocks {
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
     public static final  RegistryObject<Block> CONCENTRATED_CRYSTAL_BLOCK = registerBlock("concentrated_crystal_block",
-            () -> new ConcentratedCrystalBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 
     public static final RegistryObject<Block> BUDDING_ATTUNED_AMETHYST = registerBlock("budding_attuned_amethyst",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)
@@ -137,6 +138,10 @@ public class ModBlocks {
                     return 60;
                 }
             });
+
+    public static final RegistryObject<Block> CRYSTAL_OAK_SAPLING = registerBlock("crystal_oak_sapling",
+            () -> new SaplingBlock(new CrystalTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
 
 
     //Only here for datagen

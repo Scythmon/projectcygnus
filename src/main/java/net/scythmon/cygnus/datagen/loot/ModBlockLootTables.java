@@ -46,6 +46,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CRYSTAL_OAK_TRAPDOOR.get());
         this.dropSelf(ModBlocks.CRYSTAL_OAK_FENCE.get());
         this.dropSelf(ModBlocks.CRYSTAL_OAK_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.CRYSTAL_OAK_SAPLING.get());
 
         this.add(ModBlocks.CRYSTAL_OAK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.CRYSTAL_OAK_SLAB.get()));
@@ -59,7 +60,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> multiOreDrops(ModBlocks.BUDDING_ATTUNED_AMETHYST.get(), ModItems.ATTUNED_CRYSTAL.get()));
 
         this.add(ModBlocks.CRYSTAL_OAK_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_WOOD.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to a sapling!
+                createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to a sapling!
 
         LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.COFFEE_CROP.get())
@@ -76,7 +77,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
 
         this.add(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_WOOD.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder multiOreDrops(Block pBlock, Item item) {

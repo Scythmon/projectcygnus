@@ -29,6 +29,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COFFEE_SEEDS);
         simpleItem(ModItems.COFFEE_BEANS);
 
+        saplingItem(ModBlocks.CRYSTAL_OAK_SAPLING);
+
         simpleItem(ModItems.ONEH_MOTER);
 
         //Crystal gen
@@ -171,6 +173,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void evenSimplerBlockItem(RegistryObject<Block> block) {
         this.withExistingParent(ProjectCygnus.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(ProjectCygnus.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     public void trapdoorItem(RegistryObject<Block> block) {

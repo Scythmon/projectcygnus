@@ -29,7 +29,7 @@ public class ModItems {
     //Naturals
 
 
-    public static final RegistryObject<Item> CRYSTAL_FLOWER = ITEMS.register("crystal_flower",
+    public static final RegistryObject<Item> CRYSTAL_BLOOM = ITEMS.register("crystal_bloom",
             () -> new Item((new Item.Properties().food(ModFoods.CRYSTAL_FLOWER).rarity(Rarity.COMMON))));
 
     public static final RegistryObject<Item> ONEH_MOTER = ITEMS.register("oneh_moter",

@@ -51,7 +51,7 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .pattern("UTE")
                 .pattern("WFA")
                 .define('L', ModItems.LIFE_CONCENTRATE.get())
-                .define('F', ModItems.CRYSTAL_FLOWER.get())
+                .define('F', ModItems.CRYSTAL_BLOOM.get())
                 .define('S', ModItems.SPEED_CONCENTRATE.get())
                 .define('U', ModItems.UNDEAD_CONCENTRATE.get())
                 .define('T', ModItems.ATTUNED_CRYSTAL.get())
@@ -118,7 +118,7 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .pattern("GBE")
                 .pattern("ACD")
                 .define('P', Items.PRISMARINE_CRYSTALS)
-                .define('F', ModItems.CRYSTAL_FLOWER.get())
+                .define('F', ModItems.CRYSTAL_BLOOM.get())
                 .define('Q', Items.QUARTZ)
                 .define('G', Items.FLINT)
                 .define('B', ModItems.CRYSTAL_BERRIES.get())
@@ -126,7 +126,7 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .define('A', Items.AMETHYST_SHARD)
                 .define('C', ModItems.CRYSTAL_BUDS.get())
                 .define('D', Items.DIAMOND)
-                .unlockedBy(getHasName(ModItems.CRYSTAL_FLOWER.get()), has(ModItems.CRYSTAL_FLOWER.get()))
+                .unlockedBy(getHasName(ModItems.CRYSTAL_BLOOM.get()), has(ModItems.CRYSTAL_BLOOM.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EMPTY_HARBINGER_TALISMAN.get())
@@ -136,7 +136,7 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .define('B', ModItems.BOTTLED_BLOOD.get())
                 .define('S', ModItems.BLOOD_STEEL.get())
                 .define('C', ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get())
-                .define('F', ModItems.CRYSTAL_FLOWER.get())
+                .define('F', ModItems.CRYSTAL_BLOOM.get())
                 .define('T', ModItems.EMPTY_CELESTIAL_TALISMAN.get())
                 .unlockedBy(getHasName(ModItems.EMPTY_CELESTIAL_TALISMAN.get()), has(ModItems.EMPTY_CELESTIAL_TALISMAN.get()))
                 .save(pWriter);

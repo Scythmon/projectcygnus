@@ -18,6 +18,9 @@ base {
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+
+boolean isWorkspace = findProject(':Cucumber') != null
+
 minecraft {
     mappings channel: mapping_channel, version: mapping_version
 
@@ -58,7 +61,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
 
-    //Modonomicon needs this
+    maven { url 'https://maven.blakesmods.com' }
     //The wretched Geckolib dependency
     maven {
         name = 'GeckoLib'
@@ -70,6 +73,14 @@ repositories {
     }
 
     dependencies {
+        if (isWorkspace) {
+            implementation(project(':Cucumber')) {
+                transitive = false
+            }
+        } else {
+            implementation "com.blakebr0.cucumber:Cucumber:${cucumber_version}"
+        }
+
         implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraft_version}:${geckolib_version}")
         implementation("com.eliotlash.mclib:mclib:20")
     }

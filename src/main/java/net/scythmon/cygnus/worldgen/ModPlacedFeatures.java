@@ -13,6 +13,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.RarityFilter;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.block.ModBlocks;
 
@@ -32,9 +33,7 @@ public class ModPlacedFeatures {
 
 
         register(context, CRYSTAL_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTAL_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 1),
-                        ModBlocks.CRYSTAL_OAK_SAPLING.get()));
-
+                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(4), ModBlocks.CRYSTAL_OAK_SAPLING.get()));
 
     }
 

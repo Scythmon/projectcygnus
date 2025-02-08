@@ -19,6 +19,6 @@ public class StarCrownArmorModel extends GeoModel<StarCrownArmorItem> {
 
     @Override
     public ResourceLocation getAnimationResource(StarCrownArmorItem animatable) {
-        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/defualt_idle.animation.json");
+        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/dle.animation.json");
     }
 }

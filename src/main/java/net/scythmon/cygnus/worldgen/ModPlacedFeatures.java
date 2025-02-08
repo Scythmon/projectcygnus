@@ -4,6 +4,8 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -12,11 +14,13 @@ import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.block.ModBlocks;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ATTUNED_CRYSTAL_ORE_PLACED_KEY = registerKey("attuned_crystal_ore_placed");
+    public static final ResourceKey<PlacedFeature> CRYSTAL_OAK_PLACED_KEY = registerKey("crystal_oak_tree_placed");
 
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
@@ -25,6 +29,13 @@ public class ModPlacedFeatures {
         register(context, ATTUNED_CRYSTAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_ATTUNED_CRYSTAL_ORE_KEY),
                 ModOrePlacement.rareOrePlacement(2,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0))));
+
+
+        register(context, CRYSTAL_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYSTAL_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 1),
+                        ModBlocks.CRYSTAL_OAK_SAPLING.get()));
+
+
     }
 
 

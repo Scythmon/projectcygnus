@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-05T20:01:58.7552054	Block States: projectcygnus
+// 1.20.1	2025-02-07T16:34:56.5470613	Block States: projectcygnus
 317797d3f327bc602ab441b2a37ad77d6dcac1a0 assets/projectcygnus/blockstates/angel_gold_block.json
 ca35fddb99a645d383e9629165c92cfb88bf6fe5 assets/projectcygnus/blockstates/attuned_crystal_ore.json
 2728ba14de6cb370d46a228abfbe527701c7e4a7 assets/projectcygnus/blockstates/blood_steel_block.json
@@ -14,6 +14,7 @@ d3a1707f095996a943dab0ace06678a96b172963 assets/projectcygnus/blockstates/crysta
 110ed9101b4897cf3c31eff2264953b3957b6951 assets/projectcygnus/blockstates/crystal_oak_log.json
 f3135fca8137774d1be8107b922cc39eed9ed0d0 assets/projectcygnus/blockstates/crystal_oak_planks.json
 ebb77d1edb88eaaa1be637fae9e31421ef787384 assets/projectcygnus/blockstates/crystal_oak_pressure_plate.json
+57539612673bd20ee3db94f06e853900a5e5df06 assets/projectcygnus/blockstates/crystal_oak_sapling.json
 eb5469be4d1b41367955bc3c50d2393f7ca8667b assets/projectcygnus/blockstates/crystal_oak_slab.json
 f7dfa3f766007e2b12721665f19e01b918f10a43 assets/projectcygnus/blockstates/crystal_oak_stairs.json
 845dab2d62eb2d4e01625ccf067bc8ae0a53632f assets/projectcygnus/blockstates/crystal_oak_trapdoor.json
@@ -55,6 +56,7 @@ d1d6d0fb6dbe6b164384d600e2a3326ae44e96ed assets/projectcygnus/models/block/cryst
 e4d4817e913d90e3e8b0022ee62ffc10be923021 assets/projectcygnus/models/block/crystal_oak_planks.json
 eb6315f7759952166d0b4a9dd493dd8faac8251b assets/projectcygnus/models/block/crystal_oak_pressure_plate.json
 35cea0294b5a660e1772bcf222235e3247d642bd assets/projectcygnus/models/block/crystal_oak_pressure_plate_down.json
+d322a04592943bc5802f72ddb1491eef6bbc5c6d assets/projectcygnus/models/block/crystal_oak_sapling.json
 7847031ffeb392c1a48f30c0bfd04239e0c57490 assets/projectcygnus/models/block/crystal_oak_slab.json
 800a7ee66f6ed8999d810a992b18782e43bbacdc assets/projectcygnus/models/block/crystal_oak_slab_top.json
 11b3f34f888ef8d393e15ae4653ba576eb646de6 assets/projectcygnus/models/block/crystal_oak_stairs.json

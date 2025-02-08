@@ -53,6 +53,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.CRYSTAL_OAK_LEAVES);
         leavesBlock(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
 
+        saplingBlock(ModBlocks.CRYSTAL_OAK_SAPLING);
+
         blockWithItem(ModBlocks.CRYSTAL_OAK_PLANKS);
 
         stairsBlock(((StairBlock) ModBlocks.CRYSTAL_OAK_STAIRS.get()), blockTexture(ModBlocks.CRYSTAL_OAK_PLANKS.get()));
@@ -72,6 +74,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeFlowerCrop((CropBlock) ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES.get(), "flower_crop_stage", "flower_crop_stage");
     }
 
+    //All the stoff down here is just custom methods to make life a bit easier, probably an easier way to do it but this is what works for me
+
     public void makeFlowerCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> flowerStates(state, block, modelName, textureName);
 
@@ -84,6 +88,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(ProjectCygnus.MOD_ID, "block/" + textureName + state.getValue(((ModLeafCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void makeCoffeeCrop(CropBlock block, String modelName, String textureName) {

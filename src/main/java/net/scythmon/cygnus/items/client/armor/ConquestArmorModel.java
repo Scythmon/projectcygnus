@@ -18,6 +18,6 @@ public class ConquestArmorModel extends GeoModel<ConquestArmorItem> {
 
     @Override
     public ResourceLocation getAnimationResource(ConquestArmorItem animatable) {
-        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/defualt_idle.animation.json");
+        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/dle.animation.json");
     }
 }

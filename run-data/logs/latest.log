@@ -1,34 +1,34 @@
-[05Feb2025 20:12:46.522] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\entro\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.25, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, projectcygnus, --all, --output, C:\Users\entro\OneDrive\Desktop\projectcygnus\src\generated\resources, --existing, C:\Users\entro\OneDrive\Desktop\projectcygnus\src\main\resources]
-[05Feb2025 20:12:46.530] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.14 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[05Feb2025 20:12:46.751] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[05Feb2025 20:12:46.843] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/entro/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[05Feb2025 20:12:47.415] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\entro\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.25\84e3a76ab0b8c86c81d9d7db9cec2af7e910c770\javafmllanguage-1.20.1-47.3.25.jar is missing mods.toml file
-[05Feb2025 20:12:47.419] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\entro\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.25\520e07491b731479fec85d3a4425b6f684f0e646\lowcodelanguage-1.20.1-47.3.25.jar is missing mods.toml file
-[05Feb2025 20:12:47.423] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\entro\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.25\23cb6e8723dd914422a03d8a64e3cc17019c2fc1\mclanguage-1.20.1-47.3.25.jar is missing mods.toml file
-[05Feb2025 20:12:47.427] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\entro\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.25\de973d0ee85f4444f81fdbeeef54c82a9a048c8f\fmlcore-1.20.1-47.3.25.jar is missing mods.toml file
-[05Feb2025 20:12:47.683] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[05Feb2025 20:12:49.843] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[05Feb2025 20:12:49.846] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\entro\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, projectcygnus, --all, --output, C:\Users\entro\OneDrive\Desktop\projectcygnus\src\generated\resources, --existing, C:\Users\entro\OneDrive\Desktop\projectcygnus\src\main\resources]
-[05Feb2025 20:12:50.264] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using C:\Users\entro\OneDrive\Desktop\projectcygnus\build\createSrgToMcp\output.srg
-[05Feb2025 20:12:50.774] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [projectcygnus]
-[05Feb2025 20:12:56.992] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.25, for MC 1.20.1 with MCP 20230612.114412
-[05Feb2025 20:12:57.001] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.25 Initialized
-[05Feb2025 20:12:57.116] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
-[05Feb2025 20:12:57.930] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/entro/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.25_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.25_mapped_parchment_2023.09.03-1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[05Feb2025 20:12:57.930] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/entro/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.25_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.25_mapped_parchment_2023.09.03-1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[05Feb2025 20:12:58.297] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[05Feb2025 20:12:58.390] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 91 ms
-[05Feb2025 20:12:58.391] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[05Feb2025 20:12:58.494] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 103 ms
-[05Feb2025 20:12:58.495] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: projectcygnus
-[05Feb2025 20:12:58.795] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: projectcygnus finished after 300 ms
-[05Feb2025 20:12:58.795] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: projectcygnus
-[05Feb2025 20:12:58.843] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: projectcygnus finished after 48 ms
-[05Feb2025 20:12:58.844] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id projectcygnus
-[05Feb2025 20:12:58.874] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id projectcygnus finished after 30 ms
-[05Feb2025 20:12:58.874] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id projectcygnus
-[05Feb2025 20:12:58.876] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id projectcygnus finished after 1 ms
-[05Feb2025 20:12:58.876] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[05Feb2025 20:12:58.903] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 25 ms
-[05Feb2025 20:12:58.903] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 606 ms
-[05Feb2025 20:12:58.936] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 297, old count: 297, new count: 298, removed stale: 0, written: 0
+[07Feb2025 17:13:56.623] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\whisp\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.25, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, projectcygnus, --all, --output, D:\Googlestuff\Coding shit\CygnusGitRepo\src\generated\resources, --existing, D:\Googlestuff\Coding shit\CygnusGitRepo\src\main\resources]
+[07Feb2025 17:13:56.628] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.13 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[07Feb2025 17:13:56.760] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[07Feb2025 17:13:56.814] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/whisp/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[07Feb2025 17:13:57.132] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\whisp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.25\84e3a76ab0b8c86c81d9d7db9cec2af7e910c770\javafmllanguage-1.20.1-47.3.25.jar is missing mods.toml file
+[07Feb2025 17:13:57.136] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\whisp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.25\520e07491b731479fec85d3a4425b6f684f0e646\lowcodelanguage-1.20.1-47.3.25.jar is missing mods.toml file
+[07Feb2025 17:13:57.139] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\whisp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.25\23cb6e8723dd914422a03d8a64e3cc17019c2fc1\mclanguage-1.20.1-47.3.25.jar is missing mods.toml file
+[07Feb2025 17:13:57.143] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\whisp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.25\de973d0ee85f4444f81fdbeeef54c82a9a048c8f\fmlcore-1.20.1-47.3.25.jar is missing mods.toml file
+[07Feb2025 17:13:57.294] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[07Feb2025 17:13:58.757] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[07Feb2025 17:13:58.759] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\whisp\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, projectcygnus, --all, --output, D:\Googlestuff\Coding shit\CygnusGitRepo\src\generated\resources, --existing, D:\Googlestuff\Coding shit\CygnusGitRepo\src\main\resources]
+[07Feb2025 17:13:59.151] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using D:\Googlestuff\Coding shit\CygnusGitRepo\build\createSrgToMcp\output.srg
+[07Feb2025 17:13:59.472] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [projectcygnus]
+[07Feb2025 17:14:03.749] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.25, for MC 1.20.1 with MCP 20230612.114412
+[07Feb2025 17:14:03.752] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.25 Initialized
+[07Feb2025 17:14:03.801] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
+[07Feb2025 17:14:04.178] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/whisp/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.25_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.25_mapped_parchment_2023.09.03-1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[07Feb2025 17:14:04.178] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/whisp/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.25_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.25_mapped_parchment_2023.09.03-1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[07Feb2025 17:14:04.361] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[07Feb2025 17:14:04.396] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 33 ms
+[07Feb2025 17:14:04.396] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[07Feb2025 17:14:04.440] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 44 ms
+[07Feb2025 17:14:04.440] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: projectcygnus
+[07Feb2025 17:14:04.638] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: projectcygnus finished after 197 ms
+[07Feb2025 17:14:04.638] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: projectcygnus
+[07Feb2025 17:14:04.671] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: projectcygnus finished after 32 ms
+[07Feb2025 17:14:04.671] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id projectcygnus
+[07Feb2025 17:14:04.682] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id projectcygnus finished after 11 ms
+[07Feb2025 17:14:04.682] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id projectcygnus
+[07Feb2025 17:14:04.683] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id projectcygnus finished after 1 ms
+[07Feb2025 17:14:04.684] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[07Feb2025 17:14:04.700] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 15 ms
+[07Feb2025 17:14:04.700] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 338 ms
+[07Feb2025 17:14:04.712] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 304, old count: 304, new count: 305, removed stale: 0, written: 1

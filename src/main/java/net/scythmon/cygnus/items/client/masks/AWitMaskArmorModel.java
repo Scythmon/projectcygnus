@@ -18,6 +18,6 @@ public class AWitMaskArmorModel extends GeoModel<AWitMaskArmorItem> {
 
     @Override
     public ResourceLocation getAnimationResource(AWitMaskArmorItem animatable) {
-        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/defualt_idle.animation.json");
+        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/dle.animation.json");
     }
 }

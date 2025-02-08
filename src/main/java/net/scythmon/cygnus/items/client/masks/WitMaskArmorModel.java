@@ -18,6 +18,6 @@ public class WitMaskArmorModel extends GeoModel<WitMaskArmorItem> {
 
     @Override
     public ResourceLocation getAnimationResource(WitMaskArmorItem animatable) {
-        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/dle.animation.json");
+        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/idle.animation.json");
     }
 }

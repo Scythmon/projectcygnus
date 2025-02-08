@@ -19,6 +19,6 @@ public class DeathBirdArmorModel extends GeoModel<DeathBirdArmorItem> {
 
     @Override
     public ResourceLocation getAnimationResource(DeathBirdArmorItem animatable) {
-        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/dle.animation.json");
+        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/idle.animation.json");
     }
 }

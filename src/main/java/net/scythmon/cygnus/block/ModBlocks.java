@@ -20,6 +20,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.block.custom.*;
 import net.scythmon.cygnus.items.ModItems;
+import net.scythmon.cygnus.worldgen.tree.CrystalTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -33,7 +34,7 @@ public class ModBlocks {
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
     public static final  RegistryObject<Block> CONCENTRATED_CRYSTAL_BLOCK = registerBlock("concentrated_crystal_block",
-            () -> new ConcentratedCrystalBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
 
     public static final RegistryObject<Block> BUDDING_ATTUNED_AMETHYST = registerBlock("budding_attuned_amethyst",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)
@@ -49,7 +50,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
 
     public static final  RegistryObject<Block> ATTUNED_CRYSTAL_BLOCK = registerBlock("attuned_crystal_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
 
     public static final RegistryObject<Block> CRYSTAL_OAK_LOG = registerBlock("crystal_oak_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3.0f)));
@@ -71,7 +72,7 @@ public class ModBlocks {
             () -> new ModLeafCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).destroyTime(0.3f).noOcclusion()));
 
     public static final RegistryObject<Block> CRYSTAL_OAK_PLANKS = registerBlock("crystal_oak_planks",
-            () -> new CrystalOakBlocks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2.0f)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2.0f)));
 
     public static final RegistryObject<Block> CRYSTAL_OAK_STAIRS = registerBlock("crystal_oak_stairs",
             () -> new StairBlock(() -> ModBlocks.CRYSTAL_OAK_PLANKS.get().defaultBlockState(),
@@ -94,6 +95,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CRYSTAL_OAK_FENCE_GATE = registerBlock("crystal_oak_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE).sound(SoundType.WOOD), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> CRYSTAL_OAK_SAPLING = registerBlock("crystal_oak_sapling",
+            () -> new SaplingBlock(new CrystalTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
 
     public static final RegistryObject<Block> CRYSTAL_OAK_DOOR = registerBlock("crystal_oak_door",
@@ -139,6 +143,9 @@ public class ModBlocks {
                 public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return 60;
                 }
+
+
+
             });
 
 

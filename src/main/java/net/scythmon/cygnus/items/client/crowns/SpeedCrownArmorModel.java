@@ -19,6 +19,6 @@ public class SpeedCrownArmorModel extends GeoModel<SpeedCrownArmorItem> {
 
     @Override
     public ResourceLocation getAnimationResource(SpeedCrownArmorItem animatable) {
-        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/dle.animation.json");
+        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/idle.animation.json");
     }
 }

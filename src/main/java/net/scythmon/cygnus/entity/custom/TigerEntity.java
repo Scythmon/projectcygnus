@@ -71,7 +71,7 @@ public class TigerEntity extends Animal implements GeoEntity {
             return PlayState.CONTINUE;
         }
 
-        tigerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("tiger.animation.idle", Animation.LoopType.LOOP));
+        tigerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.tiger.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 

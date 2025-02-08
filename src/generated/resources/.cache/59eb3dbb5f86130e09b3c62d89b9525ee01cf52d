@@ -1,5 +1,6 @@
-// 1.20.1	2025-02-07T16:34:56.5440867	Loot Tables
+// 1.20.1	2025-02-07T23:41:36.0706531	Loot Tables
 3d91623397a7c89db7ee4bd9bdc662175c836b2b data/projectcygnus/loot_tables/blocks/angel_gold_block.json
+757eccdadc0481b0cfa515591054a65c04c9e1fe data/projectcygnus/loot_tables/blocks/attuned_crystal_block.json
 8a1c38366a36936c7204991a7043a830d5f0b6f7 data/projectcygnus/loot_tables/blocks/attuned_crystal_ore.json
 73d15fca8e330529ee72348d64d918887a9486dc data/projectcygnus/loot_tables/blocks/blood_steel_block.json
 0bd8b3b9efba9f2a400f94e0fd599ed0e48fbc8c data/projectcygnus/loot_tables/blocks/budding_attuned_amethyst.json

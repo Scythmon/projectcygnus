@@ -19,6 +19,6 @@ public class StrengthCrownArmorModel extends GeoModel<StrengthCrownArmorItem> {
 
     @Override
     public ResourceLocation getAnimationResource(StrengthCrownArmorItem animatable) {
-        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/dle.animation.json");
+        return new ResourceLocation(ProjectCygnus.MOD_ID, "animations/idle.animation.json");
     }
 }

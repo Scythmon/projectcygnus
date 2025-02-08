@@ -23,42 +23,43 @@ public class ModCreativeModeTabs {
             //Item progression can be found in the comments of the ModItems class, this is formatted as such to make the creative tab more appealing to look at
 
                         //Placeholder spot
-                        pOutput.accept(ModItems.STARFLAME.get());
-                        pOutput.accept(ModItems.BROWNIE.get());
-                        pOutput.accept(ModItems.COFFEE.get());
+                        pOutput.accept(ModItems.STAR.get());
+                        pOutput.accept(ModItems.BOOK_OF_ENOCH.get());
+                        pOutput.accept(ModItems.PRAYER_BOOK.get());
                         pOutput.accept(ModItems.CULTIST_KNIFE.get());
                         pOutput.accept(ModItems.BOTTLED_BLOOD.get());
                         pOutput.accept(ModItems.HOLY_WATER.get());
                         pOutput.accept(ModItems.CRYSTAL_BUDS.get());
-                        pOutput.accept(ModItems.BOOK_OF_ENOCH.get());
-                        pOutput.accept(ModItems.PRAYER_BOOK.get());
+                        pOutput.accept(ModItems.CRYSTAL_FLOWER.get());
+                        pOutput.accept(ModItems.CRYSTAL_BERRIES.get());
+
                         pOutput.accept(ModItems.ONEH_MOTER.get());
                         pOutput.accept(ModItems.COFFEE_SEEDS.get());
 
                         //Crystal Items
                         pOutput.accept(ModItems.ATTUNED_CRYSTAL.get());
-                        pOutput.accept(ModItems.STAR.get());
-                        pOutput.accept(ModItems.CRYSTAL_FLOWER.get());
-                        pOutput.accept(ModItems.CRYSTAL_BERRIES.get());
-                        pOutput.accept(ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get());
+
+
 
                         //Metal?
                         pOutput.accept(ModItems.BLOOD_STEEL.get());
                         pOutput.accept(ModItems.ANGEL_GOLD.get());
                         pOutput.accept(ModItems.ALTAR_CORE.get());
 
-                        //Concentrates
+
+                        pOutput.accept(ModItems.CHERUB_TEAR.get());
+                        pOutput.accept(ModItems.DOMINION_TEAR.get());
+                        pOutput.accept(ModItems.THRONE_TEAR.get());
                         pOutput.accept(ModItems.WITHER_CONCENTRATE.get());
                         pOutput.accept(ModItems.LIFE_CONCENTRATE.get());
                         pOutput.accept(ModItems.UNDEAD_CONCENTRATE.get());
                         pOutput.accept(ModItems.SPEED_CONCENTRATE.get());
                         pOutput.accept(ModItems.STRENGTH_CONCENTRATE.get());
                         pOutput.accept(ModItems.STAR_CONCENTRATE.get());
+                        pOutput.accept(ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get());
+                        pOutput.accept(ModItems.STARFLAME.get());
 
-                        //Tears
-                        pOutput.accept(ModItems.CHERUB_TEAR.get());
-                        pOutput.accept(ModItems.DOMINION_TEAR.get());
-                        pOutput.accept(ModItems.THRONE_TEAR.get());
+
 
                         //Plates
                         pOutput.accept(ModItems.FELL_STAR_PLATE.get());
@@ -112,7 +113,8 @@ public class ModCreativeModeTabs {
 
                         //Misc
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
-                        pOutput.accept(ModItems.TIGER_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.BROWNIE.get());
+                        pOutput.accept(ModItems.COFFEE.get());
 
                     }))
                     .build());

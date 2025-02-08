@@ -358,6 +358,29 @@ public class ModItems {
     public static final RegistryObject<Item> COFFEE_BEANS = ITEMS.register("coffee_beans",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
+    //Stratus' Lore Items Below
+    public static final RegistryObject<Item> FIRST_RITUAL_KNIFE = ITEMS.register("first_ritual_knife",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> HEART_OF_FLAMES = ITEMS.register("heart_of_flames",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> NULL_CATALYST_TALISMAN = ITEMS.register("null_catalyst_talisman",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> POWER_BOOSTER_CANISTER = ITEMS.register("power_booster_canister",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> POWER_BOOSTER_NEEDLE = ITEMS.register("power_booster_needle",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> SHATTERED_RELIC = ITEMS.register("shattered_relic",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> STARMAN_SIGIL = ITEMS.register("starman_sigil",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+
 
 
 

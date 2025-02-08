@@ -66,6 +66,13 @@
   "item.projectcygnus.soul_of_crumbling_heavens": "Soul of Crumbling Heavens",
   "item.projectcygnus.metal_detector": "Metal Detector",
   "item.projectcygnus.coffee_beans": "Coffee Beans",
+  "item.projectcygnus.first_ritual_knife": "First Ritual Knife",
+  "item.projectcygnus.heart_of_flames": "Heart Of Flames",
+  "item.projectcygnus.null_catalyst_talisman": "Null Catalyst Talisman",
+  "item.projectcygnus.power_booster_canister": "Power Booster Canister",
+  "item.projectcygnus.power_booster_needle": "Power Booster Needle",
+  "item.projectcygnus.shattered_relic": "Shattered Relic",
+  "item.projectcygnus.starman_sigil": "Starman Sigil",
 
   "tooltip.projectcygnus.metal_detector.tooltip": "Finds Valuables Underground",
   "tooltip.projectcygnus.oneh_moter.tooltip": "You feel compelled to drink this...though your arent sure if you should",

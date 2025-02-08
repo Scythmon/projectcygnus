@@ -159,6 +159,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CONQUEST_LEGGINGS);
         simpleItem(ModItems.CONQUEST_BOOTS);
 
+        //No-Creative Items for Stratus' lore
+        simpleItem(ModItems.FIRST_RITUAL_KNIFE);
+        simpleItem(ModItems.HEART_OF_FLAMES);
+        simpleItem(ModItems.NULL_CATALYST_TALISMAN);
+        simpleItem(ModItems.POWER_BOOSTER_CANISTER);
+        simpleItem(ModItems.POWER_BOOSTER_NEEDLE);
+        simpleItem(ModItems.SHATTERED_RELIC);
+        simpleItem(ModItems.STARMAN_SIGIL);
+
+
         //ignore this
         withExistingParent(ModItems.TIGER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         simpleItem(ModItems.METAL_DETECTOR);

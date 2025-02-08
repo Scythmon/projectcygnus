@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -100,6 +101,7 @@ public class ModBlocks {
             () -> new SaplingBlock(new CrystalTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
 
+
     public static final RegistryObject<Block> CRYSTAL_OAK_DOOR = registerBlock("crystal_oak_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).sound(SoundType.WOOD).noOcclusion(), BlockSetType.OAK));
 
@@ -147,6 +149,35 @@ public class ModBlocks {
 
 
             });
+
+    //FLOWERS :DDDDDDDDDDD, the effect is there as its required for sus stew
+
+    public static final RegistryObject<Block> CRYSTAL_LILY = registerBlock("crystal_lily",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> BLOOD_CARDINAL = registerBlock("blood_cardinal",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    //IMPORTANT, use the BLOCKS.register method to add the potted versions ot else it will break, also make sure to add the corresponding event to the ProjectCygnus class under CommonSetup
+
+    public static final RegistryObject<Block> POTTED_CRYSTAL_LILY = BLOCKS.register("potted_crystal_lily",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CRYSTAL_LILY,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+
+    public static final RegistryObject<Block> POTTED_BLOOD_CARDINAL = BLOCKS.register("potted_blood_cardinal",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.BLOOD_CARDINAL,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+
+    public static final RegistryObject<Block> CRYSTAL_VINES_PLANT = registerBlock("crystal_vines_plant",
+            () -> new CrystalVinesPlantBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES).noCollission().instabreak().sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CRYSTAL_VINES = registerBlock("crystal_vines",
+            () -> new CrystalVinesBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES).randomTicks().noCollission().instabreak().sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.DESTROY)));
+
 
 
     //Only here for datagen

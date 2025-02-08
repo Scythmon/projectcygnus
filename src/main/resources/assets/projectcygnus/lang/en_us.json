@@ -103,7 +103,10 @@
   "block.projectcygnus.budding_crystal_oak_leaves": "Budding Crystal Oak Leaves",
   "block.projectcygnus.sound_block": "Sound Block",
   "block.projectcygnus.attuned_crystal_block": "Block of Attuned Crystal",
-
+  "block.projectcygnus.crystal_vines": "Crystal Vines",
+  "block.projectcygnus.crystal_lily": "Crystal Lily",
+  "block.projectcygnus.blood_cardinal": "Blood Cardinal",
+  "block.projectcygnus.crystal_vines_plant": "Crystal Vines",
   "item.projectcygnus.death_bird_helmet": "Mask of the Death Bird",
   "item.projectcygnus.death_bird_chestplate": "Ribs of the Death Bird",
   "item.projectcygnus.death_bird_leggings": "Leggings of the Death Bird",

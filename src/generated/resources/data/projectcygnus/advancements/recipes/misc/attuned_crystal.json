@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_crystal_flower": {
+    "has_crystal_bloom": {
       "conditions": {
         "items": [
           {
             "items": [
-              "projectcygnus:crystal_flower"
+              "projectcygnus:crystal_bloom"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_crystal_flower",
+      "has_crystal_bloom",
       "has_the_recipe"
     ]
   ],

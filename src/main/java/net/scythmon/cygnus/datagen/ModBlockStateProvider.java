@@ -38,6 +38,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TEST_BLOCK_RED);
         blockWithItem(ModBlocks.BUDDING_ATTUNED_AMETHYST);
 
+
         logBlock(((RotatedPillarBlock) ModBlocks.CRYSTAL_OAK_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.CRYSTAL_OAK_WOOD.get()), blockTexture(ModBlocks.CRYSTAL_OAK_LOG.get()), blockTexture(ModBlocks.CRYSTAL_OAK_LOG.get()));
 
@@ -53,6 +54,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         leavesBlock(ModBlocks.CRYSTAL_OAK_LEAVES);
         leavesBlock(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
+
+        saplingBlock(ModBlocks.CRYSTAL_VINES);
+        saplingBlock(ModBlocks.CRYSTAL_VINES_PLANT);
 
         saplingBlock(ModBlocks.CRYSTAL_OAK_SAPLING);
 
@@ -73,6 +77,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeCoffeeCrop((CropBlock) ModBlocks.COFFEE_CROP.get(), "coffee_crop_stage", "coffee_crop_stage");
 
         makeFlowerCrop((CropBlock) ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES.get(), "flower_crop_stage", "flower_crop_stage");
+
+
+        simpleBlockWithItem(ModBlocks.CRYSTAL_LILY.get(), models().cross(blockTexture(ModBlocks.CRYSTAL_LILY.get()).getPath(),
+                blockTexture(ModBlocks.CRYSTAL_LILY.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_CRYSTAL_LILY.get(), models().singleTexture("potted_crystal_lily", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.CRYSTAL_LILY.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.BLOOD_CARDINAL.get(), models().cross(blockTexture(ModBlocks.BLOOD_CARDINAL.get()).getPath(),
+                blockTexture(ModBlocks.BLOOD_CARDINAL.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_BLOOD_CARDINAL.get(), models().singleTexture("potted_blood_cardinal", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.BLOOD_CARDINAL.get())).renderType("cutout"));
     }
 
     //All the stoff down here is just custom methods to make life a bit easier, probably an easier way to do it but this is what works for me
@@ -117,10 +132,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     }
 
+    private void vinesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+
+    private void vinesHeadBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(ProjectCygnus.MOD_ID +
                 ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
+
 
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

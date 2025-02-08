@@ -41,6 +41,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_CRYSTAL_OAK_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_CRYSTAL_OAK_WOOD.get());
         this.dropSelf(ModBlocks.CRYSTAL_OAK_PLANKS.get());
+        this.dropOther(ModBlocks.CRYSTAL_VINES.get(), ModBlocks.CRYSTAL_VINES_PLANT.get());
+        this.dropSelf(ModBlocks.CRYSTAL_VINES_PLANT.get());
 
         this.dropSelf(ModBlocks.CRYSTAL_OAK_STAIRS.get());
         this.dropSelf(ModBlocks.CRYSTAL_OAK_BUTTON.get());
@@ -62,7 +64,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> multiOreDrops(ModBlocks.BUDDING_ATTUNED_AMETHYST.get(), ModItems.ATTUNED_CRYSTAL.get()));
 
         this.add(ModBlocks.CRYSTAL_OAK_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to a sapling!
+                createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.COFFEE_CROP.get())
@@ -75,11 +77,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.COFFEE_CROP.get(), createCropDrops(ModBlocks.COFFEE_CROP.get(), ModItems.COFFEE_BEANS.get(),
                 ModItems.COFFEE_SEEDS.get(), lootitemcondition$builder));
 
-        this.add(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES.get(), createCropDrops(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES.get(), ModItems.CRYSTAL_FLOWER.get(), Items.STICK, lootitemcondition$$builder));
+        this.add(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES.get(), createCropDrops(ModBlocks.FLOWERING_CRYSTAL_OAK_LEAVES.get(), ModItems.CRYSTAL_BLOOM.get(), Items.STICK, lootitemcondition$$builder));
 
 
         this.add(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.CRYSTAL_OAK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.CRYSTAL_LILY.get());
+        this.add(ModBlocks.POTTED_CRYSTAL_LILY.get(), createPotFlowerItemTable(ModBlocks.CRYSTAL_LILY.get()));
+
+        this.dropSelf(ModBlocks.BLOOD_CARDINAL.get());
+        this.add(ModBlocks.POTTED_BLOOD_CARDINAL.get(), createPotFlowerItemTable(ModBlocks.BLOOD_CARDINAL.get()));
     }
 
     protected LootTable.Builder multiOreDrops(Block pBlock, Item item) {

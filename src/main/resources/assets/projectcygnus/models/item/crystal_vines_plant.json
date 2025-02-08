@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "projectcygnus:item/crystal_flower"
+    "layer0": "projectcygnus:block/crystal_vines_plant"
   }
 }

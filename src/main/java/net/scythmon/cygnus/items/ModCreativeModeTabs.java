@@ -132,6 +132,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get());
                         pOutput.accept(ModBlocks.BLOOD_STEEL_BLOCK.get());
                         pOutput.accept(ModBlocks.ANGEL_GOLD_BLOCK.get());
+                        pOutput.accept(ModBlocks.STAR_FORGE.get());
 
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_LOG.get());
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_WOOD.get());

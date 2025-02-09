@@ -88,6 +88,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.BLOOD_CARDINAL.get())).renderType("cutout"));
         simpleBlockWithItem(ModBlocks.POTTED_BLOOD_CARDINAL.get(), models().singleTexture("potted_blood_cardinal", new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.BLOOD_CARDINAL.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.STAR_FORGE.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/star_forge")));
+        simpleBlockWithItem(ModBlocks.STAR_FORGE_PILLAR.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/star_forge_pillar")));
     }
 
     //All the stoff down here is just custom methods to make life a bit easier, probably an easier way to do it but this is what works for me

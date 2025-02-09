@@ -43,6 +43,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CRYSTAL_OAK_PLANKS.get());
         this.dropOther(ModBlocks.CRYSTAL_VINES.get(), ModBlocks.CRYSTAL_VINES_PLANT.get());
         this.dropSelf(ModBlocks.CRYSTAL_VINES_PLANT.get());
+        this.dropSelf(ModBlocks.STAR_FORGE.get());
+        this.dropSelf(ModBlocks.STAR_FORGE_PILLAR.get());
 
         this.dropSelf(ModBlocks.CRYSTAL_OAK_STAIRS.get());
         this.dropSelf(ModBlocks.CRYSTAL_OAK_BUTTON.get());

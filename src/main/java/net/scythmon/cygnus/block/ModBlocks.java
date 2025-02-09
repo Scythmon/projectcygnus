@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,7 +27,7 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ProjectCygnus.MOD_ID);
-    //Crystaline blocks
+    //Crystalline blocks
 
     public static final RegistryObject<Block> ATTUNED_CRYSTAL_ORE = registerBlock("attuned_crystal_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
@@ -150,7 +149,14 @@ public class ModBlocks {
 
             });
 
-    //FLOWERS :DDDDDDDDDDD, the effect is there as its required for sus stew
+    public static final RegistryObject<Block> STAR_FORGE = registerBlock("star_forge",
+            () -> new StarForgeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> STAR_FORGE_PILLAR = registerBlock("star_forge_pillar",
+            () -> new StarForgeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+
+    //FLOWERS :D, the effect is there as it's required for sus stew
 
     public static final RegistryObject<Block> CRYSTAL_LILY = registerBlock("crystal_lily",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
@@ -173,10 +179,10 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> CRYSTAL_VINES_PLANT = registerBlock("crystal_vines_plant",
-            () -> new CrystalVinesPlantBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES).noCollission().instabreak().sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.DESTROY)));
+            () -> new CrystalVinesPlantBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN).noCollission().instabreak().sound(SoundType.VINE).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> CRYSTAL_VINES = registerBlock("crystal_vines",
-            () -> new CrystalVinesBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES).randomTicks().noCollission().instabreak().sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.DESTROY)));
+            () -> new CrystalVinesBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN).randomTicks().noCollission().instabreak().sound(SoundType.VINE).pushReaction(PushReaction.DESTROY)));
 
 
 

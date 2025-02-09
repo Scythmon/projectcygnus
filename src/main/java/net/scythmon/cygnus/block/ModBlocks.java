@@ -153,7 +153,7 @@ public class ModBlocks {
             () -> new StarForgeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     public static final RegistryObject<Block> STAR_FORGE_PILLAR = registerBlock("star_forge_pillar",
-            () -> new StarForgeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new StarForgePillar(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
     //FLOWERS :D, the effect is there as it's required for sus stew
@@ -186,9 +186,6 @@ public class ModBlocks {
 
 
 
-    //Only here for datagen
-    public static final  RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
-            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

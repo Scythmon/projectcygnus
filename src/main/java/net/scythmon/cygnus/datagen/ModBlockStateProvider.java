@@ -34,7 +34,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ANGEL_GOLD_BLOCK);
         blockWithItem(ModBlocks.CRYSTAL_OAK_LEAVES);
         blockWithItem(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
-        blockWithItem(ModBlocks.SOUND_BLOCK);
         blockWithItem(ModBlocks.TEST_BLOCK_RED);
         blockWithItem(ModBlocks.BUDDING_ATTUNED_AMETHYST);
 

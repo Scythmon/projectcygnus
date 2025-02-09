@@ -24,7 +24,7 @@ import net.scythmon.cygnus.block.entity.StarForgeBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class StarForgeBlock extends BaseEntityBlock {
-    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 15, 16);
+    public static final VoxelShape SHAPE = Block.box(4, 0, 4, 12, 15, 12);
 
 
     public StarForgeBlock(Properties pProperties) {

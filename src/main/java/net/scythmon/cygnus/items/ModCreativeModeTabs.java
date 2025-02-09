@@ -133,6 +133,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BLOOD_STEEL_BLOCK.get());
                         pOutput.accept(ModBlocks.ANGEL_GOLD_BLOCK.get());
                         pOutput.accept(ModBlocks.STAR_FORGE.get());
+                        pOutput.accept(ModBlocks.STAR_FORGE_PILLAR.get());
 
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_LOG.get());
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_WOOD.get());
@@ -152,8 +153,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_TRAPDOOR.get());
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_LEAVES.get());
                         pOutput.accept(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES.get());
-                        //Misc
-                        pOutput.accept(ModBlocks.SOUND_BLOCK.get());
+
                     }))
                     .build());
     public static final RegistryObject<CreativeModeTab> CYGNUS_ARMOR = CREATIVE_MODE_TABS.register("cygnus_armor",

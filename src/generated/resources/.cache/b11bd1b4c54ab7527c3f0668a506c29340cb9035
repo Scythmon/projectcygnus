@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-08T09:57:45.1708021	Item Models: projectcygnus
+// 1.20.1	2025-02-08T15:20:02.148335	Item Models: projectcygnus
 904ce2feac93e2a7ecae0df3aeec8d93e482a8d8 assets/projectcygnus/models/item/afterlife_plate.json
 5d3563b60c002fa30d79733769ecdad93578b297 assets/projectcygnus/models/item/altar_core.json
 092c421b21868ba7e8a22dfcafbba6885da532b3 assets/projectcygnus/models/item/angel_gold.json
@@ -7,6 +7,7 @@ fd0ea9fd3c902a2b4ee3e99a0d58a2a11fc389ee assets/projectcygnus/models/item/attune
 c6cf5bd20231d33a812178eec3c16d6d0af9b8b8 assets/projectcygnus/models/item/awakened_mask_of_the_damned.json
 ea1f228ff170033f4fa791cc0f59debb4655ca9b assets/projectcygnus/models/item/awakened_mask_of_vitality.json
 cc6481a1a947507e5cf3744adf68043ba6ea9bf7 assets/projectcygnus/models/item/awakened_mask_of_withering.json
+fa8fae764c98995fcf1116b7db9b37198b503e6d assets/projectcygnus/models/item/blood_cardinal.json
 863e6d3e9396209ce98f65ef87a977ba81490991 assets/projectcygnus/models/item/blood_steel.json
 2bc260acf8d2643ad38694967a26b5d5262bb8c3 assets/projectcygnus/models/item/book_of_enoch.json
 be446fb2145701db679b59c8225094fba593f924 assets/projectcygnus/models/item/bottled_blood.json
@@ -24,8 +25,9 @@ d1cc36ebb9379613c5269ad0364bb99f2c5fb87f assets/projectcygnus/models/item/conque
 87c87b8cbfa1368f84df60f6c5f851d8ee10ebac assets/projectcygnus/models/item/conquest_helmet.json
 017294e49b38aed9305cda64a347e791322a7f22 assets/projectcygnus/models/item/conquest_leggings.json
 73155ce233007f5310bf301a5e6c8a7894b0b65f assets/projectcygnus/models/item/crystal_berries.json
+0afc3a2a529fcc466153f6578d07d134997d00aa assets/projectcygnus/models/item/crystal_bloom.json
 cfd0a5643bde4d7deccd4f1470957259f4ad526a assets/projectcygnus/models/item/crystal_buds.json
-82d99dd324b83b57a31e0f95c94a04471722714d assets/projectcygnus/models/item/crystal_flower.json
+f122b9e065b0f8ed5c3d0116baa09afd5bf2ac04 assets/projectcygnus/models/item/crystal_lily.json
 10a7cdba96b5c1d554068d3aad012d634e0cd0cb assets/projectcygnus/models/item/crystal_oak_button.json
 ceaeba0f2652c60c94236935efd495428a565390 assets/projectcygnus/models/item/crystal_oak_door.json
 b29ac956bf92d79ea5aa237410cb4c7a96b1ab5a assets/projectcygnus/models/item/crystal_oak_fence.json

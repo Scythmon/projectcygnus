@@ -12,6 +12,8 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -173,6 +175,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> FESTERED_PIMPERNEL = registerBlock("festered_pimpernel",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
                     BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> CHOIRS_GEM = registerBlock("choirs_gem",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> FERRO_CLOVERS = registerBlock("ferro_clovers",
+            () -> new PinkPetalsBlock(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS).noOcclusion().noCollission()));
+
+
+
+
     //IMPORTANT, use the BLOCKS.register method to add the potted versions ot else it will break, also make sure to add the corresponding event to the ProjectCygnus class under CommonSetup
 
     public static final RegistryObject<Block> POTTED_CRYSTAL_LILY = BLOCKS.register("potted_crystal_lily",
@@ -190,6 +203,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> POTTED_FESTERED_PIMPERNEL = BLOCKS.register("potted_festered_pimpernel",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.FESTERED_PIMPERNEL,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+    public static final RegistryObject<Block> POTTED_CHOIRS_GEM = BLOCKS.register("potted_choirs_gem",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CHOIRS_GEM,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
 

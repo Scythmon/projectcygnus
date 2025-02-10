@@ -95,6 +95,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.FESTERED_PIMPERNEL.get());
         this.add(ModBlocks.POTTED_FESTERED_PIMPERNEL.get(), createPotFlowerItemTable(ModBlocks.FESTERED_PIMPERNEL.get()));
+
+        this.dropSelf(ModBlocks.CHOIRS_GEM.get());
+        this.add(ModBlocks.POTTED_CHOIRS_GEM.get(), createPotFlowerItemTable(ModBlocks.CHOIRS_GEM.get()));
+
+        this.dropSelf(ModBlocks.FERRO_CLOVERS.get());
     }
 
     protected LootTable.Builder multiOreDrops(Block pBlock, Item item) {

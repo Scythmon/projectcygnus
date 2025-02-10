@@ -35,6 +35,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.CRYSTAL_VINES.get());
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_SAPLING.get());
                         pOutput.accept(ModBlocks.CRYSTAL_LILY.get());
+                        pOutput.accept(ModBlocks.BLOOD_CARDINAL.get());
+                        pOutput.accept(ModBlocks.JUDGES_LILIES.get());
 
                         pOutput.accept(ModItems.ONEH_MOTER.get());
                         pOutput.accept(ModItems.COFFEE_SEEDS.get());

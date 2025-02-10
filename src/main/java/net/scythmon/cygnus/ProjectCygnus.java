@@ -30,6 +30,7 @@ import net.scythmon.cygnus.screen.StarForgeScreen;
 import org.slf4j.Logger;
 
 
+
 @Mod(ProjectCygnus.MOD_ID)
 public class ProjectCygnus  {
     public static final String MOD_ID = "projectcygnus";

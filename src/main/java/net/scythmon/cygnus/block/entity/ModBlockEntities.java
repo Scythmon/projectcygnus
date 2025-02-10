@@ -17,6 +17,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(StarForgeBlockEntity::new,
                             ModBlocks.STAR_FORGE.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<StarForgeBlockEntity>> STAR_FORGE_PILLAR_BE =
+            BLOCK_ENTITIES.register("star_forge_pillar_be", () ->
+                    BlockEntityType.Builder.of(StarForgeBlockEntity::new,
+                            ModBlocks.STAR_FORGE_PILLAR.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

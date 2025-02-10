@@ -24,6 +24,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         //FLOWERDDSSDF
         simpleBlockItemBlockTexture(ModBlocks.CRYSTAL_LILY);
         simpleBlockItemBlockTexture(ModBlocks.BLOOD_CARDINAL);
+        simpleBlockItemBlockTexture(ModBlocks.JUDGES_LILIES);
+        simpleBlockItemBlockTexture(ModBlocks.FESTERED_PIMPERNEL);
         //Food Item
 
         simpleItem(ModItems.BROWNIE);

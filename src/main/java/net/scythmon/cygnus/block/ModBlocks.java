@@ -170,6 +170,9 @@ public class ModBlocks {
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
                     BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> FESTERED_PIMPERNEL = registerBlock("festered_pimpernel",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
     //IMPORTANT, use the BLOCKS.register method to add the potted versions ot else it will break, also make sure to add the corresponding event to the ProjectCygnus class under CommonSetup
 
     public static final RegistryObject<Block> POTTED_CRYSTAL_LILY = BLOCKS.register("potted_crystal_lily",
@@ -183,6 +186,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> POTTED_JUDGES_LILIES = BLOCKS.register("potted_judges_lilies",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.JUDGES_LILIES,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+    public static final RegistryObject<Block> POTTED_FESTERED_PIMPERNEL = BLOCKS.register("potted_festered_pimpernel",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.FESTERED_PIMPERNEL,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
 

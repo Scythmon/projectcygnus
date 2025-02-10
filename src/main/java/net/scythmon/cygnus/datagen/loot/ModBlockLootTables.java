@@ -92,6 +92,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.JUDGES_LILIES.get());
         this.add(ModBlocks.POTTED_JUDGES_LILIES.get(), createPotFlowerItemTable(ModBlocks.JUDGES_LILIES.get()));
+
+        this.dropSelf(ModBlocks.FESTERED_PIMPERNEL.get());
+        this.add(ModBlocks.POTTED_FESTERED_PIMPERNEL.get(), createPotFlowerItemTable(ModBlocks.FESTERED_PIMPERNEL.get()));
     }
 
     protected LootTable.Builder multiOreDrops(Block pBlock, Item item) {

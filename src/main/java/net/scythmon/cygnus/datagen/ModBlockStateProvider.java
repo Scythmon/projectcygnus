@@ -93,6 +93,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_JUDGES_LILIES.get(), models().singleTexture("potted_judges_lilies", new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.JUDGES_LILIES.get())).renderType("cutout"));
 
+        simpleBlockWithItem(ModBlocks.FESTERED_PIMPERNEL.get(), models().cross(blockTexture(ModBlocks.FESTERED_PIMPERNEL.get()).getPath(),
+                blockTexture(ModBlocks.FESTERED_PIMPERNEL.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_FESTERED_PIMPERNEL.get(), models().singleTexture("potted_festered_pimpernel", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.FESTERED_PIMPERNEL.get())).renderType("cutout"));
+
         simpleBlockWithItem(ModBlocks.STAR_FORGE.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/star_forge")));
         simpleBlockWithItem(ModBlocks.STAR_FORGE_PILLAR.get(),

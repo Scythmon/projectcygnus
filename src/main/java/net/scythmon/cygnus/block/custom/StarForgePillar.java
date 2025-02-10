@@ -36,13 +36,13 @@ import java.util.List;
 import java.util.UUID;
 
 import static net.minecraft.world.InteractionHand.MAIN_HAND;
-import static net.minecraft.world.phys.shapes.BooleanOp.OR;
+
 
 public class StarForgePillar extends Block implements EntityBlock {
 
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty IS_REVERSE = BooleanProperty.create("is_reverse");
-    public static final VoxelShape SHAPE = Block.box(4, 0, 4, 12, 15, 12);
+    public static final VoxelShape SHAPE = Block.box(4, 0, 4, 12, 10, 12);
 
 //    public static final TagKey<Item> SWORDS = ItemTags.create(new ResourceLocation("itemdisplay:items"));
 
@@ -95,9 +95,8 @@ public class StarForgePillar extends Block implements EntityBlock {
             } else {
                 ItemStack stack = player.getItemInHand(hand);
 
-//                boolean isInGroup = stack.is(SWORDS); // Checks if the ItemStack is in the specified Tag Group, bypasses SwordItem requirement.
 
-                boolean isItem = stack.getItem() instanceof Item /*|| isInGroup*/;
+                boolean isItem = stack.getItem() instanceof Item ;
 
                 if (hand == MAIN_HAND) {
                     boolean isDisplayEmpty = displayTile.getItem().isEmpty();
@@ -120,17 +119,6 @@ public class StarForgePillar extends Block implements EntityBlock {
         return items.stream().anyMatch(item -> stack.getItem() == item);
     }
 
-    //    @Override
-    //    public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
-    //        ItemStack itemstack = super.getCloneItemStack(state, target, world, pos, player);
-    //        ItemDisplayTile tileTrophy = (ItemDisplayTile) world.getBlockEntity(pos);
-    //        CompoundTag nbttagcompound = tileTrophy.saveAdditional(new CompoundTag());
-    //        tile.setChanged();
-    //        if (!nbttagcompound.isEmpty()) {
-    //            itemstack.setTagInfo("BlockEntityTag", nbttagcompound);
-    //        }
-    //        return itemstack;
-    //    }
     @Override
     public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
         return super.getCloneItemStack(state, target, world, pos, player);

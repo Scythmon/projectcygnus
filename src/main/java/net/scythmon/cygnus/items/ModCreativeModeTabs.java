@@ -40,6 +40,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.FESTERED_PIMPERNEL.get());
                         pOutput.accept(ModBlocks.CHOIRS_GEM.get());
                         pOutput.accept(ModBlocks.FERRO_CLOVERS.get());
+                        pOutput.accept(ModBlocks.ARCHITECT_CORPSE.get());
 
                         pOutput.accept(ModItems.ONEH_MOTER.get());
                         pOutput.accept(ModItems.COFFEE_SEEDS.get());

@@ -100,6 +100,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.POTTED_CHOIRS_GEM.get(), createPotFlowerItemTable(ModBlocks.CHOIRS_GEM.get()));
 
         this.dropSelf(ModBlocks.FERRO_CLOVERS.get());
+        this.dropSelf(ModBlocks.ARCHITECT_CORPSE.get());
     }
 
     protected LootTable.Builder multiOreDrops(Block pBlock, Item item) {

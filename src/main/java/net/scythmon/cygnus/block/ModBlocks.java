@@ -180,6 +180,10 @@ public class ModBlocks {
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
                     BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> SPECKLED_BUSH = registerBlock("speckled_bush",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
     public static final RegistryObject<Block> FERRO_CLOVERS = registerBlock("ferro_clovers",
             () -> new FerroClover(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS).noOcclusion().noCollission()));
 
@@ -210,6 +214,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> POTTED_CHOIRS_GEM = BLOCKS.register("potted_choirs_gem",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CHOIRS_GEM,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+    public static final RegistryObject<Block> POTTED_SPECKLED_BUSH = BLOCKS.register("potted_speckled_bush",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.SPECKLED_BUSH,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
 

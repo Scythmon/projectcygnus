@@ -99,7 +99,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CHOIRS_GEM.get());
         this.add(ModBlocks.POTTED_CHOIRS_GEM.get(), createPotFlowerItemTable(ModBlocks.CHOIRS_GEM.get()));
 
+        this.dropSelf(ModBlocks.SPECKLED_BUSH.get());
+        this.add(ModBlocks.POTTED_SPECKLED_BUSH.get(), createPotFlowerItemTable(ModBlocks.SPECKLED_BUSH.get()));
+
         this.dropSelf(ModBlocks.FERRO_CLOVERS.get());
+
         this.dropSelf(ModBlocks.ARCHITECT_CORPSE.get());
     }
 

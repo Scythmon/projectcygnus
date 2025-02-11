@@ -103,6 +103,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_CHOIRS_GEM.get(), models().singleTexture("potted_choirs_gem", new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.CHOIRS_GEM.get())).renderType("cutout"));
 
+        simpleBlockWithItem(ModBlocks.SPECKLED_BUSH.get(), models().cross(blockTexture(ModBlocks.SPECKLED_BUSH.get()).getPath(),
+                blockTexture(ModBlocks.SPECKLED_BUSH.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_SPECKLED_BUSH.get(), models().singleTexture("potted_speckled_bush", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.SPECKLED_BUSH.get())).renderType("cutout"));
+
 
         simpleBlockWithItem(ModBlocks.STAR_FORGE.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/star_forge")));

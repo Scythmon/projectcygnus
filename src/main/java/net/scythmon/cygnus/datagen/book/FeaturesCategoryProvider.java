@@ -4,6 +4,7 @@
 
 package net.scythmon.cygnus.datagen.book;
 
+import com.klikli_dev.modonomicon.Modonomicon;
 import com.klikli_dev.modonomicon.api.datagen.BookProvider;
 import com.klikli_dev.modonomicon.api.datagen.CategoryProvider;
 import com.klikli_dev.modonomicon.api.datagen.book.BookCategoryModel;
@@ -86,9 +87,9 @@ public class FeaturesCategoryProvider extends CategoryProvider {
         return BookCategoryModel.create(this.modLoc(this.context().categoryId()), this.context().categoryName())
                 .withIcon(Items.NETHER_STAR)
                 .withBackgroundParallaxLayers(
-                        new BookCategoryBackgroundParallaxLayer(this.modLoc("textures/gui/parallax/flow/base.png"), 0.7f, -1),
-                        new BookCategoryBackgroundParallaxLayer(this.modLoc("textures/gui/parallax/flow/1.png"), 1f, -1),
-                        new BookCategoryBackgroundParallaxLayer(this.modLoc("textures/gui/parallax/flow/2.png"), 1.4f, -1)
+                        new BookCategoryBackgroundParallaxLayer(new ResourceLocation(Modonomicon.MOD_ID, "textures/gui/parallax/flow/base.png"), 0.7f, -1),
+                        new BookCategoryBackgroundParallaxLayer(new ResourceLocation(Modonomicon.MOD_ID, "textures/gui/parallax/flow/1.png"), 1f, -1),
+                        new BookCategoryBackgroundParallaxLayer(new ResourceLocation(Modonomicon.MOD_ID, "textures/gui/parallax/flow/2.png"), 1.4f, -1)
                 );
     }
 

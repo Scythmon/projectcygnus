@@ -22,9 +22,7 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         super(packOutput, ProjectCygnus.MOD_ID, "en_us", cachedProvider);
     }
 
-    private void addModTranslations(){
-        //these are just converted from the en_us.json file, because there can only be one, either manually created or data generated.
-
+    private void addItems(){
         this.add("item.projectcygnus.star", "Star");
         this.add("item.projectcygnus.concentrated_crystal_cluster", "Concentrated Crystal Cluster");
         this.add("item.projectcygnus.singularity_stone", "Singularity Stone");
@@ -99,8 +97,14 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.projectcygnus.power_booster_needle", "Power Booster Needle");
         this.add("item.projectcygnus.shattered_relic", "Shattered Relic");
         this.add("item.projectcygnus.starman_sigil", "Starman Sigil");
+    }
+
+    private void addToolTips(){
         this.add("tooltip.projectcygnus.metal_detector.tooltip", "Finds Valuables Underground");
         this.add("tooltip.projectcygnus.oneh_moter.tooltip", "You feel compelled to drink this...though your arent sure if you should");
+    }
+
+    private void addBlocks (){
         this.add("block.projectcygnus.concentrated_crystal_block", "Block of Concentrated Crystal");
         this.add("block.projectcygnus.attuned_crystal_ore", "Attuned Crystal Ore");
         this.add("block.projectcygnus.blood_steel_block", "Block of Blood Steel");
@@ -164,10 +168,19 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.projectcygnus.empowered_star_crown", "Empowered Crown of Stars");
         this.add("item.projectcygnus.empowered_strength_crown", "Empowered Crown of Power");
         this.add("item.projectcygnus.empowered_speed_crown", "Empowered Crown of Agility");
+    }
+
+    private void miscTrans (){
         this.add("creativetab.cygnus_items_tab", "Cygnus Items");
         this.add("creativetab.cygnus_blocks_tab", "Cygnus Blocks");
         this.add("creativetab.cygnus_armor_tab", "Cygnus Armor");
+    }
 
+    private void addModTranslations(){
+        this.addItems();
+        this.addBlocks();
+        this.addToolTips();
+        this.miscTrans();
     }
 
     private void addDemoBook() {
@@ -506,5 +519,6 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
 
     protected void addTranslations() {
         this.addBooks();
+        this.addModTranslations();
     }
 }

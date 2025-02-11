@@ -15,10 +15,11 @@ import com.klikli_dev.modonomicon.api.datagen.BookContextHelper;
 import com.klikli_dev.modonomicon.api.datagen.ModonomiconLanguageProvider;
 import com.klikli_dev.modonomicon.registry.ItemRegistry;
 import net.minecraft.data.PackOutput;
+import net.scythmon.cygnus.ProjectCygnus;
 
 public class EnUsProvider extends AbstractModonomiconLanguageProvider {
     public EnUsProvider(PackOutput packOutput, ModonomiconLanguageProvider cachedProvider) {
-        super(packOutput, Modonomicon.MOD_ID, "en_us", cachedProvider);
+        super(packOutput, ProjectCygnus.MOD_ID, "en_us", cachedProvider);
     }
 
     private void addMisc() {

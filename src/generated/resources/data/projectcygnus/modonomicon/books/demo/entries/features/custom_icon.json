@@ -1,0 +1,37 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "projectcygnus:features",
+  "description": "book.projectcygnus.demo.features.custom_icon.description",
+  "hide_while_locked": false,
+  "icon": {
+    "height": 32,
+    "texture": "projectcygnus:textures/gui/big_test_icon.png",
+    "width": 32
+  },
+  "name": "book.projectcygnus.demo.features.custom_icon.name",
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.projectcygnus.demo.features.custom_icon.intro.text",
+      "title": "book.projectcygnus.demo.features.custom_icon.intro.title",
+      "use_markdown_in_title": false
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "projectcygnus:features/image",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "x": 2,
+  "y": 2
+}

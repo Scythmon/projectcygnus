@@ -26,21 +26,10 @@
       "condition": {
         "type": "modonomicon:none"
       },
-      "multiblock_id": "projectcygnus:blockentity",
-      "multiblock_name": "multiblocks.modonomicon.blockentity",
-      "show_visualize_button": true,
-      "text": "book.projectcygnus.demo.features.multiblock.preview.text"
-    },
-    {
-      "type": "modonomicon:multiblock",
-      "anchor": "",
-      "condition": {
-        "type": "modonomicon:none"
-      },
-      "multiblock_id": "projectcygnus:tag",
+      "multiblock_id": "projectcygnus:demo_dense",
       "multiblock_name": "",
       "show_visualize_button": true,
-      "text": "book.projectcygnus.demo.features.multiblock.preview2.text"
+      "text": "book.projectcygnus.demo.features.multiblock.preview.text"
     },
     {
       "type": "modonomicon:multiblock",

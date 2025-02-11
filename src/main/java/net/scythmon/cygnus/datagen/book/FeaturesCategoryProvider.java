@@ -103,17 +103,9 @@ public class FeaturesCategoryProvider extends CategoryProvider {
 
         this.context().page("preview");
         this.page(BookMultiblockPageModel.builder()
-                .withMultiblockId(this.modLoc("blockentity"))
-                .withMultiblockName("multiblocks.modonomicon.blockentity")
+                .withMultiblockId(this.modLoc("demo_dense"))
                 .withText(this.context().pageText())
                 .build());
-
-        this.page("preview2", () -> BookMultiblockPageModel.builder()
-                .withMultiblockId(this.modLoc("tag"))
-                .withText(this.context().pageText())
-                .build());
-
-        this.lang().add(this.context().pageText(), "A multiblock with tag!");
 
         this.context().page("demo_predicate");
         this.page(BookMultiblockPageModel.builder()
@@ -124,11 +116,6 @@ public class FeaturesCategoryProvider extends CategoryProvider {
         this.page(BookMultiblockPageModel.builder()
                 .withMultiblockId(this.modLoc("demo_fluid"))
                 .build());
-
-//        this.context().page("crash_test");
-//        this.page(BookMultiblockPageModel.builder()
-//                .withMultiblockId(this.modLoc("crash_test"))
-//                .build());
 
         return this.entry(location)
                 .withIcon(Items.FURNACE)

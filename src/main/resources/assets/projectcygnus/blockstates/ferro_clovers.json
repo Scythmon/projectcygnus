@@ -1,0 +1,62 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "projectcygnus:block/ferro_clovers",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "projectcygnus:block/ferro_clovers",
+        "x": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": {
+        "model": "projectcygnus:block/ferro_clovers",
+        "x": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "projectcygnus:block/ferro_clovers"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "projectcygnus:block/ferro_clovers",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "projectcygnus:block/ferro_clovers",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}

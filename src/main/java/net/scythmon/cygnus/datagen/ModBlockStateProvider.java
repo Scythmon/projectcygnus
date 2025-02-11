@@ -103,8 +103,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_CHOIRS_GEM.get(), models().singleTexture("potted_choirs_gem", new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.CHOIRS_GEM.get())).renderType("cutout"));
 
-        simpleBlockWithItem(ModBlocks.FERRO_CLOVERS.get(), models().cross(blockTexture(ModBlocks.FERRO_CLOVERS.get()).getPath(),
-                blockTexture(ModBlocks.FERRO_CLOVERS.get())).renderType("cutout"));
 
         simpleBlockWithItem(ModBlocks.STAR_FORGE.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/star_forge")));
@@ -147,24 +145,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         return models;
     }
 
+
+
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(),
                 models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
                         "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
 
     }
-
-    private void vinesBlock(RegistryObject<Block> blockRegistryObject) {
-        simpleBlock(blockRegistryObject.get(),
-                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
-    }
-
-
-    private void vinesHeadBlock(RegistryObject<Block> blockRegistryObject) {
-        simpleBlock(blockRegistryObject.get(),
-                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
-    }
-
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(ProjectCygnus.MOD_ID +

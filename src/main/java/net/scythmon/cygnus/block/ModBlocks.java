@@ -181,7 +181,7 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> FERRO_CLOVERS = registerBlock("ferro_clovers",
-            () -> new PinkPetalsBlock(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS).noOcclusion().noCollission()));
+            () -> new FerroClover(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> ARCHITECT_CORPSE = registerBlock("architect_corpse",
             () -> new SporeBlossomBlock(BlockBehaviour.Properties.copy(Blocks.SPORE_BLOSSOM).noOcclusion().noCollission()));

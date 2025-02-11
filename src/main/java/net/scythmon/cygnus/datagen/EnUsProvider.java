@@ -15,104 +15,164 @@ import com.klikli_dev.modonomicon.api.datagen.BookContextHelper;
 import com.klikli_dev.modonomicon.api.datagen.ModonomiconLanguageProvider;
 import com.klikli_dev.modonomicon.registry.ItemRegistry;
 import net.minecraft.data.PackOutput;
+import net.scythmon.cygnus.ProjectCygnus;
 
 public class EnUsProvider extends AbstractModonomiconLanguageProvider {
     public EnUsProvider(PackOutput packOutput, ModonomiconLanguageProvider cachedProvider) {
-        super(packOutput, Modonomicon.MOD_ID, "en_us", cachedProvider);
+        super(packOutput, ProjectCygnus.MOD_ID, "en_us", cachedProvider);
     }
 
-    private void addMisc() {
-        this.add(ModonomiconConstants.I18n.ITEM_GROUP, "Modonomicon");
+    private void addModTranslations(){
+        //these are just converted from the en_us.json file, because there can only be one, either manually created or data generated.
 
-        //buttons
-        this.add(Gui.BUTTON_PREVIOUS, "Previous Page");
-        this.add(Gui.BUTTON_NEXT, "Next Page");
-        this.add(Gui.BUTTON_BACK, "Back");
-        this.add(Gui.BUTTON_BACK_TOOLTIP, "Go back to the last page you visited");
-        this.add(Gui.BUTTON_EXIT, "Exit");
-        this.add(Gui.BUTTON_VISUALIZE, "Show Multiblock Preview");
-        this.add(Gui.BUTTON_VISUALIZE_TOOLTIP, "Show Multiblock Preview");
-        this.add(Gui.BUTTON_READ_ALL, "Mark all entries as read");
-        this.add(Gui.BUTTON_READ_ALL_TOOLTIP_READ_UNLOCKED, "Mark all §aunlocked§r entries as read.");
-        this.add(Gui.BUTTON_READ_ALL_TOOLTIP_SHIFT_INSTRUCTIONS, "Shift-Click to mark §call§r (even locked) entries as read.");
-        this.add(Gui.BUTTON_READ_ALL_TOOLTIP_READ_ALL, "Mark §call§r (even locked) entries as read.");
-        this.add(Gui.BUTTON_READ_ALL_TOOLTIP_SHIFT_WARNING, "§l§cWarning:§r This may make it harder to read progress-oriented books.");
-        this.add(Gui.BUTTON_READ_ALL_TOOLTIP_NONE, "There are currently §lno unread§r unlocked entries.");
+        this.add("item.projectcygnus.star", "Star");
+        this.add("item.projectcygnus.concentrated_crystal_cluster", "Concentrated Crystal Cluster");
+        this.add("item.projectcygnus.singularity_stone", "Singularity Stone");
+        this.add("item.projectcygnus.attuned_crystal", "Attuned Crystal");
+        this.add("item.projectcygnus.wither_concentrate", "Wither Concentrate");
+        this.add("item.projectcygnus.undead_concentrate", "Undead Concentrate");
+        this.add("item.projectcygnus.life_concentrate", "Life Concentrate");
+        this.add("item.projectcygnus.speed_concentrate", "Speed Concentrate");
+        this.add("item.projectcygnus.strength_concentrate", "Strength Concentrate");
+        this.add("item.projectcygnus.star_concentrate", "Star Concentrate");
+        this.add("item.projectcygnus.starflame", "Starflame");
+        this.add("item.projectcygnus.bottled_blood", "Bottle of Blood");
+        this.add("item.projectcygnus.cultist_knife", "Cultist Knife");
+        this.add("item.projectcygnus.holy_water", "Holy Water");
+        this.add("item.projectcygnus.book_of_enoch", "The Book of Enoch");
+        this.add("item.projectcygnus.prayer_book", "Prayer Book");
+        this.add("item.projectcygnus.oneh_moter", "Oneh Moter");
+        this.add("item.projectcygnus.crystal_buds", "Crystal Buds");
+        this.add("item.projectcygnus.blood_steel", "Blood Steel");
+        this.add("item.projectcygnus.angel_gold", "Angel Gold");
+        this.add("item.projectcygnus.altar_core", "Altar Core");
+        this.add("item.projectcygnus.cherub_tear", "Cherub Tear");
+        this.add("item.projectcygnus.throne_tear", "Throne Tear");
+        this.add("item.projectcygnus.dominion_tear", "Dominion Tear");
+        this.add("item.projectcygnus.fell_star_plate", "Fell Star Plate");
+        this.add("item.projectcygnus.empty_angelic_talisman", "Empty Angelic Talisman");
+        this.add("item.projectcygnus.empty_celestial_talisman", "Empty Celestial Talisman");
+        this.add("item.projectcygnus.afterlife_plate", "Afterlife Plate");
+        this.add("item.projectcygnus.angel_plate", "Angel Plate");
+        this.add("item.projectcygnus.carnage_plate", "Carnage Plate");
+        this.add("item.projectcygnus.crystal_bloom", "Crystal Bloom");
+        this.add("item.projectcygnus.coffee_seeds", "Coffee Seeds");
+        this.add("item.projectcygnus.crystal_berries", "Crystal Berries");
+        this.add("item.projectcygnus.brownie", "Brownie");
+        this.add("item.projectcygnus.coffee", "Coffee");
+        this.add("item.projectcygnus.unstable_singularity", "Unstable Singularity");
+        this.add("item.projectcygnus.singularity_shard", "Singularity Shard");
+        this.add("item.projectcygnus.wishing_core", "Wishing Core");
+        this.add("item.projectcygnus.wishing_token", "Wishing Token");
+        this.add("item.projectcygnus.empty_harbinger_talisman", "Empty Harbinger Talisman");
+        this.add("item.projectcygnus.empty_watching_talisman", "Empty Watching Talisman");
+        this.add("item.projectcygnus.empty_fetid_talisman", "Empty Fetid Talisman");
+        this.add("item.projectcygnus.damned_conjure_talisman", "Damned Conjure Talisman");
+        this.add("item.projectcygnus.vitality_conjure_talisman", "Vitality Conjure Talisman");
+        this.add("item.projectcygnus.wither_conjure_talisman", "Wither Conjure Talisman");
+        this.add("item.projectcygnus.lightning_conjure_talisman", "Lightning Conjure Talisman");
+        this.add("item.projectcygnus.enflamed_conjure_talisman", "Enflamed Conjure Talisman");
+        this.add("item.projectcygnus.star_conjure_talisman", "Star Conjure Talisman");
+        this.add("item.projectcygnus.dominion_conjure_talisman", "Dominion Conjure Talisman");
+        this.add("item.projectcygnus.cherub_conjure_talisman", "Cherub Conjure Talisman");
+        this.add("item.projectcygnus.throne_conjure_talisman", "Throne Conjure Talisman");
+        this.add("item.projectcygnus.watching_conjure_talisman", "Watching Conjure Talisman");
+        this.add("item.projectcygnus.death_conjure_talisman", "Death Conjure Talisman");
+        this.add("item.projectcygnus.conquest_conjure_talisman", "Conquest Conjure Talisman");
+        this.add("item.projectcygnus.famine_conjure_talisman", "Famine Conjure Talisman");
+        this.add("item.projectcygnus.pestilence_conjure_talisman", "Pestilence Conjure Talisman");
+        this.add("item.projectcygnus.undead_essence", "Essence of the Undead");
+        this.add("item.projectcygnus.vitality_essence", "Essence of Vitality");
+        this.add("item.projectcygnus.wither_essence", "Essence of Withering");
+        this.add("item.projectcygnus.lightning_essence", "Essence of Lightning");
+        this.add("item.projectcygnus.enflamed_essence", "Essence of the Enflamed");
+        this.add("item.projectcygnus.star_essence", "Essence of the Stars");
+        this.add("item.projectcygnus.soul_of_flaming_choirs", "Soul of Flaming Choirs");
+        this.add("item.projectcygnus.soul_of_godly_judgement", "Soul of Godly Judgement");
+        this.add("item.projectcygnus.soul_of_crumbling_heavens", "Soul of Crumbling Heavens");
+        this.add("item.projectcygnus.metal_detector", "Metal Detector");
+        this.add("item.projectcygnus.coffee_beans", "Coffee Beans");
+        this.add("item.projectcygnus.first_ritual_knife", "First Ritual Knife");
+        this.add("item.projectcygnus.heart_of_flames", "Heart Of Flames");
+        this.add("item.projectcygnus.null_catalyst_talisman", "Null Catalyst Talisman");
+        this.add("item.projectcygnus.power_booster_canister", "Power Booster Canister");
+        this.add("item.projectcygnus.power_booster_needle", "Power Booster Needle");
+        this.add("item.projectcygnus.shattered_relic", "Shattered Relic");
+        this.add("item.projectcygnus.starman_sigil", "Starman Sigil");
+        this.add("tooltip.projectcygnus.metal_detector.tooltip", "Finds Valuables Underground");
+        this.add("tooltip.projectcygnus.oneh_moter.tooltip", "You feel compelled to drink this...though your arent sure if you should");
+        this.add("block.projectcygnus.concentrated_crystal_block", "Block of Concentrated Crystal");
+        this.add("block.projectcygnus.attuned_crystal_ore", "Attuned Crystal Ore");
+        this.add("block.projectcygnus.blood_steel_block", "Block of Blood Steel");
+        this.add("block.projectcygnus.budding_attuned_amethyst", "Budding Attuned Amethyst");
+        this.add("block.projectcygnus.test_block_red", "Guh");
+        this.add("block.projectcygnus.angel_gold_block", "Block of Angel Gold");
+        this.add("block.projectcygnus.crystal_oak_log", "Crystal Oak Log");
+        this.add("block.projectcygnus.crystal_oak_wood", "Crystal Oak Wood");
+        this.add("block.projectcygnus.stripped_crystal_oak_log", "Stripped Crystal Oak Log");
+        this.add("block.projectcygnus.stripped_crystal_oak_wood", "Stripped Crystal Oak Wood");
+        this.add("block.projectcygnus.crystal_oak_sapling", "Crystal Oak Sapling");
+        this.add("block.projectcygnus.crystal_oak_stairs", "Crystal Oak Stairs");
+        this.add("block.projectcygnus.crystal_oak_slab", "Crystal Oak Slab");
+        this.add("block.projectcygnus.crystal_oak_button", "Crystal Oak Button");
+        this.add("block.projectcygnus.crystal_oak_pressure_plate", "Crystal Oak Pressure Plate");
+        this.add("block.projectcygnus.crystal_oak_fence", "Crystal Oak Fence");
+        this.add("block.projectcygnus.crystal_oak_fence_gate", "Crystal Oak Fence Gate");
+        this.add("block.projectcygnus.crystal_oak_door", "Crystal Oak Planks");
+        this.add("block.projectcygnus.crystal_oak_trapdoor", "Crystal Oak Trapdoor");
+        this.add("block.projectcygnus.star_forge", "Star Forge");
+        this.add("block.projectcygnus.star_forge_pillar", "Star Forge Pillar");
+        this.add("block.projectcygnus.crystal_oak_leaves", "Crystal Oak Leaves");
+        this.add("block.projectcygnus.flowering_crystal_oak_leaves", "Flowering Crystal Oak Leaves");
+        this.add("block.projectcygnus.budding_crystal_oak_leaves", "Budding Crystal Oak Leaves");
+        this.add("block.projectcygnus.sound_block", "Sound Block");
+        this.add("block.projectcygnus.attuned_crystal_block", "Block of Attuned Crystal");
+        this.add("block.projectcygnus.crystal_vines", "Crystal Vines");
+        this.add("block.projectcygnus.crystal_lily", "Crystal Lily");
+        this.add("block.projectcygnus.blood_cardinal", "Blood Cardinal");
+        this.add("block.projectcygnus.judges_lilies", "Judge's Lilies");
+        this.add("block.projectcygnus.festered_pimpernel", "Festered Pimpernel");
+        this.add("block.projectcygnus.choirs_gem", "Choir's Gem");
+        this.add("block.projectcygnus.ferro_clovers", "Ferro Clover");
+        this.add("block.projectcygnus.architect_corpse", "Architect Corpse");
+        this.add("block.projectcygnus.crystal_vines_plant", "Crystal Vines");
+        this.add("item.projectcygnus.death_bird_helmet", "Mask of the Death Bird");
+        this.add("item.projectcygnus.death_bird_chestplate", "Ribs of the Death Bird");
+        this.add("item.projectcygnus.death_bird_leggings", "Leggings of the Death Bird");
+        this.add("item.projectcygnus.death_bird_boots", "Claws of the Death Bird");
+        this.add("item.projectcygnus.plagued_lord_helmet", "Helm of the Plagued Lord");
+        this.add("item.projectcygnus.plagued_lord_chestplate", "Chestplate of the Plagued Lord");
+        this.add("item.projectcygnus.plagued_lord_leggings", "Greaves of the Plagued Lord");
+        this.add("item.projectcygnus.plagued_lord_boots", "Boots of the Plagued Lord");
+        this.add("item.projectcygnus.famine_helmet", "Helm of the Starved Beast");
+        this.add("item.projectcygnus.famine_chestplate", "Chestplate of the Starved Beast");
+        this.add("item.projectcygnus.famine_leggings", "Greaves of the Starved Beast");
+        this.add("item.projectcygnus.famine_boots", "Boots of the Starved Beast");
+        this.add("item.projectcygnus.conquest_helmet", "War Fangs of Conquest");
+        this.add("item.projectcygnus.conquest_chestplate", "War Plate of Conquest");
+        this.add("item.projectcygnus.conquest_leggings", "War Greaves of Conquest");
+        this.add("item.projectcygnus.conquest_boots", "War Shackles of Conquest");
+        this.add("item.projectcygnus.mask_of_the_damned", "Mask of the Damned");
+        this.add("item.projectcygnus.mask_of_withering", "Mask of Withering");
+        this.add("item.projectcygnus.mask_of_vitality", "Mask of Vitality");
+        this.add("item.projectcygnus.awakened_mask_of_the_damned", "Awakened Mask of the Damned");
+        this.add("item.projectcygnus.awakened_mask_of_withering", "Awakened Mask of Withering");
+        this.add("item.projectcygnus.awakened_mask_of_vitality", "Awakened Mask of Vitality");
+        this.add("item.projectcygnus.star_crown", "Crown of Stars");
+        this.add("item.projectcygnus.strength_crown", "Crown of Power");
+        this.add("item.projectcygnus.speed_crown", "Crown of Agility");
+        this.add("item.projectcygnus.empowered_star_crown", "Empowered Crown of Stars");
+        this.add("item.projectcygnus.empowered_strength_crown", "Empowered Crown of Power");
+        this.add("item.projectcygnus.empowered_speed_crown", "Empowered Crown of Agility");
+        this.add("creativetab.cygnus_items_tab", "Cygnus Items");
+        this.add("creativetab.cygnus_blocks_tab", "Cygnus Blocks");
+        this.add("creativetab.cygnus_armor_tab", "Cygnus Armor");
 
-        this.add(Gui.HOVER_BOOK_LINK, "Go to: %s");
-        this.add(Gui.HOVER_BOOK_LINK_ERROR, "Invalid link: %s. Please contact the author of the book or the translator to fix this. More information can be found in the log with the context \"Failed to parse book link.\".");
-        this.add(Gui.HOVER_BOOK_LINK_LOCKED, "%s.\n%s");
-        this.add(Gui.HOVER_BOOK_ENTRY_LINK_LOCKED_INFO, "You need to unlock this entry before you can open the link!");
-        this.add(Gui.HOVER_BOOK_ENTRY_LINK_LOCKED_INFO_HINT, "Hint: The entry is in the Category: %s");
-        this.add(Gui.HOVER_BOOK_PAGE_LINK_LOCKED_INFO, "You need to unlock this page before you can open the link!");
-        this.add(Gui.HOVER_BOOK_PAGE_LINK_LOCKED_INFO_HINT, "Hint: The page is in the Entry %s, under the Category %s");
-        this.add(Gui.HOVER_HTTP_LINK, "Visit: %s");
-        this.add(Gui.HOVER_ITEM_LINK_INFO, "Click to show recipe in JEI, Shift-Click to show usage.");
-        this.add(Gui.HOVER_ITEM_LINK_INFO_LINE2, "Will not do anything, if no recipe/usage is found.");
-        this.add(Gui.HOVER_ITEM_LINK_INFO_NO_JEI, "Install JEI to show recipe/usage on click.");
-
-        this.add(Gui.HOVER_COMMAND_LINK, "Click to run linked command. Hold down shift to show command.");
-        this.add(Gui.HOVER_COMMAND_LINK_UNAVAILABLE, "You already used this command too many times, you cannot use it again.");
-
-        //other gui stuff
-        this.add(Gui.PAGE_ENTITY_LOADING_ERROR, "Failed to load entity");
-        this.add(Gui.SEARCH_SCREEN_TITLE, "Search in Book");
-        this.add(Gui.SEARCH_ENTRY_LOCKED, "(Locked)");
-        this.add(Gui.SEARCH_NO_RESULTS, "No Results");
-        this.add(Gui.SEARCH_NO_RESULTS_SAD, ":(");
-        this.add(Gui.SEARCH_INFO_TEXT, """
-                To search for entries, simply start typing what you are looking for.
-                """);
-        this.add(Gui.SEARCH_ENTRY_LIST_TITLE, "Entries");
-        this.add(Gui.OPEN_SEARCH, "Open Search");
-
-
-        this.add(Gui.RECIPE_PAGE_RECIPE_MISSING, "Recipe %s was not found! This may be an issue with the mod, or the modpack may have disabled it.");
-
-        //Tooltip
-        this.add(Tooltips.CONDITION_ADVANCEMENT, "Requires Advancement: %s");
-        this.add(Tooltips.CONDITION_ADVANCEMENT_LOADING, "Loading ...");
-        this.add(Tooltips.CONDITION_ADVANCEMENT_HIDDEN, "Hidden Advancement");
-        this.add(Tooltips.CONDITION_ENTRY_UNLOCKED, "Requires unlocked Entry: %s");
-        this.add(Tooltips.CONDITION_CATEGORY_HAS_VISIBLE_ENTRIES, "Requires that category %s has visible entries");
-        this.add(Tooltips.CONDITION_MOD_LOADED, "Requires loaded mod: %s");
-        this.add(Tooltips.CONDITION_ENTRY_READ, "Requires read Entry: %s\nHint: Mark all entries as read with the \"eye\" button at the top right.");
-        this.add(Tooltips.ITEM_NO_BOOK_FOUND_FOR_STACK, "No book found for this item in the modonomicon book database! Nbt: %s");
-        this.add(Tooltips.RECIPE_CRAFTING_SHAPELESS, "Shapeless");
-        this.add(Tooltips.FLUID_AMOUNT, "%s mb");
-        this.add(Tooltips.FLUID_AMOUNT_AND_CAPACITY, "%s / %s mb");
-
-        //Commands
-        this.add(Command.ERROR_UNKNOWN_BOOK, "Unknown book: %s");
-        this.add(Command.SUCCESS_RESET_BOOK, "Successfully reset book: %s");
-        this.add(Command.SUCCESS_SAVE_PROGRESS, "Saved progress for book: %s. The unlock code has been copied to your clipboard.");
-        this.add(Command.SUCCESS_LOAD_PROGRESS, "Successfully loaded progress for book: %s.");
-        this.add(Command.RELOAD_REQUESTED, "Requested reload of resource- and datapacks.");
-        this.add(Command.RELOAD_SUCCESS, "Successfully reloaded resource- and datapacks.");
-        this.add(Command.ERROR_LOAD_PROGRESS, "Invalid unlock code!");
-        this.add(Command.ERROR_LOAD_PROGRESS_CLIENT, "Failed to decode unlock code. Make sure to have a valid unlock code in your clipboard! Current Clipboard content: \"%s\"");
-
-        this.add(Command.DEFAULT_FAILURE_MESSAGE, "Modonomicon tried to run a command for you (e.g. because you read an entry for the first time, or clicked a command button or command link). However, it seems you already reached the maximum use limit for this command.");
-
-        //sounds
-        this.add(Subtitles.TURN_PAGE, "Turn Page");
-
-        //Others
-        this.add(Gui.NO_ERRORS_FOUND, "No errors found. You should not see this page!");
-
-        //Multiblock Preview
-        this.add(Multiblock.COMPLETE, "Complete!");
-        this.add(Multiblock.NOT_ANCHORED, "Right-Click a Block to anchor the Structure.");
-        this.add(Multiblock.REMOVE_BLOCKS, " (Clear blocks marked in red)");
-    }
-
-    private void addItems() {
-        this.addItem(ItemRegistry.MODONOMICON, "Modonomicon");
     }
 
     private void addDemoBook() {
 
-        var helper = ModonomiconAPI.get().getContextHelper(Modonomicon.MOD_ID);
+        var helper = ModonomiconAPI.get().getContextHelper(ProjectCygnus.MOD_ID);
         helper.book("demo");
 
         this.addDemoBookFeaturesCategory(helper);
@@ -364,11 +424,9 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add(helper.pageTitle(), "Book Links");
         this.add(helper.pageText(),
                 """
-                        [View a Multiblock](entry://modonomicon:demo/features/multiblock) \\
-                        [Link to a Condition](entry://modonomicon:demo/features/condition_level_1) \\
-                        [Link to basic formatting](entry://modonomicon:demo/formatting/basic) \\
+                        [View a Multiblock](entry://features/multiblock) \\
                         [Link without book id](entry://formatting/basic) \\
-                        [Always locked](entry://modonomicon:demo/formatting/always_locked) \\
+                        [Always locked](entry://formatting/always_locked) \\
                         [Category Link without book id](category://formatting/)
                              """);
 
@@ -447,8 +505,6 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
     }
 
     protected void addTranslations() {
-        this.addMisc();
-        this.addItems();
         this.addBooks();
     }
 }

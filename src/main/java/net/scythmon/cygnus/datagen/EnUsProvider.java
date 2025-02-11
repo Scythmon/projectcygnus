@@ -172,7 +172,7 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
 
     private void addDemoBook() {
 
-        var helper = ModonomiconAPI.get().getContextHelper(Modonomicon.MOD_ID);
+        var helper = ModonomiconAPI.get().getContextHelper(ProjectCygnus.MOD_ID);
         helper.book("demo");
 
         this.addDemoBookFeaturesCategory(helper);

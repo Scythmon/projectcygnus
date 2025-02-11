@@ -33,7 +33,7 @@
     "texture_height": 256,
     "texture_width": 256
   },
-  "model": "modonomicon:modonomicon_green",
+  "model": "projectcygnus:book_of_enoch",
   "name": "book.projectcygnus.demo.name",
   "read_all_button_y_offset": 0,
   "right_frame_overlay": {

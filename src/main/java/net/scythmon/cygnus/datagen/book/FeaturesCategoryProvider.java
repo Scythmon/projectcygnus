@@ -20,6 +20,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
+import net.scythmon.cygnus.ProjectCygnus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,8 +88,7 @@ public class FeaturesCategoryProvider extends CategoryProvider {
         return BookCategoryModel.create(this.modLoc(this.context().categoryId()), this.context().categoryName())
                 .withIcon(Items.NETHER_STAR)
                 .withBackgroundParallaxLayers(
-                        new BookCategoryBackgroundParallaxLayer(new ResourceLocation(Modonomicon.MOD_ID, "textures/gui/parallax/flow/base.png"), 0.7f, -1),
-                        new BookCategoryBackgroundParallaxLayer(new ResourceLocation(Modonomicon.MOD_ID, "textures/gui/parallax/flow/1.png"), 1f, -1),
+                        new BookCategoryBackgroundParallaxLayer(new ResourceLocation(ProjectCygnus.MOD_ID, "textures/screens/starbornbackground.png"), 0.7f, -1),
                         new BookCategoryBackgroundParallaxLayer(new ResourceLocation(Modonomicon.MOD_ID, "textures/gui/parallax/flow/2.png"), 1.4f, -1)
                 );
     }

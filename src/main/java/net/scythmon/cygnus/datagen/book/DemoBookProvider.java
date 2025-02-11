@@ -26,8 +26,8 @@ public class DemoBookProvider extends BookProvider {
 
     @Override
     protected BookModel generateBook() {
-        this.lang().add(this.context().bookName(), "Demo Book");
-        this.lang().add(this.context().bookTooltip(), "A book to showcase & test Modonomicon features.");
+        this.lang().add(this.context().bookName(), "Book of Enoch");
+        this.lang().add(this.context().bookTooltip(), "Inside contains knowledge of all good and evil.");
 
         //if we want to handle a second language in here we can access it like this:
         //this.lang("ru_ru").add(this.context().bookName(), "Демонстрационная книга");
@@ -55,7 +55,7 @@ public class DemoBookProvider extends BookProvider {
 
         var demoBook = BookModel.create(this.modLoc("demo"), this.context().bookName())
                 .withTooltip(this.context().bookTooltip())
-                .withModel(new ResourceLocation("modonomicon:modonomicon_green"))
+                .withModel(new ResourceLocation("projectcygnus:book_of_enoch"))
                 .withBookTextOffsetX(5)
                 .withBookTextOffsetY(0) //no top offset
                 .withBookTextOffsetWidth(-5)

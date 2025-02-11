@@ -1,7 +1,7 @@
-// 1.20.1	2025-02-11T15:06:19.2581922	Books: projectcygnus
-6913ee50fc787d89b1b1d398b468622818d6392c data/projectcygnus/modonomicon/books/demo/book.json
+// 1.20.1	2025-02-11T10:30:58.3705465	Books: projectcygnus
+ee6dc90cb968ad5774f0e3113a36ed95e170dbfb data/projectcygnus/modonomicon/books/demo/book.json
 35b92222f44740c81d88d791f4e3afe36d226846 data/projectcygnus/modonomicon/books/demo/categories/conditional.json
-a60d3365528f267e445666cae26fd744058f29a3 data/projectcygnus/modonomicon/books/demo/categories/features.json
+39b1c3ee8f9bf69c4ff7688d1f13e9d4e46e9a61 data/projectcygnus/modonomicon/books/demo/categories/features.json
 8b222b5976cbf2cc865ac5cb8e1c9bf000f4f180 data/projectcygnus/modonomicon/books/demo/categories/formatting.json
 3472eddf16439b93484cedd588d9b09622b859bb data/projectcygnus/modonomicon/books/demo/categories/hidden.json
 da2c91ea045a7713dfd879c635323d1cebea0bba data/projectcygnus/modonomicon/books/demo/categories/other.json

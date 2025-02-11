@@ -75,7 +75,7 @@ public class FeaturesCategoryProvider extends CategoryProvider {
         var imageEntry = new ImageEntryProvider(this).generate('i');
         imageEntry.withParent(this.parent(emptyEntry));
 
-        var redirectEntry = this.add(this.makeRedirectEntry('5'));
+//        var redirectEntry = this.add(this.makeRedirectEntry('5'));
 
         var customIconEntry = this.add(this.makeCustomIconEntry('g'));
         customIconEntry.withParent(this.parent(imageEntry));

@@ -365,11 +365,9 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add(helper.pageTitle(), "Book Links");
         this.add(helper.pageText(),
                 """
-                        [View a Multiblock](entry://modonomicon:demo/features/multiblock) \\
-                        [Link to a Condition](entry://modonomicon:demo/features/condition_level_1) \\
-                        [Link to basic formatting](entry://modonomicon:demo/formatting/basic) \\
+                        [View a Multiblock](entry://features/multiblock) \\
                         [Link without book id](entry://formatting/basic) \\
-                        [Always locked](entry://modonomicon:demo/formatting/always_locked) \\
+                        [Always locked](entry://formatting/always_locked) \\
                         [Category Link without book id](category://formatting/)
                              """);
 

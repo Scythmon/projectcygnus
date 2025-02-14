@@ -2,97 +2,74 @@ package net.scythmon.cygnus.block.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.Connection;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.world.entity.Display;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.items.ItemStackHandler;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.block.custom.StarForgePillar;
+import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
-import static net.minecraft.nbt.Tag.TAG_COMPOUND;
+public class StarForgePillarEntity extends BlockEntity {
+    private final ItemStackHandler inventory = new ItemStackHandler(1) {
+        @Override
+        protected void onContentsChanged(int slot) {
+            super.onContentsChanged(slot);
+            StarForgePillarEntity.this.setChanged();
+        }
 
-public class StarForgePillarEntity extends BaseTile {
+        @Override
+        protected int getStackLimit(int slot, @NotNull ItemStack stack) {
+            return 1;
+        }
+    };
 
-    private ItemStack cachedItem;
+
+    private final LazyOptional<ItemStackHandler> optional = LazyOptional.of(() -> this.inventory);
 
     public StarForgePillarEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.STAR_FORGE_PILLAR_BE.get(), pos, state);
-        this.cachedItem = ItemStack.EMPTY;
     }
 
     @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
-        if (tag.contains("displayed_item", TAG_COMPOUND)) {
-            this.cachedItem = ItemStack.of(tag.getCompound("displayed_item"));
-        }
+    public void load(@NotNull CompoundTag nbt) {
+        super.load(nbt);
+        CompoundTag cygnusData = nbt.getCompound(ProjectCygnus.MOD_ID);
+        this.inventory.deserializeNBT(cygnusData.getCompound("Inventory"));
     }
 
     @Override
-    public void saveAdditional(CompoundTag tag) {
-        tag.put("displayed_item", this.cachedItem.save(new CompoundTag()));
-
-        super.saveAdditional(tag);
-    }
-
-    public CompoundTag getUpdateTag() {
-        return this.saveWithFullMetadata();
-    }
-
-    //TODO: TEST EXTENSIVELY
-    @Override
-    @Nullable
-    public Packet<ClientGamePacketListener> getUpdatePacket() {
-        return ClientboundBlockEntityDataPacket.create(this);
+    protected void saveAdditional(@NotNull CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        var cygnusData = new CompoundTag();
+        cygnusData.put("Inventory", this.inventory.serializeNBT());
+        nbt.put(ProjectCygnus.MOD_ID, cygnusData);
     }
 
     @Override
-    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
-        this.load(pkt.getTag());
+    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap) {
+        return cap == ForgeCapabilities.ITEM_HANDLER ? this.optional.cast() : super.getCapability(cap);
     }
 
     @Override
-    public void handleUpdateTag(CompoundTag tag) {
-        super.handleUpdateTag(tag);
+    public void invalidateCaps() {
+        super.invalidateCaps();
+        this.optional.invalidate();
     }
 
-    @Override
-    public boolean onlyOpCanSetNbt() {
-        return false;
-    }
-
-    @Override
-    public boolean triggerEvent(int id, int type) {
-        return super.triggerEvent(id, type);
-    }
-
-    @Nullable
-    @Override
-    public Level getLevel() {
-        return super.getLevel();
-    }
-
-    @Override
-    public BlockPos getBlockPos() {
-        return super.getBlockPos();
+    public ItemStackHandler getInventory() {
+        return this.inventory;
     }
 
     public ItemStack getItem() {
-        return this.cachedItem;
+        return this.inventory.getStackInSlot(0);
     }
 
-    public void setDisplayItem(ItemStack stack) {
-        this.cachedItem = stack;
-        this.sendBlockUpdate();
-    }
-
-    public void sendBlockUpdate() {
-        this.setChanged();
-        this.level.sendBlockUpdated(this.getBlockPos(), this.getBlockState(), this.getBlockState(), 3);
+    public void setItem(ItemStack stack) {
+        this.inventory.setStackInSlot(0, stack);
     }
 }

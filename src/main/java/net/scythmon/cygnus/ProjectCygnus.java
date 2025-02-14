@@ -2,13 +2,13 @@ package net.scythmon.cygnus;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -21,7 +21,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.scythmon.cygnus.block.ModBlocks;
 import net.scythmon.cygnus.block.entity.ModBlockEntities;
 import net.scythmon.cygnus.entity.ModEntities;
-import net.scythmon.cygnus.entity.client.TigerRenderer;
+import net.scythmon.cygnus.entity.client.renderers.PillarRenderer;
+import net.scythmon.cygnus.entity.client.renderers.TigerRenderer;
 import net.scythmon.cygnus.items.ModCreativeModeTabs;
 import net.scythmon.cygnus.items.ModItems;
 import net.scythmon.cygnus.items.potions.ModPotion;
@@ -88,7 +89,7 @@ public class ProjectCygnus  {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.TIGER.get(), TigerRenderer::new);
-
+            BlockEntityRenderers.register(ModBlockEntities.STAR_FORGE_PILLAR_BE.get(), PillarRenderer::new);
             MenuScreens.register(ModMenuTypes.STAR_FORGE_MENU.get(), StarForgeScreen::new);
         }
     }

@@ -33,7 +33,7 @@ public class StarForgePillar extends Block implements EntityBlock {
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
         return ModBlockEntities.STAR_FORGE_PILLAR_BE.get().create(pos, state);
     }
-    
+
     @SuppressWarnings("deprecation")
     @Override
     public VoxelShape getShape(BlockState p_60555_, BlockGetter p_60556_, BlockPos p_60557_, CollisionContext p_60558_) {
@@ -51,14 +51,14 @@ public class StarForgePillar extends Block implements EntityBlock {
                 if(stack.isEmpty()) {
                     // Get the item from the block entity and give it to the player
                     if (inventory.getStackInSlot(0).isEmpty()) {
-                        player.sendSystemMessage(Component.literal("No item in block!"));
+                        player.sendSystemMessage(Component.literal("No item in pillar!"));
                         return InteractionResult.SUCCESS;
                     }
 
                     ItemStack extracted = inventory.extractItem(0, player.isCrouching() ? inventory.getSlotLimit(0) : 1, false);
                     player.setItemInHand(hand, extracted);
                 } else {
-                    // Set the item in the block entity to the item in the player's hand (assuming the blockentity can store the item)
+                    // Set the item in the block entity to the item in the player's hand (assuming the pillar can store the item)
                     ItemStack toInsert = stack.copy();
                     toInsert.setCount(1);
 

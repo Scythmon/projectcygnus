@@ -2,7 +2,12 @@ package net.scythmon.cygnus.block.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -11,8 +16,8 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.ItemStackHandler;
 import net.scythmon.cygnus.ProjectCygnus;
-import net.scythmon.cygnus.block.custom.StarForgePillar;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class StarForgePillarEntity extends BlockEntity {
     private final ItemStackHandler inventory = new ItemStackHandler(1) {
@@ -40,6 +45,8 @@ public class StarForgePillarEntity extends BlockEntity {
         super.load(nbt);
         CompoundTag cygnusData = nbt.getCompound(ProjectCygnus.MOD_ID);
         this.inventory.deserializeNBT(cygnusData.getCompound("Inventory"));
+
+        this.level.sendBlockUpdated(this.worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
     }
 
     @Override
@@ -54,6 +61,7 @@ public class StarForgePillarEntity extends BlockEntity {
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap) {
         return cap == ForgeCapabilities.ITEM_HANDLER ? this.optional.cast() : super.getCapability(cap);
     }
+
 
     @Override
     public void invalidateCaps() {
@@ -71,5 +79,17 @@ public class StarForgePillarEntity extends BlockEntity {
 
     public void setItem(ItemStack stack) {
         this.inventory.setStackInSlot(0, stack);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        CompoundTag nbt = super.getUpdateTag();
+        saveAdditional(nbt);
+        return nbt;
+    }
+
+    @Override
+    public @Nullable Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 }

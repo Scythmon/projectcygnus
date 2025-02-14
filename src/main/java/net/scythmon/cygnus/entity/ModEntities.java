@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.block.entity.StarForgePillarEntity;
 import net.scythmon.cygnus.entity.custom.TigerEntity;
 
 public class ModEntities {
@@ -19,7 +20,6 @@ public class ModEntities {
                     () -> EntityType.Builder.of(TigerEntity::new, MobCategory.CREATURE)
                             .sized(1.5f, 1.75f)
                             .build(new ResourceLocation(ProjectCygnus.MOD_ID, "tiger").toString()));
-
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

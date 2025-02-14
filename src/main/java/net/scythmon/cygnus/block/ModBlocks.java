@@ -190,7 +190,6 @@ public class ModBlocks {
 
 
 
-
     //IMPORTANT, use the BLOCKS.register method to add the potted versions ot else it will break, also make sure to add the corresponding event to the ProjectCygnus class under CommonSetup
 
     public static final RegistryObject<Block> POTTED_CRYSTAL_LILY = BLOCKS.register("potted_crystal_lily",

@@ -1,12 +1,12 @@
-package net.scythmon.cygnus.entity.client;
+package net.scythmon.cygnus.entity.client.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.entity.client.TigerModel;
 import net.scythmon.cygnus.entity.custom.TigerEntity;
-import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
 public class TigerRenderer extends GeoEntityRenderer<TigerEntity> {

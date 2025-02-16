@@ -25,6 +25,9 @@ public class StarForgePillarEntity extends BlockEntity {
         protected void onContentsChanged(int slot) {
             super.onContentsChanged(slot);
             StarForgePillarEntity.this.setChanged();
+            if (level != null) {
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), Block.UPDATE_ALL);
+            }
         }
 
         @Override
@@ -45,8 +48,6 @@ public class StarForgePillarEntity extends BlockEntity {
         super.load(nbt);
         CompoundTag cygnusData = nbt.getCompound(ProjectCygnus.MOD_ID);
         this.inventory.deserializeNBT(cygnusData.getCompound("Inventory"));
-
-        this.level.sendBlockUpdated(this.worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
     }
 
     @Override

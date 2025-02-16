@@ -44,12 +44,12 @@ public class PillarRenderer implements BlockEntityRenderer<StarForgePillarEntity
         );
 
         double relativeGameTime = level.getGameTime() + pPartialTick;
-        double offset = Math.sin(relativeGameTime / 10.0) / 6.0;
-        double rotation = Math.sin(relativeGameTime / 20.0) * 40.0;
+        double offset = Math.sin(relativeGameTime / 10.0) / 12.0;
 
         pPoseStack.pushPose();
-        pPoseStack.translate(0.5, 1.3 + offset, 0.5);
-        pPoseStack.mulPose(Axis.YP.rotationDegrees((float) rotation));
+        pPoseStack.translate(0.5, 0.95 + offset, 0.5);
+        pPoseStack.scale((float) 0.25, (float) 0.25, (float) 0.25);
+        pPoseStack.mulPose(Axis.YP.rotationDegrees((float) (relativeGameTime % 360)));
         this.context.getItemRenderer().renderStatic(
                 stack,
                 ItemDisplayContext.FIXED,

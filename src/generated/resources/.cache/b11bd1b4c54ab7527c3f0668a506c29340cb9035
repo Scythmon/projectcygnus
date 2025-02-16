@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-10T14:08:09.5472593	Item Models: projectcygnus
+// 1.20.1	2025-02-16T02:22:56.3896493	Item Models: projectcygnus
 904ce2feac93e2a7ecae0df3aeec8d93e482a8d8 assets/projectcygnus/models/item/afterlife_plate.json
 5d3563b60c002fa30d79733769ecdad93578b297 assets/projectcygnus/models/item/altar_core.json
 092c421b21868ba7e8a22dfcafbba6885da532b3 assets/projectcygnus/models/item/angel_gold.json
@@ -106,7 +106,6 @@ a7ea8504b09eb87c6d7674a9d9f3e8f6427ea35b assets/projectcygnus/models/item/star_c
 a42b93a7bd1cf968ae9f56bca6211d93ce23c371 assets/projectcygnus/models/item/strength_crown.json
 1d8fb6db4976f66aee8c3da9cb8e41a234bcd3e9 assets/projectcygnus/models/item/throne_conjure_talisman.json
 cf4b10be8ae59eabef5ede82ebb0530e8bf4a706 assets/projectcygnus/models/item/throne_tear.json
-63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/projectcygnus/models/item/tiger_spawn_egg.json
 75690d4c9e558a7452459a9c5a227f72ede7f4cc assets/projectcygnus/models/item/undead_concentrate.json
 98000acee6484487476235e76ab83363c84608d0 assets/projectcygnus/models/item/undead_essence.json
 71762a6d04b1faa76f298e1f5589e3f5c6cfd761 assets/projectcygnus/models/item/unstable_singularity.json

@@ -7,8 +7,8 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.scythmon.cygnus.ProjectCygnus;
-import net.scythmon.cygnus.block.ModBlocks;
-import net.scythmon.cygnus.util.ModTags;
+import net.scythmon.cygnus.init.ModBlocks;
+import net.scythmon.cygnus.init.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;

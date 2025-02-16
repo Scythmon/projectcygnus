@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-11T14:23:58.1639052	Block States: projectcygnus
+// 1.20.1	2025-02-16T02:22:56.3856813	Block States: projectcygnus
 317797d3f327bc602ab441b2a37ad77d6dcac1a0 assets/projectcygnus/blockstates/angel_gold_block.json
 e7659a1bbd98a0fe41922cbd2cef54705ef3c8f0 assets/projectcygnus/blockstates/attuned_crystal_block.json
 ca35fddb99a645d383e9629165c92cfb88bf6fe5 assets/projectcygnus/blockstates/attuned_crystal_ore.json
@@ -34,7 +34,6 @@ c7236f614090f078ac1efea42a4a10326c497770 assets/projectcygnus/blockstates/potted
 0a11607cc2425ab1d6305944604fa787c0db165d assets/projectcygnus/blockstates/potted_festered_pimpernel.json
 3277c851d3a173c26c0aeec066e6a4756816c35e assets/projectcygnus/blockstates/potted_judges_lilies.json
 c07baafbd6d05075f9e0d0565f5911578d0f6a88 assets/projectcygnus/blockstates/star_forge.json
-679c863b8b5673e224991b44f30195830460486f assets/projectcygnus/blockstates/star_forge_pillar.json
 34c6e2f5ecbc9d2cacb3293cff1927276534f472 assets/projectcygnus/blockstates/stripped_crystal_oak_log.json
 458bb1be220d2bc37eec9b2691569822b82293fe assets/projectcygnus/blockstates/stripped_crystal_oak_wood.json
 5a6b9b9464928efc6868989caa99d125f962db1f assets/projectcygnus/blockstates/test_block_red.json

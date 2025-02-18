@@ -161,9 +161,9 @@ public class ModCreativeModeTabs {
 
                     }))
                     .build());
-    public static final RegistryObject<CreativeModeTab> CYGNUS_ARMOR = CREATIVE_MODE_TABS.register("cygnus_armor",
+    public static final RegistryObject<CreativeModeTab> CYGNUS_ARSENAL = CREATIVE_MODE_TABS.register("cygnus_arsenal",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.EMPOWERED_CROWN_OF_STARS.get()))
-                    .title(Component.translatable("creativetab.cygnus_armor_tab"))
+                    .title(Component.translatable("creativetab.cygnus_arsenal_tab"))
                     .displayItems(((pParameters, pOutput) -> {
                         //Crystal
                         pOutput.accept(ModItems.MASK_OF_THE_DAMNED.get());
@@ -194,6 +194,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.CONQUEST_CHESTPLATE.get());
                         pOutput.accept(ModItems.CONQUEST_LEGGINGS.get());
                         pOutput.accept(ModItems.CONQUEST_BOOTS.get());
+                        pOutput.accept(ModItems.DOMINION_SICKLE.get());
+                        pOutput.accept(ModItems.EMPOWERED_DOMINION_SICKLE.get());
+                        pOutput.accept(ModItems.THRONE_CLAW.get());
+                        pOutput.accept(ModItems.EMPOWERED_THRONE_CLAW.get());
                     }))
                     .build());
 

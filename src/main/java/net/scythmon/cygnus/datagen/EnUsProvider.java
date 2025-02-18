@@ -97,6 +97,10 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.projectcygnus.power_booster_needle", "Power Booster Needle");
         this.add("item.projectcygnus.shattered_relic", "Shattered Relic");
         this.add("item.projectcygnus.starman_sigil", "Starman Sigil");
+        this.add("item.projectcygnus.dominion_sickle", "Dominion Sickle");
+        this.add("item.projectcygnus.empowered_dominion_sickle", "Empowered Dominion Sickle");
+        this.add("item.projectcygnus.throne_claw", "Claws of the Throne");
+        this.add("item.projectcygnus.empowered_throne_claw", "Empowered Claws of the Throne");
     }
 
     private void addToolTips(){
@@ -173,7 +177,7 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
     private void miscTrans (){
         this.add("creativetab.cygnus_items_tab", "Cygnus Items");
         this.add("creativetab.cygnus_blocks_tab", "Cygnus Blocks");
-        this.add("creativetab.cygnus_armor_tab", "Cygnus Armor");
+        this.add("creativetab.cygnus_arsenal_tab", "Cygnus Arsenal");
     }
 
     private void addModTranslations(){

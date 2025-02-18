@@ -339,6 +339,21 @@ public class ModItems {
 
     public static final RegistryObject<Item> CONQUEST_BOOTS = ITEMS.register("conquest_boots",
             () -> new ConquestArmorItem(ModArmorMaterials.CONQUEST, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    //Weaponry
+
+    public static final RegistryObject<Item> DOMINION_SICKLE = ITEMS.register("dominion_sickle",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> EMPOWERED_DOMINION_SICKLE = ITEMS.register("empowered_dominion_sickle",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
+
+    public static final RegistryObject<Item> THRONE_CLAW = ITEMS.register("throne_claw",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> EMPOWERED_THRONE_CLAW = ITEMS.register("empowered_throne_claw",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
+
     //ignore this
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",

@@ -44,7 +44,7 @@ public class PillarRenderer implements BlockEntityRenderer<StarForgePillarEntity
         );
 
         double relativeGameTime = level.getGameTime() + pPartialTick;
-        double offset = Math.sin(relativeGameTime / 10.0) / 12.0;
+        double offset = Math.sin(relativeGameTime / 10.0) / 24.0;
 
         pPoseStack.pushPose();
         pPoseStack.translate(0.5, 0.95 + offset, 0.5);

@@ -6,8 +6,10 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeItemTagsProvider;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.init.ModBlocks;
+import net.scythmon.cygnus.init.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -26,5 +28,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.STRIPPED_CRYSTAL_OAK_LOG.get().asItem());
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.CRYSTAL_OAK_PLANKS.get().asItem());
+
+        this.tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get());
     }
 }

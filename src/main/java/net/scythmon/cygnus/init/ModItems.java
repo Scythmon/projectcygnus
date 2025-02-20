@@ -1,9 +1,6 @@
 package net.scythmon.cygnus.init;
 
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -343,16 +340,40 @@ public class ModItems {
     //Weaponry
 
     public static final RegistryObject<Item> DOMINION_SICKLE = ITEMS.register("dominion_sickle",
-            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> EMPOWERED_DOMINION_SICKLE = ITEMS.register("empowered_dominion_sickle",
-            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> THRONE_CLAW = ITEMS.register("throne_claw",
-            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> EMPOWERED_THRONE_CLAW = ITEMS.register("empowered_throne_claw",
-            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
+
+    public static final RegistryObject<Item> GLAIVE = ITEMS.register("glaive",
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> EMPOWERED_GLAIVE = ITEMS.register("empowered_glaive",
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
+
+    public static final RegistryObject<Item> CONQUEST_HALBERD = ITEMS.register("conquest_halberd",
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> DEATH_SCYTHE = ITEMS.register("death_scythe",
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> PESTILENCE_SWORD = ITEMS.register("pestilence_sword",
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> SEER_TRIDENT = ITEMS.register("seer_trident",
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> ZWEI = ITEMS.register("zwei",
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 10, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> SHAME = ITEMS.register("shame",
+            () -> new SwordItem(ModToolTiers.BOSS_WEAPONS, 1, -3f, new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
 
     //ignore this
 

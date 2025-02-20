@@ -101,6 +101,13 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.projectcygnus.empowered_dominion_sickle", "Empowered Dominion Sickle");
         this.add("item.projectcygnus.throne_claw", "Claws of the Throne");
         this.add("item.projectcygnus.empowered_throne_claw", "Empowered Claws of the Throne");
+        this.add("item.projectcygnus.glaive", "Glaive of Gabriel");
+        this.add("item.projectcygnus.empowered_glaive", "Empowered Glaive of Gabriel");
+        this.add("item.projectcygnus.conquest_halberd", "Halberd of Conquest");
+        this.add("item.projectcygnus.death_scythe", "Death's Scythe");
+        this.add("item.projectcygnus.pestilence_sword", "Hooked Sword of Pestilence");
+        this.add("item.projectcygnus.zwei", "Zweihander of Famine");
+        this.add("item.projectcygnus.shame", "Shameful Greatsword");
     }
 
     private void addToolTips(){

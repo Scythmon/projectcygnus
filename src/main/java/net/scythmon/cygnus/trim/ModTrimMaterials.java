@@ -23,6 +23,8 @@ public class ModTrimMaterials {
         register(context, CONCENTRATED_CRYSTAL, ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get(), Style.EMPTY.withColor(TextColor.parseColor("#031cfc")), 0.8F);
     }
 
+
+
     private static void register(BootstapContext<TrimMaterial> context, ResourceKey<TrimMaterial> trimKey, Item item,
                                  Style style, float itemModelIndex) {
         TrimMaterial trimmaterial = TrimMaterial.create(trimKey.location().getPath(), item, itemModelIndex,

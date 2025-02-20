@@ -198,6 +198,14 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.EMPOWERED_DOMINION_SICKLE.get());
                         pOutput.accept(ModItems.THRONE_CLAW.get());
                         pOutput.accept(ModItems.EMPOWERED_THRONE_CLAW.get());
+                        pOutput.accept(ModItems.GLAIVE.get());
+                        pOutput.accept(ModItems.EMPOWERED_GLAIVE.get());
+                        pOutput.accept(ModItems.DEATH_SCYTHE.get());
+                        pOutput.accept(ModItems.CONQUEST_HALBERD.get());
+                        pOutput.accept(ModItems.PESTILENCE_SWORD.get());
+                        pOutput.accept(ModItems.SEER_TRIDENT.get());
+                        pOutput.accept(ModItems.ZWEI.get());
+                        pOutput.accept(ModItems.SHAME.get());
                     }))
                     .build());
 

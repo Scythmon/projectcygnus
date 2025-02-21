@@ -1,7 +1,6 @@
 package net.scythmon.cygnus.datagen;
 
 import com.klikli_dev.modonomicon.api.datagen.LanguageProviderCache;
-import com.klikli_dev.modonomicon.datagen.ItemModelProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -34,11 +33,12 @@ public class DataGenerators {
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
 
+
         ModblockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
                 new ModblockTagGenerator(packOutput, lookupProvider, existingFileHelper));
 
         generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
 
-        generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new ModRegistrySetProvider(packOutput, lookupProvider));
     }
 }

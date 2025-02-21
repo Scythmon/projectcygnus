@@ -1,0 +1,9 @@
+{
+  "asset_name": "concentrated_crystal_cluster",
+  "description": {
+    "color": "#031CFC",
+    "translate": "trim_material.projectcygnus.concentrated_crystal_cluster"
+  },
+  "ingredient": "projectcygnus:concentrated_crystal_cluster",
+  "item_model_index": 0.8
+}

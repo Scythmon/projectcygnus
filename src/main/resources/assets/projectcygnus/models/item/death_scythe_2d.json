@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "projectcygnus:item/death_scythe_2d"
+  }
+}

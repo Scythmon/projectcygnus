@@ -1,8 +1,6 @@
 package net.scythmon.cygnus.items.custom.armor;
 
-import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -14,8 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import net.scythmon.cygnus.items.ModArmorMaterials;
-import net.scythmon.cygnus.items.client.armor.ConquestArmorRenderer;
+import net.scythmon.cygnus.init.ModArmorMaterials;
 import net.scythmon.cygnus.items.client.armor.FamineArmorRenderer;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -24,7 +21,6 @@ import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInst
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
 
-import java.util.Map;
 import java.util.function.Consumer;
 
 

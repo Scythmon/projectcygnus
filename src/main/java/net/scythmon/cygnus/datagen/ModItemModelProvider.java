@@ -10,8 +10,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
-import net.scythmon.cygnus.block.ModBlocks;
-import net.scythmon.cygnus.items.ModItems;
+import net.scythmon.cygnus.init.ModBlocks;
+import net.scythmon.cygnus.init.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -180,7 +180,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         //ignore this
-        withExistingParent(ModItems.TIGER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         simpleItem(ModItems.METAL_DETECTOR);
     }
 

@@ -9,8 +9,8 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.scythmon.cygnus.ProjectCygnus;
-import net.scythmon.cygnus.block.ModBlocks;
-import net.scythmon.cygnus.items.ModItems;
+import net.scythmon.cygnus.init.ModBlocks;
+import net.scythmon.cygnus.init.ModItems;
 
 import java.util.List;
 import java.util.function.Consumer;

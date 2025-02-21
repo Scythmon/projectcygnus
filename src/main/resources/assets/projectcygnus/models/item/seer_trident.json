@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "projectcygnus:item/seer_trident_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "projectcygnus:item/seer_trident_2d"
+    },
+    "ground": {
+      "parent": "projectcygnus:item/seer_trident_2d"
+    },
+    "fixed": {
+      "parent": "projectcygnus:item/seer_trident_2d"
+    }
+  }
+}

@@ -3,19 +3,17 @@ package net.scythmon.cygnus.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
-import net.scythmon.cygnus.block.ModBlocks;
+import net.scythmon.cygnus.init.ModBlocks;
 import net.scythmon.cygnus.block.custom.ModCropBlock;
-import net.scythmon.cygnus.block.custom.ModLeafCropBlock;
+import net.scythmon.cygnus.block.custom.onetimeclasses.ModLeafCropBlock;
 
 import java.util.function.Function;
 
@@ -50,6 +48,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.CRYSTAL_OAK_WOOD);
         blockItem(ModBlocks.STRIPPED_CRYSTAL_OAK_LOG);
         blockItem(ModBlocks.STRIPPED_CRYSTAL_OAK_WOOD);
+
 
         leavesBlock(ModBlocks.CRYSTAL_OAK_LEAVES);
         leavesBlock(ModBlocks.BUDDING_CRYSTAL_OAK_LEAVES);
@@ -112,7 +111,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.STAR_FORGE.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/star_forge")));
         simpleBlockWithItem(ModBlocks.STAR_FORGE_PILLAR.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/star_forge_pillar")));
+               new ModelFile.UncheckedModelFile(modLoc("block/star_forge_pillar")));
     }
 
     //All the stoff down here is just custom methods to make life a bit easier, probably an easier way to do it but this is what works for me

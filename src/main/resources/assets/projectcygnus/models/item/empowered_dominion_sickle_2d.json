@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "projectcygnus:item/empowered_dominion_sickle_2d"
+  }
+}

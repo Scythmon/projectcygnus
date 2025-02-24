@@ -25,6 +25,7 @@ import net.scythmon.cygnus.init.ModItems;
 import net.scythmon.cygnus.items.potions.ModPotion;
 import net.scythmon.cygnus.init.ModMenuTypes;
 import net.scythmon.cygnus.client.screens.StarForgeScreen;
+import net.scythmon.cygnus.util.ModRecipies;
 import org.slf4j.Logger;
 
 
@@ -45,6 +46,7 @@ public class ProjectCygnus  {
         ModPotion.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModRecipies.register(modEventBus);
 
 
         ModEntities.register(modEventBus);

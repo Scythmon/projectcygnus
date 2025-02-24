@@ -1,0 +1,12 @@
+{
+  "type": "projectcygnus:altar_craft",
+  "ingredients": [
+    {
+      "item": "projectcygnus:concentrated_crystal_cluster"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "projectcygnus:attuned_crystal"
+  }
+}

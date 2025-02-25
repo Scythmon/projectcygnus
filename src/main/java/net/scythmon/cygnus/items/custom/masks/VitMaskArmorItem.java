@@ -1,12 +1,20 @@
 package net.scythmon.cygnus.items.custom.masks;
 
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.scythmon.cygnus.init.ModArmorMaterials;
+import net.scythmon.cygnus.init.ModItems;
 import net.scythmon.cygnus.items.client.masks.VitMaskArmorRenderer;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -17,6 +25,8 @@ import software.bernie.geckolib.core.object.PlayState;
 
 import java.util.function.Consumer;
 
+import static net.minecraft.world.entity.EquipmentSlot.HEAD;
+
 
 public class VitMaskArmorItem extends ArmorItem implements GeoItem {
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
@@ -24,6 +34,7 @@ public class VitMaskArmorItem extends ArmorItem implements GeoItem {
     public VitMaskArmorItem(ArmorMaterial material, Type type, Properties properties) {
         super(material, type, properties);
     }
+
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {

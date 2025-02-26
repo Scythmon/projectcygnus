@@ -51,7 +51,6 @@ public class EStrengthCrownArmorItem extends ArmorItem implements GeoItem {
                 || !isPlayerWearingFullSet(player)
                 || !hasCorrectMaterial(ModArmorMaterials.ESTR, player)
         ) return;
-        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 60, 0, false, false, false));
         player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 60, 2, false, false, false));
     }
 

@@ -1,14 +1,17 @@
 package net.scythmon.cygnus.items.custom.crowns;
 
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.scythmon.cygnus.items.client.crowns.ESpeedCrownArmorRenderer;
-import net.scythmon.cygnus.items.client.masks.AVitMaskArmorRenderer;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -25,6 +28,7 @@ public class ESpeedCrownArmorItem extends ArmorItem implements GeoItem {
     public ESpeedCrownArmorItem(ArmorMaterial material, Type type, Properties properties) {
         super(material, type, properties);
     }
+
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {

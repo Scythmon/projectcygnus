@@ -1,31 +1,26 @@
 package net.scythmon.cygnus;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.scythmon.cygnus.init.ModBlocks;
 import net.scythmon.cygnus.init.ModBlockEntities;
 import net.scythmon.cygnus.init.ModEntities;
-import net.scythmon.cygnus.client.renderer.PillarRenderer;
 import net.scythmon.cygnus.init.ModCreativeModeTabs;
 import net.scythmon.cygnus.init.ModItems;
-import net.scythmon.cygnus.items.potions.ModPotion;
+import net.scythmon.cygnus.init.ModPotion;
 import net.scythmon.cygnus.init.ModMenuTypes;
-import net.scythmon.cygnus.client.screens.StarForgeScreen;
 import net.scythmon.cygnus.util.ModRecipies;
+import net.scythmon.cygnus.util.PlayerTickHandler;
 import org.slf4j.Logger;
 
 
@@ -49,6 +44,7 @@ public class ProjectCygnus  {
         ModRecipies.register(modEventBus);
 
 
+
         ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -68,6 +64,7 @@ public class ProjectCygnus  {
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FESTERED_PIMPERNEL.getId(), ModBlocks.POTTED_FESTERED_PIMPERNEL);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CHOIRS_GEM.getId(), ModBlocks.POTTED_CHOIRS_GEM);
             });
+            MinecraftForge.EVENT_BUS.register(new PlayerTickHandler());
      }
 
 

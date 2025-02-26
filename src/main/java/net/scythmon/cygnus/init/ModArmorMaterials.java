@@ -27,10 +27,22 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     //Im probably gonna need to seperate these TODO://Separate the mask/crown materials into the different types, also add unique repair materials
 
-    PMASK("pmask", 8, new int[]{ 10, 6, 5, 2 }, 25,
+    AVIT("avit", 8, new int[]{ 10, 6, 5, 2 }, 25,
             SoundEvents.ARMOR_EQUIP_GOLD, 4f, 0.1f, () -> Ingredient.of(ModItems.SINGULARITY_STONE.get())),
 
-    PCROWN("pcrown", 8, new int[]{ 12, 6, 5, 2 }, 25,
+    AWIT("awit", 8, new int[]{ 10, 6, 5, 2 }, 25,
+            SoundEvents.ARMOR_EQUIP_GOLD, 4f, 0.1f, () -> Ingredient.of(ModItems.SINGULARITY_STONE.get())),
+
+    ADAM("adam", 8, new int[]{ 10, 6, 5, 2 }, 25,
+            SoundEvents.ARMOR_EQUIP_GOLD, 4f, 0.1f, () -> Ingredient.of(ModItems.SINGULARITY_STONE.get())),
+
+    ESTA("esta", 8, new int[]{ 12, 6, 5, 2 }, 25,
+            SoundEvents.ARMOR_EQUIP_GOLD, 4f, 0.1f, () -> Ingredient.of(ModItems.SINGULARITY_STONE.get())),
+
+    ESTR("estr", 8, new int[]{ 12, 6, 5, 2 }, 25,
+            SoundEvents.ARMOR_EQUIP_GOLD, 4f, 0.1f, () -> Ingredient.of(ModItems.SINGULARITY_STONE.get())),
+
+    ESPE("espe", 8, new int[]{ 12, 6, 5, 2 }, 25,
             SoundEvents.ARMOR_EQUIP_GOLD, 4f, 0.1f, () -> Ingredient.of(ModItems.SINGULARITY_STONE.get())),
 
     CROWN("crown", 8, new int[]{ 1, 6, 5, 2 }, 25,

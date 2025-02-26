@@ -185,6 +185,8 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("creativetab.cygnus_items_tab", "Cygnus Items");
         this.add("creativetab.cygnus_blocks_tab", "Cygnus Blocks");
         this.add("creativetab.cygnus_arsenal_tab", "Cygnus Arsenal");
+        this.add("entity.projectcygnus.withermask", "Withermask[PlaceHolder]");
+        this.add("death.attack.withermask", "%1$s was doomed to decay");
     }
 
     private void addModTranslations(){

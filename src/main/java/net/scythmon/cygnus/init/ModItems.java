@@ -234,6 +234,9 @@ public class ModItems {
     public static final RegistryObject<Item> SOUL_OF_CRUMBLING_HEAVENS = ITEMS.register("soul_of_crumbling_heavens",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
+    public static final RegistryObject<Item> SEER_SOUL_SHARD = ITEMS.register("seer_soul_shard",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
     //Armour Sets ----------------------------------------------------------------------------------
 
     //Unpowered crowns/masks

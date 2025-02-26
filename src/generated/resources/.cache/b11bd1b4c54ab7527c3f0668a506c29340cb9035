@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-16T02:22:56.3896493	Item Models: projectcygnus
+// 1.20.1	2025-02-26T11:21:44.0789925	Item Models: projectcygnus
 904ce2feac93e2a7ecae0df3aeec8d93e482a8d8 assets/projectcygnus/models/item/afterlife_plate.json
 5d3563b60c002fa30d79733769ecdad93578b297 assets/projectcygnus/models/item/altar_core.json
 092c421b21868ba7e8a22dfcafbba6885da532b3 assets/projectcygnus/models/item/angel_gold.json
@@ -87,6 +87,7 @@ a4335572d7c6f3b5dff08b2abd8a675607a5ce80 assets/projectcygnus/models/item/plague
 b6f8d4dd1b3865e1f28d045c54270714dc09d1cb assets/projectcygnus/models/item/power_booster_canister.json
 ff1fa1cb859f517d6ee59a48e0e3e9f5f84c8f02 assets/projectcygnus/models/item/power_booster_needle.json
 fd2e20f022075b40f6f94d5561bdca8be112299d assets/projectcygnus/models/item/prayer_book.json
+3f2694c4cdc3e22d668321b488c709fbafaaea43 assets/projectcygnus/models/item/seer_soul_shard.json
 6fc8eb3ee69549838b01b6114810b84b37430f3f assets/projectcygnus/models/item/shattered_relic.json
 26f176a9943eaff14c419d14d2cc56b4b6abd59d assets/projectcygnus/models/item/singularity_shard.json
 e85508b6549bbcbedc66ff96934eb13de9c62a0f assets/projectcygnus/models/item/singularity_stone.json

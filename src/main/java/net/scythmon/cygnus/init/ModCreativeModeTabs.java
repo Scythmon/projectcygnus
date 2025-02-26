@@ -119,6 +119,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SOUL_OF_FLAMING_CHOIRS.get());
                         pOutput.accept(ModItems.SOUL_OF_GODLY_JUDGEMENT.get());
                         pOutput.accept(ModItems.SOUL_OF_CRUMBLING_HEAVENS.get());
+                        pOutput.accept(ModItems.SEER_SOUL_SHARD.get());
 
                         //Misc
                         pOutput.accept(ModItems.METAL_DETECTOR.get());

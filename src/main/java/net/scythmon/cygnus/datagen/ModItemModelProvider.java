@@ -138,6 +138,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SOUL_OF_FLAMING_CHOIRS);
         simpleItem(ModItems.SOUL_OF_CRUMBLING_HEAVENS);
         simpleItem(ModItems.SOUL_OF_GODLY_JUDGEMENT);
+        simpleItem(ModItems.SEER_SOUL_SHARD);
 
         //Armor ---------------------------------------------------------------
         simpleItem(ModItems.MASK_OF_THE_DAMNED);

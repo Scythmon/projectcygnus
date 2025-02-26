@@ -88,6 +88,7 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.projectcygnus.soul_of_flaming_choirs", "Soul of Flaming Choirs");
         this.add("item.projectcygnus.soul_of_godly_judgement", "Soul of Godly Judgement");
         this.add("item.projectcygnus.soul_of_crumbling_heavens", "Soul of Crumbling Heavens");
+        this.add("item.projectcygnus.seer_soul_shard", "Seer Soul Shard");
         this.add("item.projectcygnus.metal_detector", "Metal Detector");
         this.add("item.projectcygnus.coffee_beans", "Coffee Beans");
         this.add("item.projectcygnus.first_ritual_knife", "First Ritual Knife");
@@ -107,7 +108,7 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.projectcygnus.death_scythe", "Death's Scythe");
         this.add("item.projectcygnus.pestilence_sword", "Hooked Sword of Pestilence");
         this.add("item.projectcygnus.zwei", "Zweihander of Famine");
-        this.add("item.projectcygnus.shame", "Shameful Greatsword");
+        this.add("item.projectcygnus.shame", "Ominious Greatsword");
     }
 
     private void addToolTips(){

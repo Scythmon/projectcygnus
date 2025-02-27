@@ -12,13 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.scythmon.cygnus.init.ModBlocks;
-import net.scythmon.cygnus.init.ModBlockEntities;
-import net.scythmon.cygnus.init.ModEntities;
-import net.scythmon.cygnus.init.ModCreativeModeTabs;
-import net.scythmon.cygnus.init.ModItems;
-import net.scythmon.cygnus.init.ModPotion;
-import net.scythmon.cygnus.init.ModMenuTypes;
+import net.scythmon.cygnus.init.*;
 import net.scythmon.cygnus.util.ModRecipies;
 import net.scythmon.cygnus.util.PlayerTickHandler;
 import org.slf4j.Logger;
@@ -38,7 +32,8 @@ public class ProjectCygnus  {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModPotion.register(modEventBus);
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModRecipies.register(modEventBus);

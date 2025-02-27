@@ -25,6 +25,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.scythmon.cygnus.block.custom.ModCropBlock;
+import net.scythmon.cygnus.init.ModParticles;
 import org.jetbrains.annotations.NotNull;
 
 public class ModLeafCropBlock extends ModCropBlock {
@@ -61,6 +62,8 @@ public class ModLeafCropBlock extends ModCropBlock {
     }
 
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        world.addParticle(ModParticles.SECOND_DEATH_PARTICLE.get(), pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5,
+                0, 1, 1);
         if (getAge(state) == getMaxAge()) {
             player.awardStat(Stats.BLOCK_MINED.get(this));
             player.causeFoodExhaustion(0.0005f);

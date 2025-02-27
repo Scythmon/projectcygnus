@@ -32,6 +32,7 @@ public class ProjectCygnus  {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModParticles.register(modEventBus);
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
         ModBlockEntities.register(modEventBus);

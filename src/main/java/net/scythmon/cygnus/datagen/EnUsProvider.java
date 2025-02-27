@@ -158,11 +158,11 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.projectcygnus.death_bird_leggings", "Leggings of the Death Bird");
         this.add("item.projectcygnus.death_bird_boots", "Claws of the Death Bird");
         this.add("item.projectcygnus.plagued_lord_helmet", "Helm of the Plagued Lord");
-        this.add("item.projectcygnus.plagued_lord_chestplate", "Chestplate of the Plagued Lord");
+        this.add("item.projectcygnus.plagued_lord_chestplate", "Breastplate of the Plagued Lord");
         this.add("item.projectcygnus.plagued_lord_leggings", "Greaves of the Plagued Lord");
         this.add("item.projectcygnus.plagued_lord_boots", "Boots of the Plagued Lord");
         this.add("item.projectcygnus.famine_helmet", "Helm of the Starved Beast");
-        this.add("item.projectcygnus.famine_chestplate", "Chestplate of the Starved Beast");
+        this.add("item.projectcygnus.famine_chestplate", "Breastplate of the Starved Beast");
         this.add("item.projectcygnus.famine_leggings", "Greaves of the Starved Beast");
         this.add("item.projectcygnus.famine_boots", "Boots of the Starved Beast");
         this.add("item.projectcygnus.conquest_helmet", "War Fangs of Conquest");

@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -12,9 +13,11 @@ import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.client.renderer.PillarRenderer;
 import net.scythmon.cygnus.client.renderer.WitherMaskBossRenderer;
 import net.scythmon.cygnus.client.screens.StarForgeScreen;
+import net.scythmon.cygnus.effects.particles.SecondDeathParticle;
 import net.scythmon.cygnus.init.ModBlockEntities;
 import net.scythmon.cygnus.init.ModEntities;
 import net.scythmon.cygnus.init.ModMenuTypes;
+import net.scythmon.cygnus.init.ModParticles;
 
 @Mod.EventBusSubscriber(modid = ProjectCygnus.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientModHandler {
@@ -41,6 +44,12 @@ public class ClientModHandler {
 
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+
+    }
+
+    @SubscribeEvent
+    public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ModParticles.SECOND_DEATH_PARTICLE.get(), SecondDeathParticle.Provider::new);
 
     }
 }

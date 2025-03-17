@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.effects.CoagulationEffect;
 import net.scythmon.cygnus.effects.SecondDeathEffect;
 
 public class ModEffects {
@@ -20,7 +21,7 @@ public class ModEffects {
             () -> new SecondDeathEffect(MobEffectCategory.HARMFUL, 0));
 
     public static final RegistryObject<MobEffect> COAGULATION = MOB_EFFECTS.register("coagulation",
-            () -> new SecondDeathEffect(MobEffectCategory.HARMFUL, 0));
+            () -> new CoagulationEffect(MobEffectCategory.HARMFUL, 0));
 
     public static final RegistryObject<MobEffect> DIVINATION = MOB_EFFECTS.register("divination",
             () -> new SecondDeathEffect(MobEffectCategory.HARMFUL, 0));

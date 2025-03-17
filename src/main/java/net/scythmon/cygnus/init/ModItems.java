@@ -46,7 +46,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> CULTIST_KNIFE = ITEMS.register("cultist_knife",
-            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+            () -> new CultistKnfie(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> HOLY_WATER = ITEMS.register("holy_water",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));

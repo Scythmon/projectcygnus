@@ -12,16 +12,6 @@ public class CoagulationEffect extends MobEffect {
     }
 
     @Override
-    public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        if (pLivingEntity.horizontalCollision) {
-            Vec3 initalVec = pLivingEntity.getDeltaMovement();
-            Vec3 climbVec = new Vec3(initalVec.x,0.2D, initalVec.z);
-            pLivingEntity.setDeltaMovement(climbVec.scale(0.97D));
-        }
-        super.applyEffectTick(pLivingEntity, pAmplifier);
-    }
-
-    @Override
     public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
         return true;
     }

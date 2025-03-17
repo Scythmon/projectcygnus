@@ -13,6 +13,7 @@ import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.client.renderer.PillarRenderer;
 import net.scythmon.cygnus.client.renderer.WitherMaskBossRenderer;
 import net.scythmon.cygnus.client.screens.StarForgeScreen;
+import net.scythmon.cygnus.effects.particles.CoagulationParticle;
 import net.scythmon.cygnus.effects.particles.SecondDeathParticle;
 import net.scythmon.cygnus.init.ModBlockEntities;
 import net.scythmon.cygnus.init.ModEntities;
@@ -50,6 +51,6 @@ public class ClientModHandler {
     @SubscribeEvent
     public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(ModParticles.SECOND_DEATH_PARTICLE.get(), SecondDeathParticle.Provider::new);
-
+            event.registerSpriteSet(ModParticles.COAGULATION_PARTICLE.get(), CoagulationParticle.Provider::new);
     }
 }

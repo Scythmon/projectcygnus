@@ -16,6 +16,9 @@ public class ModParticles {
     public static final RegistryObject<SimpleParticleType> SECOND_DEATH_PARTICLE =
             PARTICLES.register("second_death_particle", () -> new SimpleParticleType(true));
 
+    public static final RegistryObject<SimpleParticleType> COAGULATION_PARTICLE =
+            PARTICLES.register("coagulation_particle", () -> new SimpleParticleType(true));
+
     public static void register(IEventBus eventBus) {
         PARTICLES.register(eventBus);
     }

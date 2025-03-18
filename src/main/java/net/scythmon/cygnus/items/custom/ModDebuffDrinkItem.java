@@ -7,11 +7,14 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
+import net.scythmon.cygnus.init.ModEffects;
+import net.scythmon.cygnus.init.ModItems;
 
 public class ModDebuffDrinkItem extends Item {
     private static final int DRINK_DURATION = 40;
@@ -25,10 +28,14 @@ public class ModDebuffDrinkItem extends Item {
             $$3.awardStat(Stats.ITEM_USED.get(this));
         }
 
-        if (!pLevel.isClientSide) {
+        if (!pLevel.isClientSide && pStack.is(ModItems.ONEH_MOTER.get())) {
             pEntityLiving.removeEffect(MobEffects.REGENERATION);
             pEntityLiving.removeEffect(MobEffects.ABSORPTION);
             pEntityLiving.removeEffect(MobEffects.DAMAGE_RESISTANCE);
+        }
+
+        if (!pLevel.isClientSide && pStack.is(ModItems.BOTTLED_BLOOD.get()) && pEntityLiving instanceof Player player) {
+            player.addEffect(new MobEffectInstance(ModEffects.COAGULATION.get(), 200, 0, false, false, true));
         }
 
         if (pStack.isEmpty()) {
@@ -54,11 +61,11 @@ public class ModDebuffDrinkItem extends Item {
     }
 
     public SoundEvent getDrinkingSound() {
-        return SoundEvents.GENERIC_DRINK;
+        return SoundEvents.HONEY_DRINK;
     }
 
     public SoundEvent getEatingSound() {
-        return SoundEvents.GENERIC_DRINK;
+        return SoundEvents.HONEY_DRINK;
     }
 
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pHand) {

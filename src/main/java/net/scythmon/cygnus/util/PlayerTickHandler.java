@@ -70,7 +70,7 @@ public class PlayerTickHandler {
     }
     public void spawnSecondDeathParticles(LivingEntity entity) {
         Level world = entity.level();
-        if (world.getGameTime() % 20 == 0) {
+        if (world.getGameTime() % 10 == 0) {
             double x = entity.getRandomX(1);
             double y = entity.getRandomY();
             double z = entity.getRandomZ(1);

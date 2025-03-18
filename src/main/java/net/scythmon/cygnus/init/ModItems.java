@@ -46,13 +46,13 @@ public class ModItems {
             () -> new Item(new Item.Properties().rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> CULTIST_KNIFE = ITEMS.register("cultist_knife",
-            () -> new CultistKnfie(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+            () -> new CultistKnfie(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).durability(256)));
 
     public static final RegistryObject<Item> HOLY_WATER = ITEMS.register("holy_water",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> BOTTLED_BLOOD = ITEMS.register("bottled_blood",
-            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+            () -> new ModDebuffDrinkItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
 
     // Tier one crafting items

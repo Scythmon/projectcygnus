@@ -11,6 +11,7 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.init.ModBlocks;
 import net.scythmon.cygnus.init.ModItems;
+import net.scythmon.cygnus.init.ModTags;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -187,6 +188,16 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.ATTUNED_CRYSTAL.get()), has(ModItems.ATTUNED_CRYSTAL.get()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VEILED_CARD.get())
+                .pattern("CPC")
+                .pattern("PTP")
+                .pattern("CPC")
+                .define('C', ModTags.Items.HIGH_TIER_CONCENTRATES)
+                .define('P', Items.PAPER)
+                .define('T', ModItems.TAROT_DECK.get())
+                .unlockedBy(getHasName(ModItems.TAROT_DECK.get()), has(ModItems.TAROT_DECK.get()))
+                .save(pWriter);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CULTIST_KNIFE.get())
                 .pattern("  I")
                 .pattern(" E ")
@@ -196,6 +207,8 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .define('S', Items.STICK)
                 .unlockedBy(getHasName(Items.ENDER_EYE), has(Items.ENDER_EYE))
                 .save(pWriter);
+
+
 
         //SHAPELESS ------------------------------------------------------------------------------------
 

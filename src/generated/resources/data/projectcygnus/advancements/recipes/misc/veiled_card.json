@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_tarot_deck": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "projectcygnus:tarot_deck"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "projectcygnus:veiled_card"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_tarot_deck",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "projectcygnus:veiled_card"
+    ]
+  },
+  "sends_telemetry_event": false
+}

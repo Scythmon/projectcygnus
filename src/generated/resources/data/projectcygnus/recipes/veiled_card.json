@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "projectcygnus:high_tier_concentrates"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "T": {
+      "item": "projectcygnus:tarot_deck"
+    }
+  },
+  "pattern": [
+    "CPC",
+    "PTP",
+    "CPC"
+  ],
+  "result": {
+    "item": "projectcygnus:veiled_card"
+  },
+  "show_notification": true
+}

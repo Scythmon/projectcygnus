@@ -414,7 +414,7 @@ public class ModItems {
 
     //TarotCards
     public static final RegistryObject<Item> TAROT_DECK = ITEMS.register("tarot_deck",
-            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+            () -> new TarotDeck(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).durability(256)));
 
     public static final RegistryObject<Item> VEILED_CARD = ITEMS.register("veiled_card",
             () -> new VeiledCard(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));

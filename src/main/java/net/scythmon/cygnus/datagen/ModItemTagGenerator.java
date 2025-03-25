@@ -10,6 +10,7 @@ import net.minecraftforge.common.data.ForgeItemTagsProvider;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.init.ModBlocks;
 import net.scythmon.cygnus.init.ModItems;
+import net.scythmon.cygnus.init.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -31,5 +32,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.tag(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get());
-    }
+
+        this.tag(ModTags.Items.HIGH_TIER_CONCENTRATES)
+                .add(ModItems.STAR_CONCENTRATE.get())
+                .add(ModItems.UNDEAD_CONCENTRATE.get())
+                .add(ModItems.THRONE_TEAR.get());
+        }
 }

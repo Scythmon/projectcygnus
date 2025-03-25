@@ -121,6 +121,32 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SOUL_OF_CRUMBLING_HEAVENS.get());
                         pOutput.accept(ModItems.SEER_SOUL_SHARD.get());
 
+                        //TarotCards
+                        pOutput.accept(ModItems.TAROT_DECK.get());
+                        pOutput.accept(ModItems.VEILED_CARD.get());
+                        pOutput.accept(ModItems.THE_FOOL.get());
+                        pOutput.accept(ModItems.THE_MAGICIAN.get());
+                        pOutput.accept(ModItems.THE_HIGH_PRIESTESS.get());
+                        pOutput.accept(ModItems.THE_EMPRESS.get());
+                        pOutput.accept(ModItems.THE_EMPEROR.get());
+                        pOutput.accept(ModItems.THE_HIEROPHANT.get());
+                        pOutput.accept(ModItems.THE_LOVERS.get());
+                        pOutput.accept(ModItems.THE_CHARIOT.get());
+                        pOutput.accept(ModItems.STRENGTH.get());
+                        pOutput.accept(ModItems.THE_HERMIT.get());
+                        pOutput.accept(ModItems.WHEEL_OF_FORTUNE.get());
+                        pOutput.accept(ModItems.JUSTICE.get());
+                        pOutput.accept(ModItems.THE_HANGED_MAN.get());
+                        pOutput.accept(ModItems.DEATH.get());
+                        pOutput.accept(ModItems.TEMPERANCE.get());
+                        pOutput.accept(ModItems.THE_DEVIL.get());
+                        pOutput.accept(ModItems.THE_TOWER.get());
+                        pOutput.accept(ModItems.THE_STARS.get());
+                        pOutput.accept(ModItems.THE_MOON.get());
+                        pOutput.accept(ModItems.THE_SUN.get());
+                        pOutput.accept(ModItems.JUDGEMENT.get());
+                        pOutput.accept(ModItems.THE_WORLD.get());
+
                         //Misc
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
                         pOutput.accept(ModItems.BROWNIE.get());

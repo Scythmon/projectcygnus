@@ -14,6 +14,7 @@ import net.scythmon.cygnus.items.custom.armor.FamineArmorItem;
 import net.scythmon.cygnus.items.custom.armor.PlagueLordArmorItem;
 import net.scythmon.cygnus.items.custom.crowns.*;
 import net.scythmon.cygnus.items.custom.masks.*;
+import net.scythmon.cygnus.items.custom.tarot.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -410,6 +411,79 @@ public class ModItems {
 
     public static final RegistryObject<Item> STARMAN_SIGIL = ITEMS.register("starman_sigil",
             () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    //TarotCards
+    public static final RegistryObject<Item> TAROT_DECK = ITEMS.register("tarot_deck",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> VEILED_CARD = ITEMS.register("veiled_card",
+            () -> new VeiledCard(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_FOOL = ITEMS.register("the_fool",
+            () -> new A0TheFool(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_MAGICIAN = ITEMS.register("the_magician",
+            () -> new A1TheMagician(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_HIGH_PRIESTESS = ITEMS.register("the_high_priestess",
+            () -> new A2TheHighPreistess(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_EMPRESS = ITEMS.register("the_empress",
+            () -> new A3TheEmpress(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_EMPEROR = ITEMS.register("the_emperor",
+            () -> new A4TheEmperor(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_HIEROPHANT = ITEMS.register("the_hierophant",
+            () -> new A5TheHierophant(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_LOVERS = ITEMS.register("the_lovers",
+            () -> new A6TheLovers(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_CHARIOT = ITEMS.register("the_chariot",
+            () -> new A7TheChariot(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> STRENGTH = ITEMS.register("strength",
+            () -> new A8Strength(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_HERMIT = ITEMS.register("the_hermit",
+            () -> new A9TheHermit(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> WHEEL_OF_FORTUNE = ITEMS.register("wheel_of_fortune",
+            () -> new A10WheelOfFortune(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> JUSTICE = ITEMS.register("justice",
+            () -> new A11Justice(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_HANGED_MAN = ITEMS.register("the_hanged_man",
+            () -> new A12TheHangedMan(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> DEATH = ITEMS.register("death",
+            () -> new A13Death(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> TEMPERANCE = ITEMS.register("temperance",
+            () -> new A14Temperance(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_DEVIL = ITEMS.register("the_devil",
+            () -> new A15TheDevil(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_TOWER = ITEMS.register("the_tower",
+            () -> new A16TheTower(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_STARS = ITEMS.register("the_stars",
+            () -> new A17TheStars(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_MOON = ITEMS.register("the_moon",
+            () -> new A18TheMoon(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_SUN = ITEMS.register("the_sun",
+            () -> new A19TheSun(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> JUDGEMENT = ITEMS.register("judgement",
+            () -> new A20Judgement(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> THE_WORLD = ITEMS.register("the_world",
+            () -> new A21TheWorld(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)));
 
 
 

@@ -111,6 +111,34 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.projectcygnus.shame", "Ominious Greatsword");
     }
 
+    private void addTarotCards() {
+        this.add("item.projectcygnus.tarot_deck", "Tarot Card Deck");
+        this.add("item.projectcygnus.veiled_card", "Veiled Card");
+        this.add("item.projectcygnus.the_fool", "0-The Fool");
+        this.add("item.projectcygnus.the_magician", "I-The Magician");
+        this.add("item.projectcygnus.the_high_priestess", "II-The High Priestess");
+        this.add("item.projectcygnus.the_empress", "III-The Empress ");
+        this.add("item.projectcygnus.the_emperor", "IV-The Emperor");
+        this.add("item.projectcygnus.the_hierophant", "V-The Hierophant");
+        this.add("item.projectcygnus.the_lovers", "VI-The Lovers");
+        this.add("item.projectcygnus.the_chariot", "VII-The Chariot");
+        this.add("item.projectcygnus.strength", "VIII-Strength");
+        this.add("item.projectcygnus.the_hermit", "IX-The Hermit");
+        this.add("item.projectcygnus.wheel_of_fortune", "X-Wheel of Fortune");
+        this.add("item.projectcygnus.justice", "XI-Justice");
+        this.add("item.projectcygnus.the_hanged_man", "XII-The Hanged Man");
+        this.add("item.projectcygnus.death", "XIII-Death");
+        this.add("item.projectcygnus.temperance", "XIV-Temperance");
+        this.add("item.projectcygnus.the_devil", "XV-The Devil");
+        this.add("item.projectcygnus.the_tower", "XVI-The Tower");
+        this.add("item.projectcygnus.the_stars", "XVII-The Stars");
+        this.add("item.projectcygnus.the_moon", "XVIII-The Moon");
+        this.add("item.projectcygnus.the_sun", "XIX-The Sun");
+        this.add("item.projectcygnus.judgement", "XX-Judgement");
+        this.add("item.projectcygnus.the_world", "XXI-The World");
+
+    }
+
     private void addToolTips(){
         this.add("tooltip.projectcygnus.metal_detector.tooltip", "Finds Valuables Underground");
         this.add("tooltip.projectcygnus.oneh_moter.tooltip", "You feel compelled to drink this...though your arent sure if you should");
@@ -206,6 +234,7 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.addToolTips();
         this.miscTrans();
         this.modEffects();
+        this.addTarotCards();
     }
 
     private void addDemoBook() {

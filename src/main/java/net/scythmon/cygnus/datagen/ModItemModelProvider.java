@@ -179,6 +179,32 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SHATTERED_RELIC);
         simpleItem(ModItems.STARMAN_SIGIL);
 
+        //TarotCards
+        simpleItem(ModItems.TAROT_DECK);
+        simpleItem(ModItems.VEILED_CARD);
+        simpleItem(ModItems.THE_FOOL);
+        simpleItem(ModItems.THE_MAGICIAN);
+        simpleItem(ModItems.THE_HIGH_PRIESTESS);
+        simpleItem(ModItems.THE_EMPRESS);
+        simpleItem(ModItems.THE_EMPEROR);
+        simpleItem(ModItems.THE_HIEROPHANT);
+        simpleItem(ModItems.THE_LOVERS);
+        simpleItem(ModItems.THE_CHARIOT);
+        simpleItem(ModItems.STRENGTH);
+        simpleItem(ModItems.THE_HERMIT);
+        simpleItem(ModItems.WHEEL_OF_FORTUNE);
+        simpleItem(ModItems.JUSTICE);
+        simpleItem(ModItems.THE_HANGED_MAN);
+        simpleItem(ModItems.DEATH);
+        simpleItem(ModItems.TEMPERANCE);
+        simpleItem(ModItems.THE_DEVIL);
+        simpleItem(ModItems.THE_TOWER);
+        simpleItem(ModItems.THE_STARS);
+        simpleItem(ModItems.THE_MOON);
+        simpleItem(ModItems.THE_SUN);
+        simpleItem(ModItems.JUDGEMENT);
+        simpleItem(ModItems.THE_WORLD);
+
 
         //ignore this
         simpleItem(ModItems.METAL_DETECTOR);

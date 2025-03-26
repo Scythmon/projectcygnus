@@ -19,7 +19,7 @@ public class SecondDeathParticle extends TextureSheetParticle {
         this.quadSize *= 1;
         this.lifetime = 30;
 
-        // Set the initial sprite
+        // Set the initial sprite yes
         this.setSpriteFromAge(spriteSet);
 
         this.rCol = 1f;
@@ -71,4 +71,3 @@ public class SecondDeathParticle extends TextureSheetParticle {
         }
     }
 }
-

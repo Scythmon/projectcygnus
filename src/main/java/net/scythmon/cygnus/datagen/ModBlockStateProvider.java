@@ -112,6 +112,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ModelFile.UncheckedModelFile(modLoc("block/star_forge")));
         simpleBlockWithItem(ModBlocks.STAR_FORGE_PILLAR.get(),
                new ModelFile.UncheckedModelFile(modLoc("block/star_forge_pillar")));
+        simpleBlockWithItem(ModBlocks.CARNAGE_ALTAR.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/carnage_altar")));
+        simpleBlockWithItem(ModBlocks.LIFE_ALTAR.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/life_altar")));
     }
 
     //All the stoff down here is just custom methods to make life a bit easier, probably an easier way to do it but this is what works for me

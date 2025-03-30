@@ -157,6 +157,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> STAR_FORGE_PILLAR = registerBlock("star_forge_pillar",
             () -> new StarForgePillar(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+    public static final RegistryObject<Block> CARNAGE_ALTAR = registerBlock("carnage_altar",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> LIFE_ALTAR = registerBlock("life_altar",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
 
 
     //FLOWERS :D, the effect is there as it's required for sus stew

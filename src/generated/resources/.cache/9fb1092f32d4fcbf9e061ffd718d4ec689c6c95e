@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-08T13:47:50.9721887	Recipes
+// 1.20.1	2025-03-26T11:55:07.7036239	Recipes
 0e1eb543932318f9b5865b2de95bf34c85ddc9cb data/minecraft/advancements/recipes/misc/amethyst_shard.json
 bbbb1cc617afd1f504e7cd9e559f2652be2f7537 data/minecraft/advancements/recipes/misc/nether_wart.json
 d518b05c87c9b78705f33be9fe45fcdd4ebedf49 data/minecraft/advancements/recipes/misc/prismarine_shard.json
@@ -34,6 +34,7 @@ b566f4856178532754848a193a92771b6cd4c3e9 data/projectcygnus/advancements/recipes
 6658a71911d0a430c4040d7158aa1e039b73fe64 data/projectcygnus/advancements/recipes/misc/singularity_stone.json
 03e674994a6b9cb97c41f0ae1dbfcebfcd10a794 data/projectcygnus/advancements/recipes/misc/star.json
 4fbf3f431c26185a2b2682aac1752a43cbe4b9b3 data/projectcygnus/advancements/recipes/misc/starflame.json
+7f618f15e81c0fc1892d252ebbca2066d2bfae2f data/projectcygnus/advancements/recipes/misc/veiled_card.json
 1cce7e9331f89de91e23dcbed5138b90868df402 data/projectcygnus/advancements/recipes/misc/wishing_core.json
 8f77b02cb9aa77114ba437f86f45d21558eace2a data/projectcygnus/recipes/altar_core.json
 96d14672b20bb7ffcb0bc35438614761febbb801 data/projectcygnus/recipes/angel_gold.json
@@ -64,4 +65,5 @@ ccf1e3c8b43229c42aa3249f692acfdfa7a37ff5 data/projectcygnus/recipes/empty_fetid_
 0aacf7d15371e96c4d21947348037f079c8a0d65 data/projectcygnus/recipes/singularity_stone.json
 990c096b8cd2e36d4a797ca7473bb219d1f853b8 data/projectcygnus/recipes/star.json
 6c102bf3eb7d918d6d877c4c1c9086424d429665 data/projectcygnus/recipes/starflame.json
+3c0cedb84a21d57cede28c031fa9f13cca6e6d41 data/projectcygnus/recipes/veiled_card.json
 549482132514e2d10b5d1043dc93690c8aa372a9 data/projectcygnus/recipes/wishing_core.json

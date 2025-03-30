@@ -167,6 +167,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ANGEL_GOLD_BLOCK.get());
                         pOutput.accept(ModBlocks.STAR_FORGE.get());
                         pOutput.accept(ModBlocks.STAR_FORGE_PILLAR.get());
+                        pOutput.accept(ModBlocks.CARNAGE_ALTAR.get());
+                        pOutput.accept(ModBlocks.LIFE_ALTAR.get());
 
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_LOG.get());
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_WOOD.get());

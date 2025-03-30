@@ -55,6 +55,10 @@ public class PlayerTickHandler {
             LivingEntity entity = event.getEntity();
             spawnSecondDeathParticles(entity);
         }
+        if (event.getEntity().hasEffect(ModEffects.HUNTED.get())) {
+            LivingEntity entity = event.getEntity();
+            spawnHuntedParticles(entity);
+        }
     }
     public void spawnCoagulationParticles(LivingEntity entity) {
         Level world = entity.level();
@@ -78,6 +82,18 @@ public class PlayerTickHandler {
             double motionY = 0.1;
             double motionZ = 0.0;
             world.addParticle(ModParticles.SECOND_DEATH_PARTICLE.get(), x, y, z, motionX, motionY, motionZ);
+        }
+    }
+    public void spawnHuntedParticles(LivingEntity entity) {
+        Level world = entity.level();
+        if (world.getGameTime() % 20 == 0) {
+            double x = entity.getRandomX(1);
+            double y = entity.getRandomY();
+            double z = entity.getRandomZ(1);
+            double motionX = 0.0;
+            double motionY = 0.1;
+            double motionZ = 0.0;
+            world.addParticle(ModParticles.HUNTED_PARTICLE.get(), x, y, z, motionX, motionY, motionZ);
         }
     }
 }

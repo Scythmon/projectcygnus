@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-20T16:31:07.8799795	Loot Tables
+// 1.20.1	2025-03-28T10:22:29.5808791	Loot Tables
 3d91623397a7c89db7ee4bd9bdc662175c836b2b data/projectcygnus/loot_tables/blocks/angel_gold_block.json
 b5c789f5fea0ffa3bb2e1eef67515e8c01b19662 data/projectcygnus/loot_tables/blocks/architect_corpse.json
 757eccdadc0481b0cfa515591054a65c04c9e1fe data/projectcygnus/loot_tables/blocks/attuned_crystal_block.json
@@ -7,6 +7,7 @@ b5c789f5fea0ffa3bb2e1eef67515e8c01b19662 data/projectcygnus/loot_tables/blocks/a
 73d15fca8e330529ee72348d64d918887a9486dc data/projectcygnus/loot_tables/blocks/blood_steel_block.json
 0bd8b3b9efba9f2a400f94e0fd599ed0e48fbc8c data/projectcygnus/loot_tables/blocks/budding_attuned_amethyst.json
 4b517a9d21af4a21965aac472fa26bff96d53d6f data/projectcygnus/loot_tables/blocks/budding_crystal_oak_leaves.json
+f938403e47ab82a99274c32251e53c5f2af6042e data/projectcygnus/loot_tables/blocks/carnage_altar.json
 eba9ee849a2cca9d8858031f05814dd8c1659b7a data/projectcygnus/loot_tables/blocks/choirs_gem.json
 9f8b4a99291c88bec218a99d66610746719be3c9 data/projectcygnus/loot_tables/blocks/coffee_crop.json
 b60140870d4569b4d04507b4e58dc11c13d784c1 data/projectcygnus/loot_tables/blocks/concentrated_crystal_block.json
@@ -30,6 +31,7 @@ c1f22214593a5c298d54aeb6de55c5f7aee7a1ce data/projectcygnus/loot_tables/blocks/c
 35363cca88fa852614f74f8ff5984ed4613e0ff8 data/projectcygnus/loot_tables/blocks/festered_pimpernel.json
 79104871ba2270fafc4bc367efcdec4568246238 data/projectcygnus/loot_tables/blocks/flowering_crystal_oak_leaves.json
 9aa808c5ee1c7d48a0f8a65eaeba261221c85843 data/projectcygnus/loot_tables/blocks/judges_lilies.json
+8329335ffe01695b8c2e30914d575c22deafe374 data/projectcygnus/loot_tables/blocks/life_altar.json
 42331cb36612c11b39a3ab04f2846615ff73aa85 data/projectcygnus/loot_tables/blocks/potted_blood_cardinal.json
 f6319a45949fa2021dfce3114061128a461c5b57 data/projectcygnus/loot_tables/blocks/potted_choirs_gem.json
 a75775f8e7c93f14ea34077e2423ae7cadf35a73 data/projectcygnus/loot_tables/blocks/potted_crystal_lily.json

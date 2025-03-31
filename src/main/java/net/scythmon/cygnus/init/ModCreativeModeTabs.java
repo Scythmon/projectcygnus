@@ -169,6 +169,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.STAR_FORGE_PILLAR.get());
                         pOutput.accept(ModBlocks.CARNAGE_ALTAR.get());
                         pOutput.accept(ModBlocks.LIFE_ALTAR.get());
+                        pOutput.accept(ModBlocks.STARS_ALTAR.get());
+                        pOutput.accept(ModBlocks.ANGELIC_ALTAR.get());
 
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_LOG.get());
                         pOutput.accept(ModBlocks.CRYSTAL_OAK_WOOD.get());

@@ -1,150 +1,192 @@
 package net.scythmon.cygnus.tileentity;
 
+import com.blakebr0.cucumber.inventory.BaseItemStackHandler;
+import com.blakebr0.cucumber.inventory.CachedRecipe;
+import com.blakebr0.cucumber.item.BaseItem;
+import com.blakebr0.cucumber.tileentity.BaseInventoryTileEntity;
+import com.blakebr0.cucumber.util.MultiblockPositions;
+import net.minecraft.client.particle.Particle;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ItemParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.Containers;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.SimpleContainer;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
-import net.scythmon.cygnus.client.screens.StarForgeMenu;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import net.minecraft.world.phys.AABB;
+import net.scythmon.cygnus.init.ModBlockEntities;
+import net.scythmon.cygnus.init.ModRecipeTypes;
+import net.scythmon.cygnus.util.AltarRecipie;
+import net.scythmon.cygnus.util.IActivatable;
+import net.scythmon.cygnus.util.IAltarRecipe;
+import net.scythmon.cygnus.util.StarForgingAltar;
 
-public class StarForgeAltarEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(3);
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-    private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
-    private static final int INPUTSLOT = 0;
-    private static final int FUELSLOT = 1;
-    private static final int OUTPUTSLOT = 2;
+public class StarForgeAltarEntity extends BaseInventoryTileEntity implements IActivatable {
+    private final BaseItemStackHandler inventory;
+    private final BaseItemStackHandler recipeInventory;
+    private final MultiblockPositions pedestalLocations = new MultiblockPositions.Builder()
+            .pos(3, 0, 0).pos(0, 0, 3).pos(-3, 0, 0).pos(0, 0, -3)
+            .pos(2, 0, 2).pos(2, 0, -2).pos(-2, 0, 2).pos(-2, 0, -2).build();
+    private final CachedRecipe<IAltarRecipe> recipe;
+    private int progress;
+    private boolean active;
 
-    protected final ContainerData data;
+    public StarForgeAltarEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.STAR_FORGE_BE.get(), pos, state);
+        this.inventory = createInventoryHandler(this::setChangedFast);
+        this.recipeInventory = BaseItemStackHandler.create(9);
+        this.recipe = new CachedRecipe<>(ModRecipeTypes.STAR_FORGING.get());
+    }
 
-    private int progress = 0;
-    private int maxProgress = 78;
 
-    public StarForgeAltarEntity(BlockEntityType<?> pType, BlockPos pPos, BlockState pBlockState, ContainerData data) {
-        super(pType, pPos, pBlockState);
-        this.data = new ContainerData() {
-            @Override
-            public int get(int pIndex) {
-                return switch (pIndex) {
-                    case 0 -> StarForgeAltarEntity.this.progress;
-                    case 1 -> StarForgeAltarEntity.this.maxProgress;
-                    default -> 0;
-                };
-            }
+    @Override
+    public BaseItemStackHandler getInventory() {
+        return this.inventory;
+    }
 
-            @Override
-            public void set(int pIndex, int pValue) {
-                switch (pIndex) {
-                    case 0 -> StarForgeAltarEntity.this.progress = pValue;
-                    case 1 -> StarForgeAltarEntity.this.maxProgress = pValue;
+    @Override
+    public void load(CompoundTag tag) {
+        super.load(tag);
+
+        this.progress = tag.getInt("Progress");
+        this.active = tag.getBoolean("Active");
+    }
+
+    @Override
+    public void saveAdditional(CompoundTag tag) {
+        super.saveAdditional(tag);
+
+        tag.putInt("Progress", this.progress);
+        tag.putBoolean("Active", this.active);
+    }
+
+    @Override
+    public AABB getRenderBoundingBox() {
+        return INFINITE_EXTENT_AABB;
+    }
+
+    @Override
+    public boolean isActive() {
+        if (!this.active) {
+            this.active = this.level != null && this.level.hasNeighborSignal(this.getBlockPos());
+        }
+        return this.active;
+    }
+
+    @Override
+    public void activate() {
+        this.active = true;
+    }
+
+    public static void tick(Level level, BlockPos pos, BlockState state, StarForgeAltarEntity altar) {
+        var input = altar.inventory.getStackInSlot(0);
+
+        if (input.isEmpty()) {
+            altar.reset();
+            altar.dispatchIfChanged();
+            return;
+        }
+        if (altar.isActive()) {
+            var recipe = altar.getActiveRecipe();
+
+            if (recipe != null) {
+                altar.progress++;
+
+                var pedestals = altar.getPedestals();
+
+                if (altar.progress >= 100) {
+                    var remaining = recipe.getRemainingItems(altar.recipeInventory.asRecipeWrapper());
+
+                    for (var i = 0; i < pedestals.size(); i++) {
+                        var pedestal = pedestals.get(i);
+                        pedestal.getInventory().setStackInSlot(0, remaining.get(i + 1));
+
+                    }
+
+                    var result = recipe.assemble(altar.recipeInventory.asRecipeWrapper(), level.registryAccess());
+
+                    altar.setOutput(result, remaining.get(0));
+                    altar.reset();
+                    altar.setChangedFast();
+                } else {
+                    for (var pedestal : pedestals) {
+                        var pedestalPos = pedestal.getBlockPos();
+                        var stack = pedestal.getInventory().getStackInSlot(0);
+                    }
                 }
-            }
-
-            @Override
-            public int getCount() {
-                return 2;
-            }
-        };
-    }
-
-    @Override
-    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if (cap == ForgeCapabilities.ITEM_HANDLER) {
-            return lazyItemHandler.cast();
-        }
-        return super.getCapability(cap, side);
-    }
-
-    @Override
-    public void invalidateCaps() {
-        super.invalidateCaps();
-        lazyItemHandler.invalidate();
-    }
-
-    @Override
-    public void onLoad() {
-        super.onLoad();
-        lazyItemHandler = LazyOptional.of(() -> itemHandler);
-    }
-
-    public void drops() {
-        SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
-        for (int i = 0;
-             i < itemHandler.getSlots();
-             i++){
-            inventory.setItem(i, itemHandler.getStackInSlot(i));
-        }
-
-        Containers.dropContents(this.level, this.worldPosition, inventory);
-    }
-    @Override
-    protected void saveAdditional(CompoundTag pTag) {
-        pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("star_forge.progress", progress);
-
-        super.saveAdditional(pTag);
-    }
-
-    @Override
-    public void load(CompoundTag pTag) {
-        super.load(pTag);
-        itemHandler.deserializeNBT(pTag.getCompound("inventory"));
-        progress = pTag.getInt("star_forge.progress");
-    }
-
-    @Override
-    public Component getDisplayName() {return Component.translatable("block.projectcygnus.star_forge");}
-
-    @Override
-    public @Nullable AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
-        return null;
-    }
-
-    public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
-        if(validRecipe() && validAltarCraft()) {
-            increaseCraftingProgress();
-            setChanged(pLevel, pPos, pState);
-
-            if(craftingFinished()){
-                craftItem();
-                resetProgress();
+            } else {
+                altar.reset();
             }
         } else {
-            resetProgress();
+            altar.progress = 0;
+        }
+        altar.dispatchIfChanged();
+    }
+
+    public static BaseItemStackHandler createInventoryHandler(Runnable onContentsChanged) {
+        return BaseItemStackHandler.create(2, onContentsChanged, builder -> {
+            builder.setDefaultSlotLimit(1);
+            builder.setCanInsert((slot, stack) -> builder.getStackInSlot(1).isEmpty());
+            builder.setOutputSlots(1);
+        });
+    }
+
+    public List<BlockPos> getPedestalPositions() {
+        return this.pedestalLocations.get(this.getBlockPos());
+    }
+
+    public IAltarRecipe getActiveRecipe() {
+        if (this.level == null)
+            return null;
+
+        this.updateRecipeInventory(this.getPedestals());
+
+        return this.recipe.checkAndGet(this.recipeInventory, this.level);
+    }
+
+    public void reset() {
+        this.progress = 0;
+        this.active = false;
+    }
+
+    private void updateRecipeInventory(List<StarForgePillarEntity> pedestals) {
+        this.recipeInventory.setSize(StarForgingAltar.RECIPE_SIZE);
+        this.recipeInventory.setStackInSlot(0, this.inventory.getStackInSlot(0));
+
+        for (int i = 0; i < pedestals.size(); i++) {
+            var stack = pedestals.get(i).getInventory().getStackInSlot(0);
+
+            this.recipeInventory.setStackInSlot(i + 1, stack);
         }
     }
 
-    private void resetProgress() {progress = 0;}
+    private List<StarForgePillarEntity> getPedestals() {
+        if (this.level == null) {
+            return Collections.emptyList();
+        }
 
-    private void craftItem() {
+        List<StarForgePillarEntity> pedestals = new ArrayList<>();
+
+        for (var pos : this.getPedestalPositions()) {
+            var tile = this.level.getBlockEntity(pos);
+            if (tile instanceof StarForgePillarEntity pedestal)
+                pedestals.add(pedestal);
+        }
+
+        return pedestals;
     }
 
-    private boolean craftingFinished() {return progress >= maxProgress;}
+    private void setOutput(ItemStack stack, ItemStack remaining) {
+        var stacks = this.inventory.getStacks();
 
-    private void increaseCraftingProgress() {progress ++;}
-
-    private boolean validAltarCraft() {
-        return false;
+        stacks.set(0, remaining);
+        stacks.set(1, stack);
     }
 
-    private boolean validRecipe() {
-        return false;
-    }
 }

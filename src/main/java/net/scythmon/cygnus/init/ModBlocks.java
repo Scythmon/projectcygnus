@@ -163,6 +163,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIFE_ALTAR = registerBlock("life_altar",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+    public static final RegistryObject<Block> STARS_ALTAR = registerBlock("stars_altar",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> ANGELIC_ALTAR = registerBlock("angelic_altar",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
 
 
     //FLOWERS :D, the effect is there as it's required for sus stew

@@ -197,11 +197,19 @@ public class ModBlocks {
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
                     BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> WITHERING_SUNDEW = registerBlock("withering_sundew",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
     public static final RegistryObject<Block> FERRO_CLOVERS = registerBlock("ferro_clovers",
             () -> new FerroClover(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> ARCHITECT_CORPSE = registerBlock("architect_corpse",
             () -> new SporeBlossomBlock(BlockBehaviour.Properties.copy(Blocks.SPORE_BLOSSOM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> TRIMMED_ARCHITECT_CORPSE = registerBlock("trimmed_architect_corpse",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
 
 
 
@@ -230,6 +238,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> POTTED_SPECKLED_BUSH = BLOCKS.register("potted_speckled_bush",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.SPECKLED_BUSH,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+    public static final RegistryObject<Block> POTTED_TRIMMED_ARCHITECT_CORPSE = BLOCKS.register("potted_trimmed_architect_corpse",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.TRIMMED_ARCHITECT_CORPSE,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+    public static final RegistryObject<Block> POTTED_WITHERING_SUNDEW = BLOCKS.register("potted_withering_sundew",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.WITHERING_SUNDEW,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
 

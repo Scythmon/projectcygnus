@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-25T12:40:17.7978353	Item Models: projectcygnus
+// 1.20.1	2025-04-08T12:02:50.6510097	Item Models: projectcygnus
 904ce2feac93e2a7ecae0df3aeec8d93e482a8d8 assets/projectcygnus/models/item/afterlife_plate.json
 5d3563b60c002fa30d79733769ecdad93578b297 assets/projectcygnus/models/item/altar_core.json
 092c421b21868ba7e8a22dfcafbba6885da532b3 assets/projectcygnus/models/item/angel_gold.json
@@ -97,6 +97,7 @@ e85508b6549bbcbedc66ff96934eb13de9c62a0f assets/projectcygnus/models/item/singul
 cee81a4ed4cc4611a154c98ae8040ccaac344075 assets/projectcygnus/models/item/soul_of_crumbling_heavens.json
 15f087867342dce2270fbfbe5d2281ad48968f12 assets/projectcygnus/models/item/soul_of_flaming_choirs.json
 61b80dc43339c21bb6cd67b0439c3cf8d6f2cc0c assets/projectcygnus/models/item/soul_of_godly_judgement.json
+a5d861c09dc4260ed815123156dd5468705504d5 assets/projectcygnus/models/item/speckled_bush.json
 afa1521bd27a54af9b3be67a52bfd1e179dbf398 assets/projectcygnus/models/item/speed_concentrate.json
 6c30f1e49293b9b2015afd3b958d64a222443b25 assets/projectcygnus/models/item/speed_crown.json
 a1ee4d0d61d46ffe92b8d83a1bb793d8f581d7b6 assets/projectcygnus/models/item/star.json
@@ -129,6 +130,7 @@ a6a9c8f2f340b6ae888da7252598953d48bdd688 assets/projectcygnus/models/item/the_to
 1ed3655e6d59fadb5ddab2cd47648894d250cdec assets/projectcygnus/models/item/the_world.json
 1d8fb6db4976f66aee8c3da9cb8e41a234bcd3e9 assets/projectcygnus/models/item/throne_conjure_talisman.json
 cf4b10be8ae59eabef5ede82ebb0530e8bf4a706 assets/projectcygnus/models/item/throne_tear.json
+d2abf214ce8b0205b10aa25935937c74295bd9f3 assets/projectcygnus/models/item/trimmed_architect_corpse.json
 75690d4c9e558a7452459a9c5a227f72ede7f4cc assets/projectcygnus/models/item/undead_concentrate.json
 98000acee6484487476235e76ab83363c84608d0 assets/projectcygnus/models/item/undead_essence.json
 71762a6d04b1faa76f298e1f5589e3f5c6cfd761 assets/projectcygnus/models/item/unstable_singularity.json
@@ -139,6 +141,7 @@ bf74c31423edb3d8ddc6a252f1d925940b98b94d assets/projectcygnus/models/item/watchi
 d01af62a6d2f51ff711619f67b50a8ab33b37277 assets/projectcygnus/models/item/wheel_of_fortune.json
 8ad2bea48e10e05a30f306a4bf45402a510a67cb assets/projectcygnus/models/item/wishing_core.json
 d865f8c3c0cd85520b51c7ec9503a8700b8eed8b assets/projectcygnus/models/item/wishing_token.json
+d35af3de031ed141a4229a47265916170d9927f8 assets/projectcygnus/models/item/withering_sundew.json
 c4999af6ef9bf5b436a672cbf20aeb8f29980735 assets/projectcygnus/models/item/wither_concentrate.json
 90859aa49e53aaec939fc2ee153a88da183d18f4 assets/projectcygnus/models/item/wither_conjure_talisman.json
 64fb2d76185cea299a064b2cd04f68e5bc0559e4 assets/projectcygnus/models/item/wither_essence.json

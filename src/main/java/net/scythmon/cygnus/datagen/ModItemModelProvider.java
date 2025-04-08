@@ -29,6 +29,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItemBlockTexture(ModBlocks.CHOIRS_GEM);
         simpleBlockItemBlockTexture(ModBlocks.FERRO_CLOVERS);
         simpleBlockItemBlockTexture(ModBlocks.ARCHITECT_CORPSE);
+        simpleBlockItemBlockTexture(ModBlocks.TRIMMED_ARCHITECT_CORPSE);
+        simpleBlockItemBlockTexture(ModBlocks.SPECKLED_BUSH);
+        simpleBlockItemBlockTexture(ModBlocks.WITHERING_SUNDEW);
+
 
         //Food Item
 

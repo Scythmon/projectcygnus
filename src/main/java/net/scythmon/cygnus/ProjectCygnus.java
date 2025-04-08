@@ -60,6 +60,8 @@ public class ProjectCygnus  {
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FESTERED_PIMPERNEL.getId(), ModBlocks.POTTED_FESTERED_PIMPERNEL);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CHOIRS_GEM.getId(), ModBlocks.POTTED_CHOIRS_GEM);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SPECKLED_BUSH.getId(), ModBlocks.POTTED_SPECKLED_BUSH);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.WITHERING_SUNDEW.getId(), ModBlocks.POTTED_WITHERING_SUNDEW);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.TRIMMED_ARCHITECT_CORPSE.getId(), ModBlocks.POTTED_TRIMMED_ARCHITECT_CORPSE);
             });
             MinecraftForge.EVENT_BUS.register(new PlayerTickHandler());
      }

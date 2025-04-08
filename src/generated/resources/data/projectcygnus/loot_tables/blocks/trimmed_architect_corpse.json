@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "projectcygnus:trimmed_architect_corpse"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "projectcygnus:blocks/trimmed_architect_corpse"
+}

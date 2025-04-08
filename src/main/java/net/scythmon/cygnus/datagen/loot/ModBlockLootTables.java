@@ -105,9 +105,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SPECKLED_BUSH.get());
         this.add(ModBlocks.POTTED_SPECKLED_BUSH.get(), createPotFlowerItemTable(ModBlocks.SPECKLED_BUSH.get()));
 
+        this.dropSelf(ModBlocks.WITHERING_SUNDEW.get());
+        this.add(ModBlocks.POTTED_WITHERING_SUNDEW.get(), createPotFlowerItemTable(ModBlocks.WITHERING_SUNDEW.get()));
+
         this.dropSelf(ModBlocks.FERRO_CLOVERS.get());
 
         this.dropSelf(ModBlocks.ARCHITECT_CORPSE.get());
+
+        this.dropSelf(ModBlocks.TRIMMED_ARCHITECT_CORPSE.get());
+        this.add(ModBlocks.POTTED_TRIMMED_ARCHITECT_CORPSE.get(), createPotFlowerItemTable(ModBlocks.TRIMMED_ARCHITECT_CORPSE.get()));
+
+
     }
 
     protected LootTable.Builder multiOreDrops(Block pBlock, Item item) {

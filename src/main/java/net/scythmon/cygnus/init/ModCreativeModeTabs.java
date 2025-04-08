@@ -41,6 +41,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.FERRO_CLOVERS.get());
                         pOutput.accept(ModBlocks.ARCHITECT_CORPSE.get());
                         pOutput.accept(ModBlocks.SPECKLED_BUSH.get());
+                        pOutput.accept(ModBlocks.WITHERING_SUNDEW.get());
+                        pOutput.accept(ModBlocks.TRIMMED_ARCHITECT_CORPSE.get());
 
                         pOutput.accept(ModItems.ONEH_MOTER.get());
                         pOutput.accept(ModItems.COFFEE_SEEDS.get());

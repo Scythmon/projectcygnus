@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "projectcygnus:block/speckled_bush"
+    "layer0": "projectcygnus:block/trimmed_architect_corpse"
   }
 }

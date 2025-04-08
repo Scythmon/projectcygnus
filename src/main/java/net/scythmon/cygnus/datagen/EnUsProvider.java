@@ -180,6 +180,8 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("block.projectcygnus.ferro_clovers", "Ferro Clover");
         this.add("block.projectcygnus.architect_corpse", "Architect Corpse");
         this.add("item.projectcygnus.speckeled_bush", "Speckled Bush");
+        this.add("item.projectcygnus.trimmed_architect_corpse", "Trimmed Architect Corpse");
+        this.add("item.projectcygnus.withering_sundew", "Withering Sundew");
         this.add("block.projectcygnus.crystal_vines_plant", "Crystal Vines");
         this.add("item.projectcygnus.death_bird_helmet", "Mask of the Death Bird");
         this.add("item.projectcygnus.death_bird_chestplate", "Ribs of the Death Bird");

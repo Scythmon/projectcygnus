@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-31T13:41:42.6084692	Loot Tables
+// 1.20.1	2025-04-08T12:02:50.6470081	Loot Tables
 48d43fc5857e959268c147d180852a0d5568c411 data/projectcygnus/loot_tables/blocks/angelic_altar.json
 3d91623397a7c89db7ee4bd9bdc662175c836b2b data/projectcygnus/loot_tables/blocks/angel_gold_block.json
 b5c789f5fea0ffa3bb2e1eef67515e8c01b19662 data/projectcygnus/loot_tables/blocks/architect_corpse.json
@@ -39,6 +39,8 @@ a75775f8e7c93f14ea34077e2423ae7cadf35a73 data/projectcygnus/loot_tables/blocks/p
 24285921c438ca0ee736fe47e338a4d341cc6812 data/projectcygnus/loot_tables/blocks/potted_festered_pimpernel.json
 3df4588429b9ff424b2d507a900c8760590a06d3 data/projectcygnus/loot_tables/blocks/potted_judges_lilies.json
 26880b543a65c3dc20d0c795cdc2ed39f7d45f9e data/projectcygnus/loot_tables/blocks/potted_speckled_bush.json
+d5188b628ce8f69334a08c7cb25d9638c71cd765 data/projectcygnus/loot_tables/blocks/potted_trimmed_architect_corpse.json
+7daede964fc6056f07cbf477d6e820f32c312152 data/projectcygnus/loot_tables/blocks/potted_withering_sundew.json
 e5b087a651a703728c059b2274296bc60602552f data/projectcygnus/loot_tables/blocks/speckled_bush.json
 7c35acc34515d7a73ee5349728d2d228b8dade0d data/projectcygnus/loot_tables/blocks/stars_altar.json
 dc34e2f909137c94fccd5a7d33c69b2472f5bcaf data/projectcygnus/loot_tables/blocks/star_forge.json
@@ -46,3 +48,5 @@ f5ff0e74b37d7d3e685767bee8ea864b1843279b data/projectcygnus/loot_tables/blocks/s
 e188f4723cd364dea80b89d025bfb238a4bd3472 data/projectcygnus/loot_tables/blocks/stripped_crystal_oak_log.json
 98a2625023ff054e7541aa5c681613b8518a448b data/projectcygnus/loot_tables/blocks/stripped_crystal_oak_wood.json
 53fd260346ffc93b4eb6dd238177b7d4ffba72b4 data/projectcygnus/loot_tables/blocks/test_block_red.json
+1ea5561e1b8081fe377da993b0afce2d6fc8257d data/projectcygnus/loot_tables/blocks/trimmed_architect_corpse.json
+bdce22cbec228ebd16bd495e05620c9109510bef data/projectcygnus/loot_tables/blocks/withering_sundew.json

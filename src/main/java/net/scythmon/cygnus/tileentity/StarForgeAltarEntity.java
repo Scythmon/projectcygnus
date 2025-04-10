@@ -8,6 +8,7 @@ import com.blakebr0.cucumber.util.MultiblockPositions;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ItemParticleOption;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
@@ -44,7 +45,6 @@ public class StarForgeAltarEntity extends BaseInventoryTileEntity implements IAc
         this.recipe = new CachedRecipe<>(ModRecipeTypes.STAR_FORGING.get());
     }
 
-
     @Override
     public BaseItemStackHandler getInventory() {
         return this.inventory;
@@ -76,6 +76,7 @@ public class StarForgeAltarEntity extends BaseInventoryTileEntity implements IAc
         if (!this.active) {
             this.active = this.level != null && this.level.hasNeighborSignal(this.getBlockPos());
         }
+
         return this.active;
     }
 
@@ -84,49 +85,54 @@ public class StarForgeAltarEntity extends BaseInventoryTileEntity implements IAc
         this.active = true;
     }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, StarForgeAltarEntity altar) {
-        var input = altar.inventory.getStackInSlot(0);
+    public static void tick(Level level, BlockPos pos, BlockState state, StarForgeAltarEntity tile) {
+        var input = tile.inventory.getStackInSlot(0);
 
         if (input.isEmpty()) {
-            altar.reset();
-            altar.dispatchIfChanged();
+            tile.reset();
+            tile.dispatchIfChanged();
             return;
         }
-        if (altar.isActive()) {
-            var recipe = altar.getActiveRecipe();
+
+        if (tile.isActive()) {
+            var recipe = tile.getActiveRecipe();
 
             if (recipe != null) {
-                altar.progress++;
+                tile.progress++;
 
-                var pedestals = altar.getPedestals();
+                var pedestals = tile.getPedestals();
 
-                if (altar.progress >= 100) {
-                    var remaining = recipe.getRemainingItems(altar.recipeInventory.asRecipeWrapper());
+                if (tile.progress >= 100) {
+                    var remaining = recipe.getRemainingItems(tile.recipeInventory.asRecipeWrapper());
 
                     for (var i = 0; i < pedestals.size(); i++) {
                         var pedestal = pedestals.get(i);
                         pedestal.getInventory().setStackInSlot(0, remaining.get(i + 1));
-
+                        tile.spawnParticles(ParticleTypes.SMOKE, pedestal.getBlockPos(), 1.2D, 20);
                     }
 
-                    var result = recipe.assemble(altar.recipeInventory.asRecipeWrapper(), level.registryAccess());
+                    var result = recipe.assemble(tile.recipeInventory.asRecipeWrapper(), level.registryAccess());
 
-                    altar.setOutput(result, remaining.get(0));
-                    altar.reset();
-                    altar.setChangedFast();
+                    tile.setOutput(result, remaining.get(0));
+                    tile.reset();
+                    tile.setChangedFast();
+                    tile.spawnParticles(ParticleTypes.HAPPY_VILLAGER, pos, 1.0D, 10);
                 } else {
                     for (var pedestal : pedestals) {
                         var pedestalPos = pedestal.getBlockPos();
                         var stack = pedestal.getInventory().getStackInSlot(0);
+
+                        tile.spawnItemParticles(pedestalPos, stack);
                     }
                 }
             } else {
-                altar.reset();
+                tile.reset();
             }
         } else {
-            altar.progress = 0;
+            tile.progress = 0;
         }
-        altar.dispatchIfChanged();
+
+        tile.dispatchIfChanged();
     }
 
     public static BaseItemStackHandler createInventoryHandler(Runnable onContentsChanged) {
@@ -150,13 +156,13 @@ public class StarForgeAltarEntity extends BaseInventoryTileEntity implements IAc
         return this.recipe.checkAndGet(this.recipeInventory, this.level);
     }
 
-    public void reset() {
+    private void reset() {
         this.progress = 0;
         this.active = false;
     }
 
     private void updateRecipeInventory(List<StarForgePillarEntity> pedestals) {
-        this.recipeInventory.setSize(StarForgingAltar.RECIPE_SIZE);
+        this.recipeInventory.setSize(AltarRecipie.RECIPE_SIZE);
         this.recipeInventory.setStackInSlot(0, this.inventory.getStackInSlot(0));
 
         for (int i = 0; i < pedestals.size(); i++) {
@@ -182,11 +188,41 @@ public class StarForgeAltarEntity extends BaseInventoryTileEntity implements IAc
         return pedestals;
     }
 
+    private <T extends ParticleOptions> void spawnParticles(T particle, BlockPos pos, double yOffset, int count) {
+        if (this.level == null || this.level.isClientSide())
+            return;
+
+        var level = (ServerLevel) this.level;
+
+        double x = pos.getX() + 0.5D;
+        double y = pos.getY() + yOffset;
+        double z = pos.getZ() + 0.5D;
+
+        level.sendParticles(particle, x, y, z, count, 0, 0, 0, 0.1D);
+    }
+
+    private void spawnItemParticles(BlockPos pedestalPos, ItemStack stack) {
+        if (this.level == null || this.level.isClientSide() || stack.isEmpty())
+            return;
+
+        var level = (ServerLevel) this.level;
+        var pos = this.getBlockPos();
+
+        double x = pedestalPos.getX() + (level.getRandom().nextDouble() * 0.2D) + 0.4D;
+        double y = pedestalPos.getY() + (level.getRandom().nextDouble() * 0.2D) + 1.2D;
+        double z = pedestalPos.getZ() + (level.getRandom().nextDouble() * 0.2D) + 0.4D;
+
+        double velX = pos.getX() - pedestalPos.getX();
+        double velY = 0.25D;
+        double velZ = pos.getZ() - pedestalPos.getZ();
+
+        level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, stack), x, y, z, 0, velX, velY, velZ, 0.18D);
+    }
+
     private void setOutput(ItemStack stack, ItemStack remaining) {
         var stacks = this.inventory.getStacks();
 
         stacks.set(0, remaining);
         stacks.set(1, stack);
     }
-
 }

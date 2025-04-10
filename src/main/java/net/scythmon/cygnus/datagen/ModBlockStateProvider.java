@@ -107,6 +107,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_SPECKLED_BUSH.get(), models().singleTexture("potted_speckled_bush", new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.SPECKLED_BUSH.get())).renderType("cutout"));
 
+        simpleBlockWithItem(ModBlocks.WITHERING_SUNDEW.get(), models().cross(blockTexture(ModBlocks.WITHERING_SUNDEW.get()).getPath(),
+                blockTexture(ModBlocks.WITHERING_SUNDEW.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_WITHERING_SUNDEW.get(), models().singleTexture("potted_withering_sundew", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.WITHERING_SUNDEW.get())).renderType("cutout"));
+
         simpleBlockWithItem(ModBlocks.TRIMMED_ARCHITECT_CORPSE.get(), models().cross(blockTexture(ModBlocks.TRIMMED_ARCHITECT_CORPSE.get()).getPath(),
                 blockTexture(ModBlocks.TRIMMED_ARCHITECT_CORPSE.get())).renderType("cutout"));
         simpleBlockWithItem(ModBlocks.POTTED_TRIMMED_ARCHITECT_CORPSE.get(), models().singleTexture("potted_trimmed_architect_corpse", new ResourceLocation("flower_pot_cross"), "plant",

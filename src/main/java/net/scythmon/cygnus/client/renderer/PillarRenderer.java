@@ -1,5 +1,6 @@
 package net.scythmon.cygnus.client.renderer;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -7,6 +8,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -19,47 +21,24 @@ import com.mojang.math.Axis;
 
 
 public class PillarRenderer implements BlockEntityRenderer<StarForgePillarEntity> {
-    private final BlockEntityRendererProvider.Context context;
-
-    public PillarRenderer(BlockEntityRendererProvider.Context ctx) {
-        this.context = ctx;
+    public PillarRenderer(BlockEntityRendererProvider.Context context) {
     }
 
     @Override
-    public void render(@NotNull StarForgePillarEntity pBlockEntity, float pPartialTick, @NotNull PoseStack pPoseStack,
-                       @NotNull MultiBufferSource pBuffer, int pPackedLight, int pPackedOverlay) {
-        ItemStack stack = pBlockEntity.getInventory().getStackInSlot(0);
-        if(stack.isEmpty())
-            return;
+    public void render(StarForgePillarEntity tile, float v, PoseStack matrix, MultiBufferSource buffer, int i, int i1) {
+        var stack = tile.getInventory().getStackInSlot(0);
+        var minecraft = Minecraft.getInstance();
 
-        Level level = pBlockEntity.getLevel();
-        if(level == null)
-            return;
-
-        BlockPos pos = pBlockEntity.getBlockPos().above();
-
-        int packedLight = LightTexture.pack(
-                level.getBrightness(LightLayer.BLOCK, pos),
-                level.getBrightness(LightLayer.SKY, pos)
-        );
-
-        double relativeGameTime = level.getGameTime() + pPartialTick;
-        double offset = Math.sin(relativeGameTime / 10.0) / 24.0;
-
-        pPoseStack.pushPose();
-        pPoseStack.translate(0.5, 0.95 + offset, 0.5);
-        pPoseStack.scale((float) 0.25, (float) 0.25, (float) 0.25);
-        pPoseStack.mulPose(Axis.YP.rotationDegrees((float) (relativeGameTime % 360)));
-        this.context.getItemRenderer().renderStatic(
-                stack,
-                ItemDisplayContext.FIXED,
-                packedLight,
-                OverlayTexture.NO_OVERLAY,
-                pPoseStack,
-                pBuffer,
-                level,
-                0
-        );
-        pPoseStack.popPose();
+        if (!stack.isEmpty()) {
+            matrix.pushPose();
+            matrix.translate(0.5D, 0.75D, 0.5D);
+            float scale = stack.getItem() instanceof BlockItem ? 0.95F : 0.75F;
+            matrix.scale(scale, scale, scale);
+            double tick = System.currentTimeMillis() / 800.0D;
+            matrix.translate(0.0D, Math.sin(tick % (2 * Math.PI)) * 0.065D, 0.0D);
+            matrix.mulPose(Axis.YP.rotationDegrees((float) ((tick * 40.0D) % 360)));
+            minecraft.getItemRenderer().renderStatic(stack, ItemDisplayContext.GROUND, i, i1, matrix, buffer, minecraft.level, 0);
+            matrix.popPose();
+        }
     }
 }

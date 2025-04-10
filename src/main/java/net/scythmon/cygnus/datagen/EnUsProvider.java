@@ -104,11 +104,40 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("item.projectcygnus.empowered_throne_claw", "Empowered Claws of the Throne");
         this.add("item.projectcygnus.glaive", "Glaive of Gabriel");
         this.add("item.projectcygnus.empowered_glaive", "Empowered Glaive of Gabriel");
+        this.add("item.projectcygnus.seer_trident", "Seer Trident");
         this.add("item.projectcygnus.conquest_halberd", "Halberd of Conquest");
         this.add("item.projectcygnus.death_scythe", "Death's Scythe");
         this.add("item.projectcygnus.pestilence_sword", "Hooked Sword of Pestilence");
         this.add("item.projectcygnus.zwei", "Zweihander of Famine");
         this.add("item.projectcygnus.shame", "Ominious Greatsword");
+        this.add("item.projectcygnus.death_bird_helmet", "Mask of the Death Bird");
+        this.add("item.projectcygnus.death_bird_chestplate", "Ribs of the Death Bird");
+        this.add("item.projectcygnus.death_bird_leggings", "Leggings of the Death Bird");
+        this.add("item.projectcygnus.death_bird_boots", "Claws of the Death Bird");
+        this.add("item.projectcygnus.plagued_lord_helmet", "Helm of the Plagued Lord");
+        this.add("item.projectcygnus.plagued_lord_chestplate", "Breastplate of the Plagued Lord");
+        this.add("item.projectcygnus.plagued_lord_leggings", "Greaves of the Plagued Lord");
+        this.add("item.projectcygnus.plagued_lord_boots", "Boots of the Plagued Lord");
+        this.add("item.projectcygnus.famine_helmet", "Helm of the Starved Beast");
+        this.add("item.projectcygnus.famine_chestplate", "Breastplate of the Starved Beast");
+        this.add("item.projectcygnus.famine_leggings", "Greaves of the Starved Beast");
+        this.add("item.projectcygnus.famine_boots", "Boots of the Starved Beast");
+        this.add("item.projectcygnus.conquest_helmet", "War Fangs of Conquest");
+        this.add("item.projectcygnus.conquest_chestplate", "War Plate of Conquest");
+        this.add("item.projectcygnus.conquest_leggings", "War Greaves of Conquest");
+        this.add("item.projectcygnus.conquest_boots", "War Shackles of Conquest");
+        this.add("item.projectcygnus.mask_of_the_damned", "Mask of the Damned");
+        this.add("item.projectcygnus.mask_of_withering", "Mask of Withering");
+        this.add("item.projectcygnus.mask_of_vitality", "Mask of Vitality");
+        this.add("item.projectcygnus.awakened_mask_of_the_damned", "Awakened Mask of the Damned");
+        this.add("item.projectcygnus.awakened_mask_of_withering", "Awakened Mask of Withering");
+        this.add("item.projectcygnus.awakened_mask_of_vitality", "Awakened Mask of Vitality");
+        this.add("item.projectcygnus.star_crown", "Crown of Stars");
+        this.add("item.projectcygnus.strength_crown", "Crown of Power");
+        this.add("item.projectcygnus.speed_crown", "Crown of Agility");
+        this.add("item.projectcygnus.empowered_star_crown", "Empowered Crown of Stars");
+        this.add("item.projectcygnus.empowered_strength_crown", "Empowered Crown of Power");
+        this.add("item.projectcygnus.empowered_speed_crown", "Empowered Crown of Agility");
     }
 
     private void addTarotCards() {
@@ -179,38 +208,14 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("block.projectcygnus.choirs_gem", "Choir's Gem");
         this.add("block.projectcygnus.ferro_clovers", "Ferro Clover");
         this.add("block.projectcygnus.architect_corpse", "Architect Corpse");
-        this.add("item.projectcygnus.speckeled_bush", "Speckled Bush");
-        this.add("item.projectcygnus.trimmed_architect_corpse", "Trimmed Architect Corpse");
-        this.add("item.projectcygnus.withering_sundew", "Withering Sundew");
+        this.add("block.projectcygnus.speckeled_bush", "Speckled Bush");
+        this.add("block.projectcygnus.trimmed_architect_corpse", "Trimmed Architect Corpse");
+        this.add("block.projectcygnus.withering_sundew", "Withering Sundew");
         this.add("block.projectcygnus.crystal_vines_plant", "Crystal Vines");
-        this.add("item.projectcygnus.death_bird_helmet", "Mask of the Death Bird");
-        this.add("item.projectcygnus.death_bird_chestplate", "Ribs of the Death Bird");
-        this.add("item.projectcygnus.death_bird_leggings", "Leggings of the Death Bird");
-        this.add("item.projectcygnus.death_bird_boots", "Claws of the Death Bird");
-        this.add("item.projectcygnus.plagued_lord_helmet", "Helm of the Plagued Lord");
-        this.add("item.projectcygnus.plagued_lord_chestplate", "Breastplate of the Plagued Lord");
-        this.add("item.projectcygnus.plagued_lord_leggings", "Greaves of the Plagued Lord");
-        this.add("item.projectcygnus.plagued_lord_boots", "Boots of the Plagued Lord");
-        this.add("item.projectcygnus.famine_helmet", "Helm of the Starved Beast");
-        this.add("item.projectcygnus.famine_chestplate", "Breastplate of the Starved Beast");
-        this.add("item.projectcygnus.famine_leggings", "Greaves of the Starved Beast");
-        this.add("item.projectcygnus.famine_boots", "Boots of the Starved Beast");
-        this.add("item.projectcygnus.conquest_helmet", "War Fangs of Conquest");
-        this.add("item.projectcygnus.conquest_chestplate", "War Plate of Conquest");
-        this.add("item.projectcygnus.conquest_leggings", "War Greaves of Conquest");
-        this.add("item.projectcygnus.conquest_boots", "War Shackles of Conquest");
-        this.add("item.projectcygnus.mask_of_the_damned", "Mask of the Damned");
-        this.add("item.projectcygnus.mask_of_withering", "Mask of Withering");
-        this.add("item.projectcygnus.mask_of_vitality", "Mask of Vitality");
-        this.add("item.projectcygnus.awakened_mask_of_the_damned", "Awakened Mask of the Damned");
-        this.add("item.projectcygnus.awakened_mask_of_withering", "Awakened Mask of Withering");
-        this.add("item.projectcygnus.awakened_mask_of_vitality", "Awakened Mask of Vitality");
-        this.add("item.projectcygnus.star_crown", "Crown of Stars");
-        this.add("item.projectcygnus.strength_crown", "Crown of Power");
-        this.add("item.projectcygnus.speed_crown", "Crown of Agility");
-        this.add("item.projectcygnus.empowered_star_crown", "Empowered Crown of Stars");
-        this.add("item.projectcygnus.empowered_strength_crown", "Empowered Crown of Power");
-        this.add("item.projectcygnus.empowered_speed_crown", "Empowered Crown of Agility");
+        this.add("block.projectcygnus.carnage_altar", "Altar of Carnage");
+        this.add("block.projectcygnus.life_altar", "Altar of Life");
+        this.add("block.projectcygnus.stars_altar", "Altar of the Stars");
+        this.add("block.projectcygnus.angelic_altar", "Altar of Angelic Power");
     }
 
     private void modEffects (){

@@ -152,10 +152,10 @@ public class ModBlocks {
             });
 
     public static final RegistryObject<Block> STAR_FORGE = registerBlock("star_forge",
-            () -> new StarForgeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            StarForgeBlock::new);
 
     public static final RegistryObject<Block> STAR_FORGE_PILLAR = registerBlock("star_forge_pillar",
-            () -> new StarForgePillar(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            StarForgePillar::new);
 
     public static final RegistryObject<Block> CARNAGE_ALTAR = registerBlock("carnage_altar",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));

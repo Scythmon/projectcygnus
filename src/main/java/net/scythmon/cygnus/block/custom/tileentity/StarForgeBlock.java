@@ -1,6 +1,7 @@
 package net.scythmon.cygnus.block.custom.tileentity;
 
 
+import com.blakebr0.cucumber.block.BaseTileEntityBlock;
 import com.blakebr0.cucumber.helper.StackHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -18,6 +19,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -36,11 +38,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.awt.*;
 
-public class StarForgeBlock extends BaseEntityBlock {
-    public static final VoxelShape SHAPE = Block.box(4, 0, 4, 12, 15, 12);
+public class StarForgeBlock extends BaseTileEntityBlock {
+    public static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 16, 14);
 
-    public StarForgeBlock(Properties pProperties) {
-        super(pProperties);
+    public StarForgeBlock() {
+        super(SoundType.STONE, 10.0F, 12.0F, true);
     }
 
     @Override
@@ -70,9 +72,6 @@ public class StarForgeBlock extends BaseEntityBlock {
                     player.setItemInHand(hand, StackHelper.shrink(held, 1, false));
                     level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1.0F, 1.0F);
                 } else if (!input.isEmpty()) {
-                    if (held.getItem() instanceof FuelItem)
-                        return InteractionResult.PASS;
-
                     var item = new ItemEntity(level, player.getX(), player.getY(), player.getZ(), input);
 
                     item.setNoPickUpDelay();
@@ -103,16 +102,9 @@ public class StarForgeBlock extends BaseEntityBlock {
         return SHAPE;
     }
 
-    @Nullable
+
     @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        if(pLevel.isClientSide()) {
-            return null;
-        }
-
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.STAR_FORGE_BE.get(),
-                (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+    protected <T extends BlockEntity> BlockEntityTicker<T> getServerTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        return createTicker(type, ModBlockEntities.STAR_FORGE_BE.get(), StarForgeAltarEntity::tick);
     }
-
-
 }

@@ -15,6 +15,7 @@ import net.scythmon.cygnus.ProjectCygnus;
 import org.jetbrains.annotations.Nullable;
 
 public class AltarRecipie implements Recipe<SimpleContainer> {
+    public static final int RECIPE_SIZE = 9;
     private final NonNullList<Ingredient> inputItems;
     private final ItemStack output;
     private final ResourceLocation id;

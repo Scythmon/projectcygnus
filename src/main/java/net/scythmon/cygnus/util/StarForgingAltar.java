@@ -77,7 +77,7 @@ public class StarForgingAltar implements ISpecialRecipe, IAltarRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipies.ALTAR_CRAFTING_SERIALIZER.get();
+        return ModRecipiesSerializers.FORGING.get();
     }
 
     @Override

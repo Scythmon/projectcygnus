@@ -10,6 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.client.renderer.ForgeRenderer;
 import net.scythmon.cygnus.client.renderer.PillarRenderer;
 import net.scythmon.cygnus.client.renderer.WitherMaskBossRenderer;
 import net.scythmon.cygnus.client.screens.StarForgeScreen;
@@ -41,6 +42,7 @@ public class ClientModHandler {
 
         // Block Entities
         event.registerBlockEntityRenderer(ModBlockEntities.STAR_FORGE_PILLAR_BE.get(), PillarRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.STAR_FORGE_BE.get(), ForgeRenderer::new);
     }
 
 

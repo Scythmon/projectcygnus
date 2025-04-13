@@ -13,8 +13,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraftforge.client.model.data.ModelData;
 import net.scythmon.cygnus.init.ModBlocks;
 import net.scythmon.cygnus.tileentity.StarForgeAltarEntity;
-import net.scythmon.cygnus.tileentity.StarForgeBlockEntity;
-import net.scythmon.cygnus.tileentity.StarForgePillarEntity;
+
 
 public class ForgeRenderer implements BlockEntityRenderer<StarForgeAltarEntity> {
     public ForgeRenderer(BlockEntityRendererProvider.Context context) { }

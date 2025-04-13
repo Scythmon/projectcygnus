@@ -243,7 +243,7 @@ public class ModItems {
     //Unpowered crowns/masks
 
     public static final RegistryObject<Item> MASK_OF_THE_DAMNED = ITEMS.register("mask_of_the_damned",
-            () -> new ArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new DamMaskArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> MASK_OF_WITHERING = ITEMS.register("mask_of_withering",
             () -> new WitMaskArmorItem(ModArmorMaterials.MASK, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -263,7 +263,7 @@ public class ModItems {
     //Powered crowns/masks
 
     public static final RegistryObject<Item> AWAKENED_MASK_OF_THE_DAMNED = ITEMS.register("awakened_mask_of_the_damned",
-            () -> new ArmorItem(ModArmorMaterials.ADAM, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ADamMaskArmorItem(ModArmorMaterials.ADAM, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> AWAKENED_MASK_OF_WITHERING = ITEMS.register("awakened_mask_of_withering",
             () -> new AWitMaskArmorItem(ModArmorMaterials.AWIT, ArmorItem.Type.HELMET, new Item.Properties()));

@@ -1,4 +1,4 @@
-package net.scythmon.cygnus.util;
+package net.scythmon.cygnus.util.recipies;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

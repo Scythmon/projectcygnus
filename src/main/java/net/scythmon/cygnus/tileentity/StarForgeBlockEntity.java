@@ -22,9 +22,8 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.scythmon.cygnus.init.ModBlockEntities;
-import net.scythmon.cygnus.init.ModItems;
 import net.scythmon.cygnus.client.screens.StarForgeMenu;
-import net.scythmon.cygnus.util.AltarRecipie;
+import net.scythmon.cygnus.util.recipies.AltarRecipie;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

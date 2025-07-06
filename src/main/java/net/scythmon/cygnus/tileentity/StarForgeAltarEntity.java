@@ -2,10 +2,8 @@ package net.scythmon.cygnus.tileentity;
 
 import com.blakebr0.cucumber.inventory.BaseItemStackHandler;
 import com.blakebr0.cucumber.inventory.CachedRecipe;
-import com.blakebr0.cucumber.item.BaseItem;
 import com.blakebr0.cucumber.tileentity.BaseInventoryTileEntity;
 import com.blakebr0.cucumber.util.MultiblockPositions;
-import net.minecraft.client.particle.Particle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
@@ -14,15 +12,13 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.scythmon.cygnus.init.ModBlockEntities;
 import net.scythmon.cygnus.init.ModRecipeTypes;
-import net.scythmon.cygnus.util.AltarRecipie;
+import net.scythmon.cygnus.util.recipies.AltarRecipie;
 import net.scythmon.cygnus.util.IActivatable;
 import net.scythmon.cygnus.util.IAltarRecipe;
-import net.scythmon.cygnus.util.StarForgingAltar;
 
 import java.util.ArrayList;
 import java.util.Collections;

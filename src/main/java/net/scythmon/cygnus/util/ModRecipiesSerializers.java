@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
+import net.scythmon.cygnus.util.recipies.AltarRecipie;
 
 import java.util.function.Supplier;
 

@@ -25,13 +25,13 @@ public class PlayerTickHandler {
             return;
         }
 
-        if (event.getSource().is(DamageTypeTags.IS_LIGHTNING)) {
+        if (event.getSource().is(DamageTypeTags.IS_LIGHTNING) && event.isCancelable()) {
             if (!helmetStack.isEmpty() && helmetStack.getItem()instanceof ESpeedCrownArmorItem) {
                 event.setCanceled(true);
             }
         }
 
-        if (event.getSource().is(DamageTypeTags.IS_FIRE)) {
+        if (event.getSource().is(DamageTypeTags.IS_FIRE) && event.isCancelable()) {
             if (!helmetStack.isEmpty() && helmetStack.getItem()instanceof EStrengthCrownArmorItem) {
                 event.setCanceled(true);
             }
@@ -40,8 +40,10 @@ public class PlayerTickHandler {
     @SubscribeEvent
     public void naturalHealingDisabled(LivingHealEvent event) {
         LivingEntity entity = event.getEntity();
-        if (entity.hasEffect(ModEffects.COAGULATION.get()) && !entity.hasEffect(MobEffects.REGENERATION) && !entity.hasEffect(MobEffects.HEAL)){
-            event.setCanceled(true);
+        if (event.isCancelable() && entity.hasEffect(ModEffects.COAGULATION.get())){
+            if (!entity.hasEffect(MobEffects.REGENERATION) && !entity.hasEffect(MobEffects.HEAL)) {
+                event.setCanceled(true);
+            }
         }
     }
 

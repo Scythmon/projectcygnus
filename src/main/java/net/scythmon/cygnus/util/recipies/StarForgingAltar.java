@@ -1,4 +1,4 @@
-package net.scythmon.cygnus.util;
+package net.scythmon.cygnus.util.recipies;
 
 import com.blakebr0.cucumber.crafting.ISpecialRecipe;
 import com.google.gson.JsonObject;
@@ -17,6 +17,8 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 import net.scythmon.cygnus.init.ModRecipeTypes;
+import net.scythmon.cygnus.util.IAltarRecipe;
+import net.scythmon.cygnus.util.ModRecipiesSerializers;
 
 import java.util.function.BiFunction;
 

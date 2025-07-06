@@ -19,13 +19,15 @@ public class A6TheLovers extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-        ItemStack mainHand = pPlayer.getMainHandItem();
+        ItemStack mainHand = pPlayer.getItemInHand(pUsedHand);
         if (!pLevel.isClientSide()) {
             if (!pPlayer.isDeadOrDying()) {
                 pPlayer.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 20, 0), pPlayer);
                 pPlayer.heal(4);
                 pLevel.playSound(pPlayer, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.NEUTRAL, 1.0F, 1.0F);
                 mainHand.shrink(1);
+                if (!pPlayer.isCreative())
+                    pPlayer.getCooldowns().addCooldown(mainHand.getItem(), (int) Math.round(30 * 20));
             }
         }
         return InteractionResultHolder.success(mainHand);

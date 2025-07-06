@@ -23,10 +23,12 @@ public class A10WheelOfFortune extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-        ItemStack mainHand = pPlayer.getMainHandItem();
+        ItemStack mainHand = pPlayer.getItemInHand(pUsedHand);
         if (!pLevel.isClientSide()) {
             spawnEffectCloud(pLevel, pPlayer);
             mainHand.shrink(1);
+            if (!pPlayer.isCreative())
+                pPlayer.getCooldowns().addCooldown(mainHand.getItem(), (int) Math.round(15 * 20));
         }
         return InteractionResultHolder.success(mainHand);
     }

@@ -21,6 +21,8 @@ public class A14Temperance extends Item {
         if (!pLevel.isClientSide()) {
             giveEffect(pPlayer);
             mainHand.shrink(1);
+            if (!pPlayer.isCreative())
+                pPlayer.getCooldowns().addCooldown(mainHand.getItem(), (int) Math.round(50 * 20));
         }
         return InteractionResultHolder.success(mainHand);
     }

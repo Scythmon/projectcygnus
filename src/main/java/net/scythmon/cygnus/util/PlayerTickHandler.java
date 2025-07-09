@@ -37,15 +37,6 @@ public class PlayerTickHandler {
             }
         }
     }
-    @SubscribeEvent
-    public void naturalHealingDisabled(LivingHealEvent event) {
-        LivingEntity entity = event.getEntity();
-        if (event.isCancelable() && entity.hasEffect(ModEffects.COAGULATION.get())){
-            if (!entity.hasEffect(MobEffects.REGENERATION) && !entity.hasEffect(MobEffects.HEAL)) {
-                event.setCanceled(true);
-            }
-        }
-    }
 
     @SubscribeEvent
     public void onPotionEffectApplied(LivingEvent.LivingTickEvent event) {

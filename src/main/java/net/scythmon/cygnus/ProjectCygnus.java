@@ -12,6 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.scythmon.cygnus.effects.DeathRefuted;
 import net.scythmon.cygnus.init.*;
 import net.scythmon.cygnus.util.ModRecipiesSerializers;
 import net.scythmon.cygnus.util.PlayerTickHandler;
@@ -39,6 +40,7 @@ public class ProjectCygnus  {
         ModMenuTypes.register(modEventBus);
         ModRecipiesSerializers.register(modEventBus);
         ModRecipeTypes.register(modEventBus);
+
 
 
 

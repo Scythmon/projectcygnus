@@ -26,6 +26,9 @@ public class ModEffects {
     public static final RegistryObject<MobEffect> DIVINATION = MOB_EFFECTS.register("divination",
             () -> new SecondDeathEffect(MobEffectCategory.HARMFUL, 0));
 
+    public static final RegistryObject<MobEffect> DEATH_REFUTED = MOB_EFFECTS.register("death_refuted",
+            () -> new SecondDeathEffect(MobEffectCategory.BENEFICIAL, 0));
+
     public static final RegistryObject<MobEffect> HUNTED = MOB_EFFECTS.register("hunted",
             () -> new SecondDeathEffect(MobEffectCategory.HARMFUL, 0));
 

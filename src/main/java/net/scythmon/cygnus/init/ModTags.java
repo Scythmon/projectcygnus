@@ -21,6 +21,8 @@ public class ModTags {
 
     public static class Items{
         public static final TagKey<Item> HIGH_TIER_CONCENTRATES = tag("high_tier_concentrates");
+        public static final TagKey<Item> TAROT_CARD = tag("tarot_card");
+
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(ProjectCygnus.MOD_ID, name));

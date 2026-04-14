@@ -23,7 +23,7 @@ import org.slf4j.Logger;
 @Mod(ProjectCygnus.MOD_ID)
 public class ProjectCygnus  {
     public static final String MOD_ID = "projectcygnus";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     @SuppressWarnings("removal")
     public ProjectCygnus()
     {

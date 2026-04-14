@@ -37,5 +37,29 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.STAR_CONCENTRATE.get())
                 .add(ModItems.UNDEAD_CONCENTRATE.get())
                 .add(ModItems.THRONE_TEAR.get());
+
+        this.tag(ModTags.Items.TAROT_CARD)
+                .add(ModItems.THE_FOOL.get())
+                .add(ModItems.THE_MAGICIAN.get())
+                .add(ModItems.THE_HIGH_PRIESTESS.get())
+                .add(ModItems.THE_EMPRESS.get())
+                .add(ModItems.THE_EMPEROR.get())
+                .add(ModItems.THE_HIEROPHANT.get())
+                .add(ModItems.THE_LOVERS.get())
+                .add(ModItems.THE_CHARIOT.get())
+                .add(ModItems.STRENGTH.get())
+                .add(ModItems.THE_HERMIT.get())
+                .add(ModItems.WHEEL_OF_FORTUNE.get())
+                .add(ModItems.JUSTICE.get())
+                .add(ModItems.THE_HANGED_MAN.get())
+                .add(ModItems.DEATH.get())
+                .add(ModItems.TEMPERANCE.get())
+                .add(ModItems.THE_DEVIL.get())
+                .add(ModItems.THE_TOWER.get())
+                .add(ModItems.THE_STARS.get())
+                .add(ModItems.THE_MOON.get())
+                .add(ModItems.THE_SUN.get())
+                .add(ModItems.JUDGEMENT.get())
+                .add(ModItems.THE_WORLD.get());
         }
 }

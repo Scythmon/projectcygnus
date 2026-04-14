@@ -1,9 +1,11 @@
 package net.scythmon.cygnus.util;
 
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
@@ -40,53 +42,28 @@ public class PlayerTickHandler {
 
     @SubscribeEvent
     public void onPotionEffectApplied(LivingEvent.LivingTickEvent event) {
+        LivingEntity entity = event.getEntity();
+
+        if (!(event.getEntity() instanceof Player) || !entity.level().isClientSide || entity.tickCount % 10 != 0) {
+            return;
+        }
         if (event.getEntity().hasEffect(ModEffects.COAGULATION.get())) {
-            LivingEntity entity = event.getEntity();
-            spawnCoagulationParticles(entity);
+            spawnEffectParticles(entity, ModParticles.COAGULATION_PARTICLE.get());
         }
         if (event.getEntity().hasEffect(ModEffects.SECOND_DEATH.get())) {
-            LivingEntity entity = event.getEntity();
-            spawnSecondDeathParticles(entity);
+            spawnEffectParticles(entity, ModParticles.SECOND_DEATH_PARTICLE.get());
         }
         if (event.getEntity().hasEffect(ModEffects.HUNTED.get())) {
-            LivingEntity entity = event.getEntity();
-            spawnHuntedParticles(entity);
+            spawnEffectParticles(entity, ModParticles.HUNTED_PARTICLE.get());
         }
     }
-    public void spawnCoagulationParticles(LivingEntity entity) {
+
+    private void spawnEffectParticles(LivingEntity entity, ParticleOptions particle) {
         Level world = entity.level();
-        if (world.getGameTime() % 20 == 0) {
-            double x = entity.getRandomX(1);
-            double y = entity.getRandomY();
-            double z = entity.getRandomZ(1);
-            double motionX = 0.0;
-            double motionY = 0.1;
-            double motionZ = 0.0;
-            world.addParticle(ModParticles.COAGULATION_PARTICLE.get(), x, y, z, motionX, motionY, motionZ);
-        }
-    }
-    public void spawnSecondDeathParticles(LivingEntity entity) {
-        Level world = entity.level();
-        if (world.getGameTime() % 10 == 0) {
-            double x = entity.getRandomX(1);
-            double y = entity.getRandomY();
-            double z = entity.getRandomZ(1);
-            double motionX = 0.0;
-            double motionY = 0.1;
-            double motionZ = 0.0;
-            world.addParticle(ModParticles.SECOND_DEATH_PARTICLE.get(), x, y, z, motionX, motionY, motionZ);
-        }
-    }
-    public void spawnHuntedParticles(LivingEntity entity) {
-        Level world = entity.level();
-        if (world.getGameTime() % 20 == 0) {
-            double x = entity.getRandomX(1);
-            double y = entity.getRandomY();
-            double z = entity.getRandomZ(1);
-            double motionX = 0.0;
-            double motionY = 0.1;
-            double motionZ = 0.0;
-            world.addParticle(ModParticles.HUNTED_PARTICLE.get(), x, y, z, motionX, motionY, motionZ);
-        }
+        double x = entity.getRandomX(1);
+        double y = entity.getRandomY();
+        double z = entity.getRandomZ(1);
+
+        world.addParticle(particle, x, y, z, 0.0, 0.1, 0.0);
     }
 }

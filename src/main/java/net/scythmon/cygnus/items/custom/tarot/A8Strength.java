@@ -81,7 +81,6 @@ public class A8Strength extends Item {
                 pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(),
                         SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 1.5f, 1.0f);
 
-                pPlayer.getCooldowns().addCooldown(this, 200);
 
                 return InteractionResultHolder.success(mainHand);
             }

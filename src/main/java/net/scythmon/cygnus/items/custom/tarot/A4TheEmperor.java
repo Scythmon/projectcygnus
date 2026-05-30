@@ -33,7 +33,9 @@ public class A4TheEmperor extends Item {
             pLevel.playSound(null, pPlayer.blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 1.0f, 1.0f);
             mainhand.shrink(1);
 
-            pPlayer.getCooldowns().addCooldown(this, 900);
+           if (!pPlayer.isCreative()) {
+               pPlayer.getCooldowns().addCooldown(this, 6000);
+           }
             return InteractionResultHolder.success(mainhand);
         }else{
             return  InteractionResultHolder.fail(mainhand);

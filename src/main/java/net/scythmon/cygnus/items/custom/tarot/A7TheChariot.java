@@ -19,12 +19,10 @@ public class A7TheChariot extends Item {
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         ItemStack mainHand = pPlayer.getItemInHand(pUsedHand);
         if (!pLevel.isClientSide()) {
-            if (!pPlayer.isDeadOrDying()) {
                 pPlayer.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 4), pPlayer);
                 pPlayer.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 2400, 4), pPlayer);
                 pLevel.playSound(null, pPlayer.blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 1.0f, 1.0f);
                 mainHand.shrink(1);
-            }
         }
         return InteractionResultHolder.success(mainHand);
     }

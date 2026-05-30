@@ -20,10 +20,12 @@ public class A5TheHierophant extends Item {
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         ItemStack mainHand = pPlayer.getItemInHand(pUsedHand);
         if (!pLevel.isClientSide()) {
-            if (!pPlayer.isDeadOrDying()) {
-                pPlayer.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 6000, 1), pPlayer);
-                pLevel.playSound(null, pPlayer.blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 1.0f, 1.0f);
-                mainHand.shrink(1);
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 6000, 1), pPlayer);
+            pLevel.playSound(null, pPlayer.blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 1.0f, 1.0f);
+            mainHand.shrink(1);
+
+            if (!pPlayer.isCreative()) {
+                pPlayer.getCooldowns().addCooldown(this, 6000);
             }
         }
         return InteractionResultHolder.success(mainHand);

@@ -8,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.effects.CoagulationEffect;
+import net.scythmon.cygnus.effects.EmperorTimer;
 import net.scythmon.cygnus.effects.SecondDeathEffect;
 
 public class ModEffects {
@@ -31,6 +32,9 @@ public class ModEffects {
 
     public static final RegistryObject<MobEffect> HUNTED = MOB_EFFECTS.register("hunted",
             () -> new SecondDeathEffect(MobEffectCategory.HARMFUL, 0));
+
+    public static final RegistryObject<MobEffect> EXHAUSTION = MOB_EFFECTS.register("exhaustion",
+            EmperorTimer::new);
 
     public static void register (IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

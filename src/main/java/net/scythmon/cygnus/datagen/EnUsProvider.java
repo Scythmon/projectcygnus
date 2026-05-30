@@ -225,6 +225,7 @@ public class EnUsProvider extends AbstractModonomiconLanguageProvider {
         this.add("effect.projectcygnus.divination", "Divination");
         this.add("effect.projectcygnus.hunted", "Hunted");
         this.add("effect.projectcygnus.death_refuted", "Death Refuted");
+        this.add("effect.projectcygnus.exhaustion", "Adrenaline Rush");
     }
 
 

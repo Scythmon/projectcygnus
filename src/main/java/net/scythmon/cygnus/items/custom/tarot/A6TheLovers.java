@@ -24,7 +24,7 @@ public class A6TheLovers extends Item {
             if (!pPlayer.isDeadOrDying()) {
                 pPlayer.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 20, 0), pPlayer);
                 pPlayer.heal(4);
-                pLevel.playSound(pPlayer, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.NEUTRAL, 1.0F, 1.0F);
+                pLevel.playSound(null, pPlayer.blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 1.0f, 1.0f);
                 mainHand.shrink(1);
                 if (!pPlayer.isCreative())
                     pPlayer.getCooldowns().addCooldown(mainHand.getItem(), (int) Math.round(30 * 20));

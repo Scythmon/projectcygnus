@@ -22,7 +22,7 @@ public class A2TheHighPreistess extends Item {
         if (!pLevel.isClientSide()) {
             if (!pPlayer.isDeadOrDying()) {
                 pPlayer.addEffect(new MobEffectInstance(ModEffects.DEATH_REFUTED.get(), 200, 0), pPlayer);
-                pLevel.playSound(pPlayer, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.NEUTRAL, 1.0F, 1.0F);
+                pLevel.playSound(null, pPlayer.blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 1.0f, 1.0f);
                 mainHand.shrink(1);
                 if (!pPlayer.isCreative())
                     pPlayer.getCooldowns().addCooldown(mainHand.getItem(), (int) Math.round(600 * 20));

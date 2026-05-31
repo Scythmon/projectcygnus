@@ -12,7 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
-import net.scythmon.cygnus.util.StrikeDelay;
+import net.scythmon.cygnus.util.tickhandlers.DelayHandler;
 
 import java.util.List;
 
@@ -38,7 +38,7 @@ public class A20Judgement extends Item {
                         serverLevel.addFreshEntity(firstBolt);
                     }
 
-                    StrikeDelay.scheduleSecondStrike(serverLevel, victim.position(), 100);
+                    DelayHandler.scheduleSecondStrike(serverLevel, victim.position(), 100);
                 }
             } else {
                 pPlayer.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 1));

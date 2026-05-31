@@ -15,7 +15,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.scythmon.cygnus.effects.DeathRefuted;
 import net.scythmon.cygnus.init.*;
 import net.scythmon.cygnus.util.ModRecipiesSerializers;
-import net.scythmon.cygnus.util.PlayerTickHandler;
 import org.slf4j.Logger;
 
 
@@ -67,7 +66,6 @@ public class ProjectCygnus  {
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.WITHERING_SUNDEW.getId(), ModBlocks.POTTED_WITHERING_SUNDEW);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.TRIMMED_ARCHITECT_CORPSE.getId(), ModBlocks.POTTED_TRIMMED_ARCHITECT_CORPSE);
             });
-            MinecraftForge.EVENT_BUS.register(new PlayerTickHandler());
      }
 
 

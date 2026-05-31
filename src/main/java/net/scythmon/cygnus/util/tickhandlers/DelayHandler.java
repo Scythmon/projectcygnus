@@ -1,4 +1,4 @@
-package net.scythmon.cygnus.util;
+package net.scythmon.cygnus.util.tickhandlers;
 
 
 import net.minecraft.server.level.ServerLevel;
@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @Mod.EventBusSubscriber
-public class StrikeDelay {
+public class DelayHandler {
     private static class PendingStrike {
         final ServerLevel level;
         final Vec3 position;

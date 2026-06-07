@@ -79,7 +79,7 @@ public class StarForgingAltar implements ISpecialRecipe, IAltarRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipiesSerializers.FORGING.get();
+        return ModRecipiesSerializers.ALTAR_SERIALIZER.get();
     }
 
     @Override

@@ -12,6 +12,7 @@ import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.init.ModBlocks;
 import net.scythmon.cygnus.init.ModItems;
 import net.scythmon.cygnus.init.ModTags;
+import net.scythmon.cygnus.util.recipies.AltarRecipeBuilder;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -310,6 +311,30 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .requires(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get()), has(ModBlocks.CONCENTRATED_CRYSTAL_BLOCK.get()))
                 .save(pWriter, new ResourceLocation(ProjectCygnus.MOD_ID, "concentrated_crystal_cluster") + "_from_block");
+
+        // STAR FORGE ALTAR RECIPES --------------------------------------------------------------------
+        //THIS IS A BIT FINNICKY SO USE SHAPELESS FOR NOW
+        // Example A: Shapeless Star Forge Altar Crafting (exact = false)
+        AltarRecipeBuilder.altarRecipe(Items.NETHER_STAR, false)
+                .requires(Items.DIAMOND)                // Slot 0: Center
+                .requires(ModItems.STARFLAME.get())     // Outer Pedestal
+                .requires(ModItems.STARFLAME.get())     // Outer Pedestal
+                .requires(ModItems.STARFLAME.get())     // Outer Pedestal
+                .save(pWriter, "starforge_shapeless_test");
+
+        // Example B: Exact Position Altar Crafting (exact = true)
+        // Order maps directly to slots 0-8 sequentially:
+        AltarRecipeBuilder.altarRecipe(ModItems.STAR.get(), true)
+                .requires(Items.NETHER_STAR)                       // Slot 0: Center Core
+                .requires(ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get()) // Slot 1: North
+                .requires(ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get()) // Slot 2: South
+                .requires(Items.NETHERITE_INGOT)                   // Slot 3: East
+                .requires(Items.NETHERITE_INGOT)                   // Slot 4: West
+                .requires(ModItems.UNSTABLE_SINGULARITY.get())     // Slot 5: North-East
+                .requires(ModItems.UNSTABLE_SINGULARITY.get())     // Slot 6: North-West
+                .requires(ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get()) // Slot 7: South-East
+                .requires(ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get()) // Slot 8: South-West
+                .save(pWriter, "star_forge_exact_test");
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");

@@ -7,7 +7,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.scythmon.cygnus.ProjectCygnus;
 import net.scythmon.cygnus.tileentity.StarForgeAltarEntity;
-import net.scythmon.cygnus.tileentity.StarForgeBlockEntity;
 import net.scythmon.cygnus.tileentity.StarForgePillarEntity;
 
 public class ModBlockEntities {

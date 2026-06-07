@@ -1,7 +1,8 @@
-// 1.20.1	2025-03-26T11:55:07.7036239	Recipes
+// 1.20.1	2026-06-07T17:31:31.4414744	Recipes
 0e1eb543932318f9b5865b2de95bf34c85ddc9cb data/minecraft/advancements/recipes/misc/amethyst_shard.json
 bbbb1cc617afd1f504e7cd9e559f2652be2f7537 data/minecraft/advancements/recipes/misc/nether_wart.json
 d518b05c87c9b78705f33be9fe45fcdd4ebedf49 data/minecraft/advancements/recipes/misc/prismarine_shard.json
+37dc3083bce59fd17452192545081c6689c16f9a data/minecraft/recipes/altar_crafting/starforge_shapeless_test.json
 599ad5d2856252eb73d6774dead329cd99cac7c1 data/minecraft/recipes/amethyst_shard.json
 525b665947bc489678cfce3ae574f2c6c4895596 data/minecraft/recipes/nether_wart.json
 07aa732daf18e047972bd8c2792b4d2eb593d01b data/minecraft/recipes/prismarine_shard.json
@@ -37,6 +38,7 @@ b566f4856178532754848a193a92771b6cd4c3e9 data/projectcygnus/advancements/recipes
 7f618f15e81c0fc1892d252ebbca2066d2bfae2f data/projectcygnus/advancements/recipes/misc/veiled_card.json
 1cce7e9331f89de91e23dcbed5138b90868df402 data/projectcygnus/advancements/recipes/misc/wishing_core.json
 8f77b02cb9aa77114ba437f86f45d21558eace2a data/projectcygnus/recipes/altar_core.json
+1ab9570991b0d741b616a751a03d3aae4111d049 data/projectcygnus/recipes/altar_crafting/star_forge_exact_test.json
 96d14672b20bb7ffcb0bc35438614761febbb801 data/projectcygnus/recipes/angel_gold.json
 9b8473d9500439bcc82bf2dda6559f177052a2b5 data/projectcygnus/recipes/angel_gold_block.json
 b8c7ef38b943c3b6fe28314147ac5f1f5dfcfbf3 data/projectcygnus/recipes/angel_gold_from_block.json

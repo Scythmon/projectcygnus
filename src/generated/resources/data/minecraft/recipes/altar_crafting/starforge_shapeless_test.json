@@ -1,0 +1,21 @@
+{
+  "type": "projectcygnus:altar_crafting",
+  "exact": false,
+  "ingredients": [
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "projectcygnus:starflame"
+    },
+    {
+      "item": "projectcygnus:starflame"
+    },
+    {
+      "item": "projectcygnus:starflame"
+    }
+  ],
+  "output": {
+    "item": "minecraft:nether_star"
+  }
+}

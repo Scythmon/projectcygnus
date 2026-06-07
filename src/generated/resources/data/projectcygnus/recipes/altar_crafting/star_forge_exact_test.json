@@ -1,0 +1,36 @@
+{
+  "type": "projectcygnus:altar_crafting",
+  "exact": true,
+  "ingredients": [
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
+      "item": "projectcygnus:concentrated_crystal_cluster"
+    },
+    {
+      "item": "projectcygnus:concentrated_crystal_cluster"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "projectcygnus:unstable_singularity"
+    },
+    {
+      "item": "projectcygnus:unstable_singularity"
+    },
+    {
+      "item": "projectcygnus:concentrated_crystal_cluster"
+    },
+    {
+      "item": "projectcygnus:concentrated_crystal_cluster"
+    }
+  ],
+  "output": {
+    "item": "projectcygnus:star"
+  }
+}

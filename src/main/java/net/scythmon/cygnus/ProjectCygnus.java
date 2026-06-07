@@ -36,7 +36,7 @@ public class ProjectCygnus  {
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
         ModBlockEntities.register(modEventBus);
-        ModMenuTypes.register(modEventBus);
+
         ModRecipiesSerializers.register(modEventBus);
         ModRecipeTypes.register(modEventBus);
 

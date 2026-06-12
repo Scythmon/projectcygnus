@@ -322,7 +322,8 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .requires(ModItems.STARFLAME.get())     // Outer Pedestal
                 .save(pWriter, "starforge_shapeless_test");
 
-        // Example B: Exact Position Altar Crafting (exact = true)
+        // Example B: Exact Position Altar Crafting, only cares about cardinal(1-4) and intermediate(6-8) directions. Meaning
+        // EX: You can place either a concentrated crystal cluster or netherite ingot in slots 1-4 as long as there are 2 of each, same goes for slots 5-8(exact = true)
         // Order maps directly to slots 0-8 sequentially:
         AltarRecipeBuilder.altarRecipe(ModItems.STAR.get(), true)
                 .requires(Items.NETHER_STAR)                       // Slot 0: Center Core

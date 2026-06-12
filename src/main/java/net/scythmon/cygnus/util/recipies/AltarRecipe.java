@@ -41,16 +41,65 @@ public class AltarRecipe implements Recipe<SimpleContainer> {
         }
 
         if (exact) {
-            if (container.getContainerSize() < recipeItems.size()) return false;
+            if (recipeItems.isEmpty()) return false;
 
-            for (int i = 0; i < recipeItems.size(); i++) {
-                Ingredient ingredient = recipeItems.get(i);
-                ItemStack actualItem = container.getItem(i);
+            // Slot 0 is always the center catalyst, must match exactly
+            if (!recipeItems.get(0).test(container.getItem(0))) return false;
 
-                if (!ingredient.test(actualItem)) {
-                    return false;
-                }
+            // Cardinal slots are 1-4
+            List<Ingredient> cardinalIngredients = new ArrayList<>();
+            for (int i = 1; i <= 4 && i < recipeItems.size(); i++) {
+                cardinalIngredients.add(recipeItems.get(i));
             }
+
+            // Diagonal slots are 5-8
+            List<Ingredient> diagonalIngredients = new ArrayList<>();
+            for (int i = 5; i <= 8 && i < recipeItems.size(); i++) {
+                diagonalIngredients.add(recipeItems.get(i));
+            }
+
+
+            List<ItemStack> actualCardinals = new ArrayList<>();
+            for (int i = 1; i <= 4; i++) {
+                ItemStack stack = container.getItem(i);
+                if (!stack.isEmpty()) actualCardinals.add(stack);
+            }
+
+
+            List<ItemStack> actualDiagonals = new ArrayList<>();
+            for (int i = 5; i <= 8; i++) {
+                ItemStack stack = container.getItem(i);
+                if (!stack.isEmpty()) actualDiagonals.add(stack);
+            }
+
+            if (actualCardinals.size() != cardinalIngredients.size()) return false;
+            List<ItemStack> cardinalCopy = new ArrayList<>(actualCardinals);
+            for (Ingredient ingredient : cardinalIngredients) {
+                boolean matched = false;
+                for (int i = 0; i < cardinalCopy.size(); i++) {
+                    if (ingredient.test(cardinalCopy.get(i))) {
+                        cardinalCopy.remove(i);
+                        matched = true;
+                        break;
+                    }
+                }
+                if (!matched) return false;
+            }
+
+            if (actualDiagonals.size() != diagonalIngredients.size()) return false;
+            List<ItemStack> diagonalCopy = new ArrayList<>(actualDiagonals);
+            for (Ingredient ingredient : diagonalIngredients) {
+                boolean matched = false;
+                for (int i = 0; i < diagonalCopy.size(); i++) {
+                    if (ingredient.test(diagonalCopy.get(i))) {
+                        diagonalCopy.remove(i);
+                        matched = true;
+                        break;
+                    }
+                }
+                if (!matched) return false;
+            }
+
             return true;
         }
 

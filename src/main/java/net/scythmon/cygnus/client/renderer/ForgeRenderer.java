@@ -32,14 +32,24 @@ public class ForgeRenderer implements BlockEntityRenderer<StarForgeAltarEntity> 
 
         if (!stack.isEmpty()) {
             matrix.pushPose();
-            matrix.translate(0.5D, 1.25D, 0.5D);
+
+            float craftProgress = tile.getCraftProgress(); // 0.0 to 1.0
+            boolean isCrafting = tile.isCrafting();
+
+            double tick = (System.currentTimeMillis() % 100000D) / 800.0D;
+
+            double baseY = 1.25D;
+            double bobAmount = isCrafting ? (1.0D - craftProgress) * 0.065D : 0.065D;
+            double bobY = Math.sin(tick) * bobAmount;
+
+            matrix.translate(0.5D, baseY + tile.currentRiseY + bobY, 0.5D);
 
             float scale = stack.getItem() instanceof BlockItem ? 0.95F : 0.75F;
             matrix.scale(scale, scale, scale);
 
-            double tick = (System.currentTimeMillis() % 100000D) / 800.0D;
-            matrix.translate(0.0D, Math.sin(tick) * 0.065D, 0.0D);
-            matrix.mulPose(Axis.YP.rotationDegrees((float) ((tick * 40.0D) % 360)));
+// Use accumulated rotation instead of deriving from time
+            float rotation = isCrafting ? tile.currentRotation : (float)((tick * 40.0D) % 360);
+            matrix.mulPose(Axis.YP.rotationDegrees(rotation));
 
             minecraft.getItemRenderer().renderStatic(
                     stack,
@@ -69,11 +79,9 @@ public class ForgeRenderer implements BlockEntityRenderer<StarForgeAltarEntity> 
                         aoePos.getZ() - pos.getZ()
                 );
 
-
                 matrix.translate(0.5D, 0.5D, 0.5D);
                 matrix.scale(0.995F, 0.995F, 0.995F);
                 matrix.translate(-0.5D, -0.5D, -0.5D);
-
 
                 minecraft.getBlockRenderer().renderBatched(
                         ModBlocks.STAR_FORGE_PILLAR.get().defaultBlockState(),

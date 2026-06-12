@@ -1,30 +1,21 @@
 package net.scythmon.cygnus.tileentity;
 
-import com.blakebr0.cucumber.inventory.BaseItemStackHandler;
-import com.blakebr0.cucumber.inventory.CachedRecipe;
-import com.blakebr0.cucumber.tileentity.BaseInventoryTileEntity;
-import com.blakebr0.cucumber.util.MultiblockPositions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ItemParticleOption;
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.SimpleContainer;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.AABB;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -32,15 +23,11 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.scythmon.cygnus.block.custom.tileentity.StarForgeBlock;
 import net.scythmon.cygnus.init.ModBlockEntities;
-import net.scythmon.cygnus.init.ModRecipeTypes;
 import net.scythmon.cygnus.util.recipies.AltarRecipe;
-import net.scythmon.cygnus.util.IActivatable;
-import net.scythmon.cygnus.util.IAltarRecipe;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -130,7 +117,7 @@ public class StarForgeAltarEntity extends BlockEntity {
             }
 
             inventory.setStackInSlot(0, result.copy());
-            level.playSound(null, worldPosition, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.0F, 2.0F);
+            level.playSound(null, worldPosition, SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.BLOCKS, 0.8F, 1.5F);
         }
 
         this.craftTime = 0;
@@ -190,7 +177,7 @@ public class StarForgeAltarEntity extends BlockEntity {
 
 
     private int craftTime = 0;
-    private int maxCraftTime = 100;
+    private int maxCraftTime = 200;
 
     public boolean isCrafting() {
         return this.craftTime > 0;
@@ -199,13 +186,30 @@ public class StarForgeAltarEntity extends BlockEntity {
     public static void tick(Level level, BlockPos pos, BlockState state, StarForgeAltarEntity altar) {
         if (level.isClientSide()) {
             if (state.hasProperty(StarForgeBlock.CRAFTING) && state.getValue(StarForgeBlock.CRAFTING)) {
+                float craftProgress = altar.getCraftProgress();
+
+                float curve = (float) Math.pow(craftProgress, 2);
+
+                float rotationSpeed = 1.0F + (curve * 90.0F); // 1x to 28x speed
+                altar.currentRotation = (altar.currentRotation + rotationSpeed) % 360f;
+
+                float targetRiseY = curve * 0.5f;
+                altar.currentRiseY += (targetRiseY - altar.currentRiseY) * 0.1f;
+
                 altar.spawnCraftingParticles();
+            } else {
+                altar.currentRiseY += (0f - altar.currentRiseY) * 0.1f;
             }
             return;
         }
 
         if (altar.craftTime > 0) {
             altar.craftTime++;
+
+            // Sync to client every 5 ticks so renderer can track progress
+            if (altar.craftTime % 5 == 0) {
+                level.sendBlockUpdated(pos, state, state, 3);
+            }
 
             if (altar.craftTime >= altar.maxCraftTime) {
                 altar.finishCraft();
@@ -224,27 +228,42 @@ public class StarForgeAltarEntity extends BlockEntity {
         RandomSource random = this.level.random;
 
         for (BlockPos pPos : getExactPedestalPositions()) {
-            if (!level.isEmptyBlock(pPos)) {
+            BlockEntity be = level.getBlockEntity(pPos);
+            if (be == null || be.getType() != ModBlockEntities.STAR_FORGE_PILLAR_BE.get()) continue;
 
-                double pedX = pPos.getX() + 0.5D;
-                double pedY = pPos.getY() + 1.1D;
-                double pedZ = pPos.getZ() + 0.5D;
+            var handlerOpt = be.getCapability(ForgeCapabilities.ITEM_HANDLER).resolve();
+            if (handlerOpt.isEmpty()) continue;
 
-                double velX = (centerX - pedX) * 0.05D;
-                double velY = (centerY - pedY) * 0.05D;
-                double velZ = (centerZ - pedZ) * 0.05D;
+            ItemStack pedestalStack = handlerOpt.get().getStackInSlot(0);
+            if (pedestalStack.isEmpty()) continue;
 
-                if (random.nextFloat() < 0.4F) {
-                    level.addParticle(
-                            ParticleTypes.CHERRY_LEAVES,
-                            pedX + (random.nextDouble() - 0.5D) * 0.2D,
-                            pedY,
-                            pedZ + (random.nextDouble() - 0.5D) * 0.2D,
-                            velX,
-                            velY,
-                            velZ
-                    );
-                }
+            double pedX = pPos.getX() + 0.5D;
+            double pedY = pPos.getY() + 1.1D;
+            double pedZ = pPos.getZ() + 0.5D;
+
+            double dx = centerX - pedX;
+            double dy = centerY - pedY;
+            double dz = centerZ - pedZ;
+
+            for (int i = 0; i < 3; i++) {
+                double t = random.nextDouble();
+                double spawnX = pedX + dx * t * 0.5D + (random.nextDouble() - 0.5D) * 0.15D;
+                double spawnY = pedY + dy * t * 0.5D + (random.nextDouble() - 0.5D) * 0.15D;
+                double spawnZ = pedZ + dz * t * 0.5D + (random.nextDouble() - 0.5D) * 0.15D;
+
+                double velX = dx * 0.08D;
+                double velY = dy * 0.08D;
+                double velZ = dz * 0.08D;
+
+                level.addParticle(
+                        new ItemParticleOption(ParticleTypes.ITEM, pedestalStack),
+                        spawnX,
+                        spawnY,
+                        spawnZ,
+                        velX,
+                        velY,
+                        velZ
+                );
             }
         }
     }
@@ -295,11 +314,15 @@ public class StarForgeAltarEntity extends BlockEntity {
         net.minecraft.nbt.CompoundTag tag = pkt.getTag();
         if (tag != null) {
             this.load(tag);
-            if (this.level != null && this.level.isClientSide()) {
-                this.level.sendBlockUpdated(this.worldPosition, this.getBlockState(), this.getBlockState(), 3);
-            }
         }
     }
+
+    public float getCraftProgress() {
+        return maxCraftTime > 0 ? (float) craftTime / maxCraftTime : 0f;
+    }
+
+    public float currentRotation = 0f;
+    public float currentRiseY = 0f;
 
     @Override
     public CompoundTag getUpdateTag() {

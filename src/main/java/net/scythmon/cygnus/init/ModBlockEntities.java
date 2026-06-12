@@ -14,13 +14,13 @@ public class ModBlockEntities {
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, ProjectCygnus.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<StarForgeAltarEntity>> STAR_FORGE_BE =
-            BLOCK_ENTITIES.register("star_forge_be",
-                    () -> BlockEntityType.Builder.of(StarForgeAltarEntity::new,
-                            ModBlocks.STAR_FORGE.get()).build(null));
+            BLOCK_ENTITIES.register("star_forge_altar", () ->
+                    BlockEntityType.Builder.of(StarForgeAltarEntity::new, ModBlocks.STAR_FORGE.get())
+                            .build(null));
 
-    public static final RegistryObject<BlockEntityType<StarForgePillarEntity>> STAR_FORGE_PILLAR_BE = BLOCK_ENTITIES
-            .register("star_forge_pillar_be",
-                    () -> BlockEntityType.Builder.of(StarForgePillarEntity::new, ModBlocks.STAR_FORGE_PILLAR.get())
+    public static final RegistryObject<BlockEntityType<StarForgePillarEntity>> STAR_FORGE_PILLAR_BE =
+            BLOCK_ENTITIES.register("star_forge_pillar_be", () ->
+                    BlockEntityType.Builder.of(StarForgePillarEntity::new, ModBlocks.STAR_FORGE_PILLAR.get())
                             .build(null));
 
 

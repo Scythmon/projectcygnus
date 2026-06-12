@@ -115,7 +115,7 @@ public class StarForgeBlock extends BaseTileEntityBlock {
     }
 
     @Override
-    protected <T extends BlockEntity> BlockEntityTicker<T> getServerTicker(Level level, BlockState state, BlockEntityType<T> type) {
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
         return createTicker(type, ModBlockEntities.STAR_FORGE_BE.get(), StarForgeAltarEntity::tick);
     }
 }

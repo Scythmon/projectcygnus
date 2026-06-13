@@ -1,5 +1,6 @@
 {
   "type": "projectcygnus:altar_crafting",
+  "craft_time": 200,
   "exact": true,
   "ingredients": [
     {

@@ -20,6 +20,7 @@ public class AltarRecipeBuilder {
     private final int count;
     private final List<Ingredient> ingredients = new ArrayList<>();
     private final boolean exact;
+    private int craftTime = 100;
 
     private AltarRecipeBuilder(ItemLike result, int count, boolean exact) {
         this.result = result.asItem();
@@ -44,8 +45,13 @@ public class AltarRecipeBuilder {
         return this;
     }
 
+    public AltarRecipeBuilder craftTime(int craftTime) {
+        this.craftTime = craftTime;
+        return this;
+    }
+
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation id) {
-        consumer.accept(new Result(id, this.result, this.count, this.ingredients, this.exact));
+        consumer.accept(new Result(id, this.result, this.count, this.ingredients, this.exact, this.craftTime));
     }
 
     public void save(Consumer<FinishedRecipe> consumer, String saveName) {
@@ -53,25 +59,27 @@ public class AltarRecipeBuilder {
         save(consumer, new ResourceLocation(mainId.getNamespace(), "altar_crafting/" + saveName));
     }
 
-    // Dynamic inner class that compiles the data properties into structured JSON fields
     private static class Result implements FinishedRecipe {
         private final ResourceLocation id;
         private final Item result;
         private final int count;
         private final List<Ingredient> ingredients;
         private final boolean exact;
+        private final int craftTime;
 
-        public Result(ResourceLocation id, Item result, int count, List<Ingredient> ingredients, boolean exact) {
+        public Result(ResourceLocation id, Item result, int count, List<Ingredient> ingredients, boolean exact, int craftTime) {
             this.id = id;
             this.result = result;
             this.count = count;
             this.ingredients = ingredients;
             this.exact = exact;
+            this.craftTime = craftTime;
         }
 
         @Override
         public void serializeRecipeData(JsonObject json) {
             json.addProperty("exact", this.exact);
+            json.addProperty("craft_time", this.craftTime);
 
             JsonArray jsonIngredients = new JsonArray();
             for (Ingredient ingredient : this.ingredients) {
@@ -88,25 +96,17 @@ public class AltarRecipeBuilder {
         }
 
         @Override
-        public ResourceLocation getId() {
-            return this.id;
-        }
+        public ResourceLocation getId() { return this.id; }
 
         @Override
-        public RecipeSerializer<?> getType() {
-            return AltarRecipe.Serializer.INSTANCE;
-        }
+        public RecipeSerializer<?> getType() { return AltarRecipe.Serializer.INSTANCE; }
 
         @Nullable
         @Override
-        public JsonObject serializeAdvancement() {
-            return null; // Opting out of mandatory advancement unlocking criteria for simplicity
-        }
+        public JsonObject serializeAdvancement() { return null; }
 
         @Nullable
         @Override
-        public ResourceLocation getAdvancementId() {
-            return null;
-        }
+        public ResourceLocation getAdvancementId() { return null; }
     }
 }

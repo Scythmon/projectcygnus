@@ -21,13 +21,15 @@ public class AltarRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     private final ItemStack output;
     private final NonNullList<Ingredient> recipeItems;
-    private final boolean exact; // New condition flag
+    private final boolean exact;
+    private final int craftTime;
 
-    public AltarRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> recipeItems, boolean exact) {
+    public AltarRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> recipeItems, boolean exact, int craftTime) {
         this.id = id;
         this.output = output;
         this.recipeItems = recipeItems;
         this.exact = exact;
+        this.craftTime = craftTime;
     }
 
     @Override
@@ -43,28 +45,23 @@ public class AltarRecipe implements Recipe<SimpleContainer> {
         if (exact) {
             if (recipeItems.isEmpty()) return false;
 
-            // Slot 0 is always the center catalyst, must match exactly
             if (!recipeItems.get(0).test(container.getItem(0))) return false;
 
-            // Cardinal slots are 1-4
             List<Ingredient> cardinalIngredients = new ArrayList<>();
             for (int i = 1; i <= 4 && i < recipeItems.size(); i++) {
                 cardinalIngredients.add(recipeItems.get(i));
             }
 
-            // Diagonal slots are 5-8
             List<Ingredient> diagonalIngredients = new ArrayList<>();
             for (int i = 5; i <= 8 && i < recipeItems.size(); i++) {
                 diagonalIngredients.add(recipeItems.get(i));
             }
-
 
             List<ItemStack> actualCardinals = new ArrayList<>();
             for (int i = 1; i <= 4; i++) {
                 ItemStack stack = container.getItem(i);
                 if (!stack.isEmpty()) actualCardinals.add(stack);
             }
-
 
             List<ItemStack> actualDiagonals = new ArrayList<>();
             for (int i = 5; i <= 8; i++) {
@@ -144,6 +141,8 @@ public class AltarRecipe implements Recipe<SimpleContainer> {
 
     public boolean isExact() { return this.exact; }
 
+    public int getCraftTime() { return this.craftTime; }
+
     public static class Type implements RecipeType<AltarRecipe> {
         public static final Type INSTANCE = new Type();
         public static final String ID = "altar_crafting";
@@ -156,7 +155,8 @@ public class AltarRecipe implements Recipe<SimpleContainer> {
         @Override
         public AltarRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
-            boolean exact = GsonHelper.getAsBoolean(json, "exact", false); // Reads exact token flag
+            boolean exact = GsonHelper.getAsBoolean(json, "exact", false);
+            int craftTime = GsonHelper.getAsInt(json, "craft_time", 100);
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(json, "ingredients");
             NonNullList<Ingredient> inputs = NonNullList.withSize(ingredients.size(), Ingredient.EMPTY);
@@ -165,23 +165,25 @@ public class AltarRecipe implements Recipe<SimpleContainer> {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new AltarRecipe(recipeId, output, inputs, exact);
+            return new AltarRecipe(recipeId, output, inputs, exact, craftTime);
         }
 
         @Override
         public @Nullable AltarRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer) {
             boolean exact = buffer.readBoolean();
+            int craftTime = buffer.readInt();
             NonNullList<Ingredient> inputs = NonNullList.withSize(buffer.readInt(), Ingredient.EMPTY);
             for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromNetwork(buffer));
             }
             ItemStack output = buffer.readItem();
-            return new AltarRecipe(recipeId, output, inputs, exact);
+            return new AltarRecipe(recipeId, output, inputs, exact, craftTime);
         }
 
         @Override
         public void toNetwork(FriendlyByteBuf buffer, AltarRecipe recipe) {
             buffer.writeBoolean(recipe.isExact());
+            buffer.writeInt(recipe.getCraftTime());
             buffer.writeInt(recipe.getIngredients().size());
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.toNetwork(buffer);

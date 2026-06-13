@@ -67,12 +67,27 @@ public class StarForgeAltarEntity extends BlockEntity {
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
+    private int craftTime = 0;
+    private int maxCraftTime = 100;
+
+    // Client-side only rotation tracking
+    public float currentRotation = 0f;
+    public float currentRiseY = 0f;
+
     public StarForgeAltarEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.STAR_FORGE_BE.get(), pos, state);
     }
 
     public ItemStackHandler getInventory() {
         return this.inventory;
+    }
+
+    public boolean isCrafting() {
+        return this.craftTime > 0;
+    }
+
+    public float getCraftProgress() {
+        return maxCraftTime > 0 ? (float) craftTime / maxCraftTime : 0f;
     }
 
     public void attemptCraft() {
@@ -84,6 +99,7 @@ public class StarForgeAltarEntity extends BlockEntity {
                 .getRecipeFor(AltarRecipe.Type.INSTANCE, container, level);
 
         if (recipe.isPresent()) {
+            this.maxCraftTime = recipe.get().getCraftTime();
             this.craftTime = 1;
             this.level.playSound(null, worldPosition, SoundEvents.BEACON_ACTIVATE, SoundSource.BLOCKS, 1.0F, 1.0F);
 
@@ -117,10 +133,12 @@ public class StarForgeAltarEntity extends BlockEntity {
             }
 
             inventory.setStackInSlot(0, result.copy());
-            level.playSound(null, worldPosition, SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.BLOCKS, 0.8F, 1.5F);
+            level.playSound(null, worldPosition, SoundEvents.BEACON_DEACTIVATE, SoundSource.BLOCKS, 0.8F, 1.5F);
+            level.playSound(null, worldPosition, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.0F, 2.0F);
         }
 
         this.craftTime = 0;
+        this.maxCraftTime = 100;
 
         BlockState state = this.getBlockState();
         if (state.hasProperty(StarForgeBlock.CRAFTING)) {
@@ -157,40 +175,29 @@ public class StarForgeAltarEntity extends BlockEntity {
 
     public List<BlockPos> getExactPedestalPositions() {
         List<BlockPos> positions = new ArrayList<>();
-        positions.add(worldPosition.offset(0, 0, 3));   // Index 0 (Container Slot 1) - North
-        positions.add(worldPosition.offset(0, 0, -3));  // Index 1 (Container Slot 2) - South
-        positions.add(worldPosition.offset(3, 0, 0));   // Index 2 (Container Slot 3) - East
-        positions.add(worldPosition.offset(-3, 0, 0));  // Index 3 (Container Slot 4) - West
-        positions.add(worldPosition.offset(2, 0, 2));   // Index 4 (Container Slot 5) - North-East
-        positions.add(worldPosition.offset(-2, 0, 2));  // Index 5 (Container Slot 6) - North-West
-        positions.add(worldPosition.offset(2, 0, -2));  // Index 6 (Container Slot 7) - South-East
-        positions.add(worldPosition.offset(-2, 0, -2)); // Index 7 (Container Slot 8) - South-West
+        positions.add(worldPosition.offset(0, 0, 3));
+        positions.add(worldPosition.offset(0, 0, -3));
+        positions.add(worldPosition.offset(3, 0, 0));
+        positions.add(worldPosition.offset(-3, 0, 0));
+        positions.add(worldPosition.offset(2, 0, 2));
+        positions.add(worldPosition.offset(-2, 0, 2));
+        positions.add(worldPosition.offset(2, 0, -2));
+        positions.add(worldPosition.offset(-2, 0, -2));
         return positions;
     }
 
     @Override
     public net.minecraft.world.phys.AABB getRenderBoundingBox() {
-        // Expands the bounding box 4 blocks outward in every horizontal direction
-        // and 2 blocks up so it doesnt stop rendering pedestals too early
         return new net.minecraft.world.phys.AABB(worldPosition).inflate(4.0D, 2.0D, 4.0D);
-    }
-
-
-    private int craftTime = 0;
-    private int maxCraftTime = 200;
-
-    public boolean isCrafting() {
-        return this.craftTime > 0;
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, StarForgeAltarEntity altar) {
         if (level.isClientSide()) {
             if (state.hasProperty(StarForgeBlock.CRAFTING) && state.getValue(StarForgeBlock.CRAFTING)) {
                 float craftProgress = altar.getCraftProgress();
+                float curve = (float) Math.pow(craftProgress, 3);
 
-                float curve = (float) Math.pow(craftProgress, 2);
-
-                float rotationSpeed = 1.0F + (curve * 90.0F); // 1x to 28x speed
+                float rotationSpeed = 1.0F + (curve * 80.0F);
                 altar.currentRotation = (altar.currentRotation + rotationSpeed) % 360f;
 
                 float targetRiseY = curve * 0.5f;
@@ -206,7 +213,6 @@ public class StarForgeAltarEntity extends BlockEntity {
         if (altar.craftTime > 0) {
             altar.craftTime++;
 
-            // Sync to client every 5 ticks so renderer can track progress
             if (altar.craftTime % 5 == 0) {
                 level.sendBlockUpdated(pos, state, state, 3);
             }
@@ -293,6 +299,7 @@ public class StarForgeAltarEntity extends BlockEntity {
         super.saveAdditional(tag);
         tag.put("Inventory", this.inventory.serializeNBT());
         tag.putInt("CraftTime", this.craftTime);
+        tag.putInt("MaxCraftTime", this.maxCraftTime);
     }
 
     @Override
@@ -302,6 +309,10 @@ public class StarForgeAltarEntity extends BlockEntity {
             this.inventory.deserializeNBT(tag.getCompound("Inventory"));
         }
         this.craftTime = tag.getInt("CraftTime");
+        this.maxCraftTime = tag.getInt("MaxCraftTime");
+
+        // Fallback in case MaxCraftTime was never saved (existing worlds)
+        if (this.maxCraftTime <= 0) this.maxCraftTime = 100;
     }
 
     @Override
@@ -317,19 +328,12 @@ public class StarForgeAltarEntity extends BlockEntity {
         }
     }
 
-    public float getCraftProgress() {
-        return maxCraftTime > 0 ? (float) craftTime / maxCraftTime : 0f;
-    }
-
-    public float currentRotation = 0f;
-    public float currentRiseY = 0f;
-
     @Override
     public CompoundTag getUpdateTag() {
         CompoundTag tag = super.getUpdateTag();
         tag.put("Inventory", this.inventory.serializeNBT());
         tag.putInt("CraftTime", this.craftTime);
+        tag.putInt("MaxCraftTime", this.maxCraftTime);
         return tag;
     }
-
 }

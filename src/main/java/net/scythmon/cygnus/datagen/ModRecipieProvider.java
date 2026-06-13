@@ -313,7 +313,6 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .save(pWriter, new ResourceLocation(ProjectCygnus.MOD_ID, "concentrated_crystal_cluster") + "_from_block");
 
         // STAR FORGE ALTAR RECIPES --------------------------------------------------------------------
-        //THIS IS A BIT FINNICKY SO USE SHAPELESS FOR NOW
         // Example A: Shapeless Star Forge Altar Crafting (exact = false)
         AltarRecipeBuilder.altarRecipe(Items.NETHER_STAR, false)
                 .requires(Items.DIAMOND)                // Slot 0: Center
@@ -326,6 +325,7 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
         // EX: You can place either a concentrated crystal cluster or netherite ingot in slots 1-4 as long as there are 2 of each, same goes for slots 5-8(exact = true)
         // Order maps directly to slots 0-8 sequentially:
         AltarRecipeBuilder.altarRecipe(ModItems.STAR.get(), true)
+                .craftTime(200)
                 .requires(Items.NETHER_STAR)                       // Slot 0: Center Core
                 .requires(ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get()) // Slot 1: North
                 .requires(ModItems.CONCENTRATED_CRYSTAL_CLUSTER.get()) // Slot 2: South

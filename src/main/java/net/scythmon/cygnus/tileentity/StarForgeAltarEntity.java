@@ -8,7 +8,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -215,33 +214,31 @@ public class StarForgeAltarEntity extends BlockEntity {
         if (altar.craftTime > 0) {
             altar.craftTime++;
 
-            SimpleContainer container = altar.getContainerFromStructure();
-            Optional<AltarRecipe> recipe = level.getRecipeManager()
-                    .getRecipeFor(AltarRecipe.Type.INSTANCE, container, level);
+            if (altar.craftTime % 5 == 0) {
+                SimpleContainer container = altar.getContainerFromStructure();
+                Optional<AltarRecipe> recipe = level.getRecipeManager()
+                        .getRecipeFor(AltarRecipe.Type.INSTANCE, container, level);
 
-            if (recipe.isEmpty()) {
-                altar.craftTime = 0;
-                altar.maxCraftTime = 100;
+                if (recipe.isEmpty()) {
+                    altar.craftTime = 0;
+                    altar.maxCraftTime = 100;
 
-                BlockState cancelState = altar.getBlockState();
-                if (cancelState.hasProperty(StarForgeBlock.CRAFTING)) {
-                    level.setBlock(pos, cancelState.setValue(StarForgeBlock.CRAFTING, false), 3);
-                }
+                    BlockState cancelState = altar.getBlockState();
+                    if (cancelState.hasProperty(StarForgeBlock.CRAFTING)) {
+                        level.setBlock(pos, cancelState.setValue(StarForgeBlock.CRAFTING, false), 3);
+                    }
 
-                level.playSound(null, pos, SoundEvents.GENERIC_EXPLODE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                if (level.getServer() != null) {
-                    for (ServerPlayer player : level.getServer().getPlayerList().getPlayers()) {
+                    level.playSound(null, pos, SoundEvents.GENERIC_EXPLODE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    for (var player : level.players()) {
                         if (player.distanceToSqr(pos.getX(), pos.getY(), pos.getZ()) < 64) {
                             player.addEffect(new MobEffectInstance(MobEffects.WITHER, 200, 1));
                         }
                     }
+                    altar.setChanged();
+                    level.sendBlockUpdated(pos, state, state, 3);
+                    return;
                 }
-                altar.setChanged();
-                level.sendBlockUpdated(pos, state, state, 3);
-                return;
-            }
 
-            if (altar.craftTime % 5 == 0) {
                 level.sendBlockUpdated(pos, state, state, 3);
             }
 

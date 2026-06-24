@@ -67,7 +67,9 @@ public class StarForgeBlock extends BaseTileEntityBlock {
 
             if (catalyst.isEmpty() && !held.isEmpty()) {
                 inventory.setStackInSlot(0, StackHelper.withSize(held, 1, false));
-                player.setItemInHand(hand, StackHelper.shrink(held, 1, false));
+                if (!player.isCreative()) {
+                    player.setItemInHand(hand, StackHelper.shrink(held, 1, false));
+                }
                 level.playSound(null, player.blockPosition(), SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 1.0f, 1.0f);
                 return InteractionResult.SUCCESS;
             }

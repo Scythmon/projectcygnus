@@ -40,6 +40,10 @@ public class StarForgePillar extends BaseTileEntityBlock {
 
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult rayTraceResult) {
+        if (world.isClientSide()) {
+            return InteractionResult.SUCCESS;
+        }
+
         var tile = world.getBlockEntity(pos);
 
         if (tile instanceof StarForgePillarEntity pedestal) {
@@ -49,7 +53,9 @@ public class StarForgePillar extends BaseTileEntityBlock {
 
             if (input.isEmpty() && !held.isEmpty()) {
                 inventory.setStackInSlot(0, StackHelper.withSize(held, 1, false));
-                player.setItemInHand(hand, StackHelper.shrink(held, 1, false));
+                if (!player.isCreative()) {
+                    player.setItemInHand(hand, StackHelper.shrink(held, 1, false));
+                }
                 world.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1.0F, 1.0F);
             } else if (!input.isEmpty()) {
                 inventory.setStackInSlot(0, ItemStack.EMPTY);

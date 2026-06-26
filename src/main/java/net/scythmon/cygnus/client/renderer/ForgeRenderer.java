@@ -2,6 +2,7 @@ package net.scythmon.cygnus.client.renderer;
 
 import com.blakebr0.cucumber.client.ModRenderTypes;
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -67,7 +68,7 @@ public class ForgeRenderer implements BlockEntityRenderer<StarForgeAltarEntity> 
         var pos = tile.getBlockPos();
 
         RenderType translucentType = RenderType.translucent();
-        var builder = buffer.getBuffer(translucentType);
+        var ghostBuilder = new GhostVertexConsumer(buffer.getBuffer(translucentType), 80);
 
         tile.getExactPedestalPositions().forEach(aoePos -> {
             if (level.isEmptyBlock(aoePos)) {
@@ -88,7 +89,7 @@ public class ForgeRenderer implements BlockEntityRenderer<StarForgeAltarEntity> 
                         aoePos,
                         level,
                         matrix,
-                        builder,
+                        ghostBuilder,
                         false,
                         level.getRandom(),
                         net.minecraftforge.client.model.data.ModelData.EMPTY,
@@ -98,6 +99,26 @@ public class ForgeRenderer implements BlockEntityRenderer<StarForgeAltarEntity> 
                 matrix.popPose();
             }
         });
+    }
+
+    private static class GhostVertexConsumer implements VertexConsumer {
+        private final VertexConsumer inner;
+        private final int alpha;
+
+        GhostVertexConsumer(VertexConsumer inner, int alpha) {
+            this.inner = inner;
+            this.alpha = alpha;
+        }
+
+        @Override public VertexConsumer vertex(double x, double y, double z) { inner.vertex(x, y, z); return this; }
+        @Override public VertexConsumer color(int r, int g, int b, int a) { inner.color(r, g, b, alpha); return this; }
+        @Override public VertexConsumer uv(float u, float v) { inner.uv(u, v); return this; }
+        @Override public VertexConsumer overlayCoords(int u, int v) { inner.overlayCoords(u, v); return this; }
+        @Override public VertexConsumer uv2(int u, int v) { inner.uv2(u, v); return this; }
+        @Override public VertexConsumer normal(float x, float y, float z) { inner.normal(x, y, z); return this; }
+        @Override public void endVertex() { inner.endVertex(); }
+        @Override public void defaultColor(int r, int g, int b, int a) { inner.defaultColor(r, g, b, alpha); }
+        @Override public void unsetDefaultColor() { inner.unsetDefaultColor(); }
     }
 
     @Override
